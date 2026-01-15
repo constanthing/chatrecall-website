@@ -1,130 +1,31 @@
-0.0.5 - Dec. 5th 2025
+0.14.0 - Jan. 14th 2026
 
 Added:
-
-Not adding temp. perplexity link when a new chat is created (/search/new)
-
-Updating title of chats instead of just time visited
-
-0.0.6 - Dec 25. 2025
-
-Revamped scraping process. Instead of using separate initailize buttons or initialize all sources button there is now only one scrape button. Checkboxes for each sources are used to determine what to scrape. Default all are selected.
-
-Added:
-
-Chat limit to scrapes (e.g. 5, 10, all)
+- Added “through your chats” text in header beside “Sift” text
+- Added down arrow in “Update Library” page to indicate user can scroll down more (when clicked automatically scrolls down)
+- Added guide to “Update Library” page
+    - First time users: guide immediately runs
+    - Guide button button left that activates guide again
+- Added additional instruction to export steps “Drop the conversations.json file below”
+- Added Settings page with following sections:
+    - Hotkeys
+    - Appearance
+    - Support
+- Added keyboard navigation for chats
+    - Arrow up -> move up list
+    - Arrow down -> move down list
+    - Enter -> open selected chat in new tab
+    - Esc -> remove selection
+- Added title search highlighting (before only prompts were highlighted)
+Changed:
+- Changed accent colors for wave and perplexity (before wave/perplexity too similar to each other)
+- Changed default theme to match the users system theme.
 Fixed:
-
-duplicate chats being added when scraping process continues again
-Changed:
-
-look of scraping logs
-
-0.0.7 - Dec 26th. 2025
-
-Removed: - Initialize all sources button / Individual initialize buttons with checkboxes and one singular “scrape” button for better UX flow.
-
-Fixed:
-- Scraping chats duplicating in database.
-
-Changed:
-- Design of scraping logs box
-    - Shows handy list of what’s next to scrape and more detailed logs.
-- Entire scraping process (background.js) to be more modularized and easier to understand
-
-Added:
-- Stop scrape button to stop scrape directly within the page being scraped
-- Date of last scrape for each source
-- Chats limit option for scraping
-    - No Limit, 5, 10, 50, 500
-- Any chat you visit is now being scraped for its first 5 prompts
-    - Supported chats: perplexity, gemini, chatgpt, and claude
-    - Does not support dynamically adding created prompts. Will be available in next update.
-- Basic prompt search based on tokens (letters/individual words)
-    - Matched tokens are highlighted
-    - Prompts with matched tokens are displayed directly under chat information (title, date accessed)
-- Chat bubble button appears on chats that have prompts scraped. Click this button to view all of the scraped prompts for a chat.
-
-0.0.8 - Dec. 26th 
-
-Added:
-- Support for dynamically saving created prompts to database.
-    - Example supported workflows:
-        - Switching between chats and creating prompts -> created prompts are saved
-        - Moving from youtube.com to chatgpt.com and starting chat -> created prompts are saved
-    - Before we only supported scraping prompts when an existing chat was visited. You’d have to refresh the entire page to save all the prompts of a chat.
-
-0.10.0 - Jan. 9th 2026
-
-Added:
-- New html page for importing chatgpt data (instructions/import functionality)
-- Color scheme for wave chats
-
-0.10.1 - Jan. 9th 2026
-
-Updated:
-- Import data html to support different sources (currently only chatgpt but in the future more will be supported)
-- Updated style of popup.html
-
-0.11.0 - Jan. 11th 2026
-
-Added:
-- Support for claude data import
-
-Updated:
-- background title to update every title (will implement better fix for gemini chats)
-- Using two date timestamps: date (created) and visited (used for ui)
-
-0.12.0 - Jan. 12 2026
-
-Changed:
-- UI THEME / STYLE
-- "Scrape" to "Sync"
-
-Added:
-- Support for light and dark themes
-- Accents to buttons toggled on
-
-0.12.1 - Jan. 12th 2026
-
-Added:
-- X button to clear search input
-- Keyboard shortcut to focus search input
-- Wave accent color
-
-Changed:
-- Autofocus search input on popup load
-- Prompt container layout to be in the same line "Prompt 1: Prompt Text"
-
-0.12.2 - Jan. 12th 2026
-
-Added:
-- Time range widget to filter search
-
-Fixed:
-- Visited property improperly set to Date.now() when added to db
-
-0.13.0 - Jan. 13th 2026
-
-Added:
-- Created new “Update Library” page
-    - Combines Importing and Scraping into one page
-    - Importing is “recommended” to users
-    - “Quick Sync” is scraping but I used “Sync” because “Scraping” may have some negative connotations. I’m open to different suggestions.
-    - This page dynamically updates to dark / light theme based on theme from popup providing a more streamlined experience.
-- Number of prompts to each chat
-- “No Chats Message” on empty result query
-- Added UI only for a basic context menu (no logic implemented yet) when a chat is right clicked with mouse.
-
+- Fixed critical bug where new prompts are not being dynamically added in ChatGPT conversations
+- Fixed title renaming bug for claude chats using claude link on occasional failures to load
+- Fixed claude chats retitling to include “- Claude” by removing “- Claude” from titles.
+- Fixed scraper infinite loop edge case (this.scroll() while loop)
 Removed:
-- “Import” button and “Sync” button (for new “Update Library” button)
-
-Fixed:
-- Claude imports not updating existing chats & visited property not being set properly
-- Fixed infinite scroll not working
-- Fixed Gemini chat titles being renamed to “Google Gemini” when chat is visited
-- Fixed critical bug incorrectly assigning wrong titles to chats
-
-Changed:
-- Scraping sources now updates titles of existing chats in case of corrupted data in DB
-- Source selection changed from multiple to singular 
+- Removed theme button (replaced with settings button; theme moved to settings page)
+- Context menu
+    - Plan to gauge real user needs once released with occasional in popup surveys such as “Help shape Sift - which would you use?” [list of potential features]
