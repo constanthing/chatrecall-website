@@ -389,24 +389,38 @@
         const themeToggle = document.getElementById('theme-toggle');
         const icon = themeToggle.querySelector('i');
 
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('sift-theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            icon.classList.replace('bi-moon', 'bi-sun');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        function setTheme(isDark) {
             if (isDark) {
-                document.documentElement.removeAttribute('data-theme');
-                icon.classList.replace('bi-sun', 'bi-moon');
-                localStorage.setItem('sift-theme', 'light');
-            } else {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 icon.classList.replace('bi-moon', 'bi-sun');
-                localStorage.setItem('sift-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                icon.classList.replace('bi-sun', 'bi-moon');
             }
+        }
+
+        // Check for saved preference, otherwise use system preference
+        const savedTheme = localStorage.getItem('sift-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            setTheme(savedTheme === 'dark');
+        } else {
+            setTheme(systemPrefersDark);
+        }
+
+        // Listen for system theme changes (only if user hasn't set a preference)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('sift-theme')) {
+                setTheme(e.matches);
+            }
+        });
+
+        // Manual toggle saves preference
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            localStorage.setItem('sift-theme', isDark ? 'light' : 'dark');
+            setTheme(!isDark);
         });
     </script>
 </body>
