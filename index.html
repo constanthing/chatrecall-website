@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sift - Search Your AI Conversations</title>
+    <title>ChatRecall - Search Your AI Conversations</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="landing.css">
 </head>
@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-content">
-            <div class="navbar-logo">Sift <span class="beta-badge">beta</span></div>
+            <div class="navbar-logo">ChatRecall <span class="beta-badge">beta</span></div>
             <div class="navbar-links">
                 <a href="#" class="nav-link active">Home</a>
                 <a href="updates.html" class="nav-link">Updates</a>
@@ -29,7 +29,8 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Sift through your chats</h1>
+                <h1 class="hero-title">Recall your chats</h1>
+                <p class="hero-tagline">You remember the insight, not the title — ChatRecall helps you get back to the thinking thread.</p>
                 <p class="hero-description">
                     A minimal Chrome extension that syncs and lets you search your conversation history across ChatGPT, Claude,
                     Gemini, and more.
@@ -195,13 +196,13 @@
 
         <!-- Footer CTA -->
         <footer class="footer">
-            <h2 class="footer-headline">Stop digging for lost conversations. Start Sifting.</h2>
+            <h2 class="footer-headline">Stop digging for lost conversations. Start Recalling.</h2>
             <a href="#" class="btn-cta">
                 <i class="bi bi-cloud-download"></i>
                 Add to Chrome
             </a>
             <p class="footer-note">Ongoing developer support</p>
-            <p class="copyright">&copy; 2025 Sift Chats. All rights reserved.</p>
+            <p class="copyright">&copy; 2025 ChatRecall. All rights reserved.</p>
         </footer>
     </main>
     <script>
@@ -219,7 +220,7 @@
         }
 
         // Check for saved preference, otherwise use system preference
-        const savedTheme = localStorage.getItem('sift-theme');
+        const savedTheme = localStorage.getItem('chatrecall-theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         if (savedTheme) {
@@ -230,7 +231,7 @@
 
         // Listen for system theme changes (only if user hasn't set a preference)
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('sift-theme')) {
+            if (!localStorage.getItem('chatrecall-theme')) {
                 setTheme(e.matches);
             }
         });
@@ -238,7 +239,7 @@
         // Manual toggle saves preference
         themeToggle.addEventListener('click', () => {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            localStorage.setItem('sift-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
             setTheme(!isDark);
         });
     </script>

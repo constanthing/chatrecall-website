@@ -226,9 +226,17 @@ main {
     }
 }
 
+.hero-tagline {
+    font-size: 20px;
+    color: var(--text);
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 420px;
+}
+
 .hero-description {
-    font-size: 18px;
-    color: var(--text-secondary);
+    font-size: 16px;
+    color: var(--text-tertiary);
     line-height: 1.6;
     max-width: 400px;
 }
