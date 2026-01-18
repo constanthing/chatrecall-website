@@ -268,6 +268,21 @@ main {
     font-size: 18px;
 }
 
+/* Trust Note */
+.trust-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+}
+
+.trust-note i {
+    font-size: 14px;
+    color: var(--accent);
+}
+
 /* Hero Visual - Chat Cards */
 .hero-visual {
     position: relative;
@@ -408,6 +423,47 @@ main {
     font-weight: 600;
     color: var(--text);
     line-height: 1.4;
+}
+
+/* Demo Section */
+.demo {
+    margin-bottom: 80px;
+}
+
+.demo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 64px 24px;
+    background: var(--bg-elevated);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-lg);
+    aspect-ratio: 16 / 9;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.demo-icon {
+    font-size: 48px;
+    color: var(--text-tertiary);
+}
+
+.demo-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+    .demo-placeholder {
+        padding: 48px 20px;
+    }
+
+    .demo-icon {
+        font-size: 40px;
+    }
 }
 
 /* Supported Sources Section */
