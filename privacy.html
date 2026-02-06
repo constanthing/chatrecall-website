@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ChatsRecall</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ChatsRecall privacy policy. Learn how we handle your data — all chat data stays local on your device.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ChatsRecall">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://chatsrecall.com/privacy.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Privacy Policy - ChatsRecall">
+    <meta property="og:description" content="ChatsRecall privacy policy. Learn how we handle your data — all chat data stays local on your device.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chatsrecall.com/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon_16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">ChatsRecall <span class="beta-badge">beta</span></div>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="updates.html" class="nav-link">Updates</a>
+                <a href="privacy.html" class="nav-link active">Privacy</a>
+            </div>
+            <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
+                <i class="bi bi-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Privacy Header -->
+        <header class="privacy-header">
+            <h1 class="privacy-title">Privacy Policy</h1>
+            <p class="privacy-subtitle">Last Updated: February 2025</p>
+        </header>
+
+        <!-- Privacy Content -->
+        <div class="privacy-content">
+
+            <!-- Overview -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Overview</h2>
+                <p>ChatsRecall is a Chrome extension that helps you search and organize your AI chat history across multiple platforms. This privacy policy explains how we handle your data.</p>
+            </section>
+
+            <!-- Data Collection -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Data Collection</h2>
+
+                <h3 class="privacy-subheading">What We Collect</h3>
+                <p>The extension collects the following data from supported AI chat platforms:</p>
+                <ul class="privacy-list">
+                    <li><strong>Chat titles</strong> — The names/titles of your conversations</li>
+                    <li><strong>Chat prompts</strong> — The messages you send to AI assistants</li>
+                    <li><strong>Chat URLs</strong> — Links to your conversations</li>
+                    <li><strong>Timestamps</strong> — When conversations were last visited</li>
+                    <li><strong>Source platform</strong> — Which AI service the chat is from (ChatGPT, Claude, Gemini, Perplexity, Wave)</li>
+                </ul>
+
+                <h3 class="privacy-subheading">What We Do NOT Collect</h3>
+                <ul class="privacy-list">
+                    <li>AI assistant responses</li>
+                    <li>Account credentials or login information</li>
+                    <li>Personal identification information</li>
+                    <li>Any data from websites outside the supported platforms</li>
+                </ul>
+            </section>
+
+            <!-- Data Storage -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Data Storage</h2>
+                <p><strong>All chat data is stored locally on your device.</strong> Specifically:</p>
+                <ul class="privacy-list">
+                    <li>Chat data is stored in your browser's IndexedDB database</li>
+                    <li>Chat titles, prompts, URLs, and conversation content never leave your browser</li>
+                    <li>Chat data is not shared with any third parties</li>
+                    <li>We do not have access to your chat data</li>
+                </ul>
+                <p>The only exception is anonymous usage analytics sent to PostHog (see "Third-Party Services" below). <strong>No chat content, titles, URLs, or prompts are included in analytics data.</strong></p>
+            </section>
+
+            <!-- Third-Party Services -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Third-Party Services</h2>
+
+                <h3 class="privacy-subheading">PostHog (Anonymous Usage Analytics)</h3>
+                <p>ChatsRecall uses <a href="https://posthog.com" target="_blank" rel="noopener noreferrer">PostHog</a> to collect anonymous usage analytics. This helps us understand how the extension is used and identify bugs.</p>
+
+                <p><strong>How it works:</strong></p>
+                <ul class="privacy-list">
+                    <li>A random anonymous user ID is generated locally (e.g., <code>user_abc123</code>) — it is not linked to any account, email, or personal identity</li>
+                    <li>Analytics data is sent to <code>us.i.posthog.com</code></li>
+                </ul>
+
+                <p><strong>What IS sent to PostHog:</strong></p>
+                <ul class="privacy-list">
+                    <li>Event names (e.g., <code>popup_opened</code>, <code>searched</code>, <code>filter_clicked</code>, <code>chat_clicked</code>, <code>scraped</code>, <code>imported</code>)</li>
+                    <li>Search query length (NOT the query text itself)</li>
+                    <li>Source platform names (e.g., "ChatGPT", "Claude")</li>
+                    <li>Filter values selected (e.g., date filter type)</li>
+                    <li>Import/scrape counts (number of chats imported, not their content)</li>
+                    <li>Error messages and context (for debugging)</li>
+                    <li>Theme and hotkey preferences</li>
+                    <li>Extension install/update events</li>
+                </ul>
+
+                <p><strong>What is NOT sent to PostHog:</strong></p>
+                <ul class="privacy-list">
+                    <li>Chat titles</li>
+                    <li>Chat prompts or conversation content</li>
+                    <li>Chat URLs</li>
+                    <li>Any personal data or account information</li>
+                </ul>
+
+                <p>You can disable analytics at any time from the extension's Settings page.</p>
+                <p>For more details, see <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog's Privacy Policy</a>.</p>
+
+                <p><strong>There are no other third-party services:</strong></p>
+                <ul class="privacy-list">
+                    <li>No tracking pixels</li>
+                    <li>No cloud storage</li>
+                    <li>No advertising networks</li>
+                </ul>
+            </section>
+
+            <!-- Permissions Explained -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Permissions Explained</h2>
+                <p>The extension requires certain permissions to function. Here's why each is needed:</p>
+
+                <div class="privacy-table-wrapper">
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Permission</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>scripting</code></td>
+                                <td>Reads chat metadata (titles, URLs, timestamps) from supported AI platforms</td>
+                            </tr>
+                            <tr>
+                                <td><code>tabs</code></td>
+                                <td>Opens chat links in new tabs when clicked from the extension popup</td>
+                            </tr>
+                            <tr>
+                                <td><code>host_permissions</code> (AI platform domains)</td>
+                                <td>Scrapes chat history from each supported AI platform</td>
+                            </tr>
+                            <tr>
+                                <td><code>host_permissions</code> (<code>us.i.posthog.com</code>)</td>
+                                <td>Sends anonymous usage analytics (no user content)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="privacy-subheading">Supported Domains</h3>
+                <p>The extension has access to:</p>
+                <ul class="privacy-list">
+                    <li><code>chatgpt.com</code> — OpenAI's ChatGPT (chat history scraping)</li>
+                    <li><code>claude.ai</code> — Anthropic's Claude (chat history scraping)</li>
+                    <li><code>gemini.google.com</code> — Google's Gemini (chat history scraping)</li>
+                    <li><code>perplexity.ai</code> — Perplexity AI (chat history scraping)</li>
+                    <li><code>app.wave.co</code> — Wave AI (chat history scraping)</li>
+                    <li><code>us.i.posthog.com</code> — PostHog (anonymous usage analytics only, not content scraping)</li>
+                </ul>
+            </section>
+
+            <!-- Your Rights -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Your Rights</h2>
+
+                <h3 class="privacy-subheading">Viewing Your Data</h3>
+                <p>All your chat data is visible within the extension popup. You can search and browse all collected conversations.</p>
+
+                <h3 class="privacy-subheading">Deleting Your Data</h3>
+                <p>You can delete all stored data by:</p>
+                <ol class="privacy-list privacy-list-ordered">
+                    <li><strong>Removing the extension</strong> — Uninstalling ChatsRecall will delete all associated data</li>
+                    <li><strong>Clearing browser data</strong> — Clearing IndexedDB in your browser settings will remove extension data</li>
+                </ol>
+
+                <h3 class="privacy-subheading">Data Portability</h3>
+                <p>Since all data is stored locally in standard browser storage (IndexedDB), you maintain full control over your data at all times.</p>
+            </section>
+
+            <!-- Security -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Security</h2>
+                <ul class="privacy-list">
+                    <li>All chat data remains on your local device</li>
+                    <li>No chat content is transmitted to any external server</li>
+                    <li>The extension uses standard browser security mechanisms</li>
+                    <li>Content scripts only run on the specific supported domains</li>
+                    <li>Analytics data contains no personally identifiable information</li>
+                </ul>
+            </section>
+
+            <!-- Children's Privacy -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Children's Privacy</h2>
+                <p>This extension is not directed at children under 13. We do not knowingly collect data from children.</p>
+            </section>
+
+            <!-- Changes to This Policy -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document.</p>
+            </section>
+
+            <!-- Contact -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">Contact</h2>
+                <p>If you have questions about this privacy policy or the extension's data practices, please:</p>
+                <ul class="privacy-list">
+                    <li>Open an issue on our GitHub repository</li>
+                    <li>Contact us at: <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a></li>
+                </ul>
+            </section>
+
+            <!-- Summary -->
+            <section class="privacy-section privacy-summary">
+                <h2 class="privacy-heading">Summary</h2>
+                <p><strong>Your chat data stays on your device.</strong> We collect anonymous usage analytics (via PostHog) to improve the extension, but no chat titles, prompts, URLs, or conversation content is ever transmitted externally. The extension works entirely with local data — analytics only track how features are used, not what you search for or chat about.</p>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="copyright">&copy; 2026 ChatsRecall. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const icon = themeToggle.querySelector('i');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                icon.classList.replace('bi-moon', 'bi-sun');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                icon.classList.replace('bi-sun', 'bi-moon');
+            }
+        }
+
+        // Check for saved preference, otherwise use system preference
+        const savedTheme = localStorage.getItem('chatrecall-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            setTheme(savedTheme === 'dark');
+        } else {
+            setTheme(systemPrefersDark);
+        }
+
+        // Listen for system theme changes (only if user hasn't set a preference)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('chatrecall-theme')) {
+                setTheme(e.matches);
+            }
+        });
+
+        // Manual toggle saves preference
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
+            setTheme(!isDark);
+        });
+    </script>
+</body>
+
+</html>
