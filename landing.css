@@ -1015,6 +1015,10 @@ main {
     margin-bottom: 0;
 }
 
+.privacy-section.privacy-summary:last-child {
+    padding-bottom: 24px;
+}
+
 @media (max-width: 768px) {
     .privacy-title {
         font-size: 28px;
