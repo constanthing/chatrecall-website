@@ -101,6 +101,13 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .navbar-content {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+}
+
 .navbar-logo {
     font-size: 20px;
     font-weight: 700;
@@ -125,12 +132,15 @@ body {
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
 }
 
 @media (max-width: 600px) {
     .navbar-links {
-        gap: 20px;
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 14px;
     }
 }
 
@@ -187,6 +197,12 @@ main {
     main {
         max-width: 100%;
         padding: 100px 20px 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding-top: 132px;
     }
 }
 
@@ -705,6 +721,174 @@ main {
 .updates-subtitle {
     font-size: 16px;
     color: var(--text-secondary);
+}
+
+/* Desktop Page */
+.desktop-main {
+    max-width: 760px;
+}
+
+.desktop-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.desktop-kicker {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+.desktop-title {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.desktop-subtitle {
+    max-width: 560px;
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.desktop-version {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.desktop-downloads {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.download-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 300px;
+    padding: 28px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.15s ease;
+}
+
+.download-card:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.download-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-active);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    font-size: 22px;
+}
+
+.download-content {
+    flex: 1;
+}
+
+.download-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.download-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.download-meta {
+    display: inline-flex;
+    padding: 4px 8px;
+    background: var(--bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+.download-button {
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.download-button:hover {
+    transform: none;
+}
+
+.desktop-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 18px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    margin-bottom: 80px;
+}
+
+.desktop-note i {
+    color: var(--accent);
+    margin-top: 2px;
+}
+
+.desktop-note p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .desktop-header {
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    .desktop-title {
+        font-size: 30px;
+    }
+
+    .desktop-downloads {
+        grid-template-columns: 1fr;
+    }
+
+    .download-card {
+        min-height: 0;
+        padding: 24px;
+    }
 }
 
 .updates-list {
