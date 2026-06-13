@@ -1,0 +1,11 @@
+{
+  "version": "0.1.1",
+  "notes": "macOS updater test release.",
+  "pub_date": "2026-06-13T00:00:00Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "url": "https://chatsrecall.com/releases/0.1.1/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuUzRVQ3JxQ3Jnbm1ka0JnditHOE54TFJTbk1BZkhqeUtoNXJVdHhZRlZWWVB2bHprSmppdjkxdCtaWHNRbFloV3NIT0tjaWRFQzF3TjFQQi9mTUZIRFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMzg3ODEyCWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpXK0taOVd0aEJuU2FhS2lhNEx2cXVGdnF6d09Sd3NXWVJsajJDTXliWEw1b2FiZnhKSCtCck5QYVdDWW9jTUZrWmU0K0lzM3UrL0dWdThhb3hyVFNCQT09Cg=="
+    }
+  }
+}
