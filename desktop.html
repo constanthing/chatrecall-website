@@ -56,7 +56,7 @@
                 <h1 class="desktop-title">ChatsRecall for your desktop</h1>
                 <p class="desktop-subtitle">Install the desktop helper for a more native ChatsRecall workflow on macOS and Windows.</p>
             </div>
-            <span class="desktop-version">v0.1.0</span>
+            <span id="desktop-version" class="desktop-version">v0.1.9</span>
         </header>
 
         <!-- Downloads -->
@@ -140,6 +140,25 @@
             localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
             setTheme(!isDark);
         });
+
+        async function updateDesktopVersion() {
+            const versionBadge = document.getElementById('desktop-version');
+            if (!versionBadge) return;
+
+            try {
+                const response = await fetch('latest.json', { cache: 'no-store' });
+                if (!response.ok) return;
+
+                const release = await response.json();
+                if (release.version) {
+                    versionBadge.textContent = `v${release.version}`;
+                }
+            } catch {
+                // Keep the static fallback version if the release manifest cannot be loaded.
+            }
+        }
+
+        updateDesktopVersion();
     </script>
 </body>
 
