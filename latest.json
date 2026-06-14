@@ -1,15 +1,15 @@
 {
-  "version": "0.1.3",
-  "notes": "Windows desktop update 0.1.3.",
-  "pub_date": "2026-06-14T03:14:36.079Z",
+  "version": "0.1.4",
+  "notes": "Windows desktop update 0.1.4.",
+  "pub_date": "2026-06-14T06:05:21.001Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.2/ChatsRecall.app.tar.gz",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuUzBpallvdFZhRzc2ZzF1NUVUSVJ2ZXJQZHpDei9RaWxobVJ5dzNyaFY0Slg2SVd5Mk1rS3NJOTd0YUNUMXMwTUw5STc1Z3VSeVVRcTNjcUwvcVcwU0FvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMzk3OTA5CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpLM0xDM21kYkNYbDdDQzFaWTJNb1JVcyt6cGoxWGFRVmE2S3JPSnN4eTBhRE1VWHhLUm5wMTk0Um1uejE1eVNzdEJxTXd1cmhVT0U4VVlRQkdIdTJDZz09Cg=="
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.3/ChatsRecall_0.1.3_x64_en-US.msi",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuUzZvS1VBQzdqSlRkSXRUTWtlR05kVXVHTnJPOUttMXA4S0xCRzNpaU1neVEzVS91TjZhT1dHbkRvUDBoRU81NWdzMXlLYldDRHI2aytHUThmRnl1d1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDA2ODc1CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjNfeDY0X2VuLVVTLm1zaQp3TmRSeEUwZnZFMWl6Yjg3ckYwbk5qVC91YWhDTEdiU0JnRExEZ2dmNzdJbUE5SnY5Nlp5dDYvZTIxc3VKRlBla2F2amc3alRjd1JSVFVnT05OaGdEUT09Cg=="
+      "url": "https://chatsrecall.com/releases/0.1.4/ChatsRecall_0.1.4_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuU3lyRlNBQVg1aERwQThPWlZJSlg3N1U5aFEwMnNmVjZtUWh5Z0JlNTdrb0JSRVZxalVnaU5TUGZ6d1ZLOXl5UkFaRW8vVmRFakVzQmlaMVllYlBpY2c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDE3MTIwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjRfeDY0X2VuLVVTLm1zaQo4Nnk4VmpFdFVHYUtFSmlYNW04dThZcjRrR25BbVYvVnJXc2pSYVlGTWJYMXR3N2ZoWjh6L0FHL2dhVHd1ODFmUHVraTRCTFVBdmFCT2owcWlsUHdBUT09Cg=="
     }
   }
 }
