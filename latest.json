@@ -1,11 +1,11 @@
 {
-  "version": "0.1.17",
-  "notes": "macOS desktop update 0.1.17.",
-  "pub_date": "2026-06-15T09:04:32.567Z",
+  "version": "0.1.18",
+  "notes": "macOS desktop update 0.1.18.",
+  "pub_date": "2026-06-15T09:22:05.993Z",
   "platforms": {
     "darwin-aarch64": {
-      "url": "https://chatsrecall.com/releases/0.1.17/ChatsRecall.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuUytadmFKREx3TWhpNVRLY0hvN2IxTXNhb2pJWHROZ0w4MGdNYlJpdXhSSUwxRjF1RlZXZEZzRk5pTDY4YmlqOGY0V3owQlpJYkI4NWNjMSs2YWpDSnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNTE0MTgwCWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpuYWJIVFlnY1JPN1IrWHBTUCtTeXE3WUk1Z1V2OGJsc0NCSS8zYzQ2SldrWTJnbmJySTFWYVBNa1UwU2s1cjRoUHg4RkgrRG5pTVFYU1lzb2pIOEtCZz09Cg=="
+      "url": "https://chatsrecall.com/releases/0.1.18/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZkVHbkNua2ZuU3p3QiswK0xRUGdMUWtId3JUT1F6VFZ6WW82UXlDb2xYZVZxQVlvbDg1SWxDdStraGJ2bHFxVEpyNUtzb2dlTXQzd1JXTFJxSFZaeDJ2dGdzWWVaT2dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNTE1MjM1CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpBS1RTbzk0STZzWVpYSWZFZDRnSERGOVMxKzZ0OEI3Z2FSSDhCcTBSZG9BZjVhYS9BWTBhQ1N3bE5DQVZpUThaZ1RPaUg2dGVxeW9xNlMxWmpFeDZBQT09Cg=="
     },
     "windows-x86_64": {
       "url": "https://chatsrecall.com/releases/0.1.8/ChatsRecall_0.1.8_x64_en-US.msi",
