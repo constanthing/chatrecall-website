@@ -840,6 +840,14 @@ main {
     color: var(--text-tertiary);
 }
 
+.download-date {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
 .download-button {
     justify-content: center;
     width: 100%;

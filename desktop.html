@@ -69,6 +69,7 @@
                     <h2 class="download-title">Mac</h2>
                     <p class="download-description">For Macs with Apple Silicon chips.</p>
                     <span class="download-meta">macOS ARM64 DMG</span>
+                    <span id="mac-release-date" class="download-date">Created Jun 16, 2026</span>
                 </div>
                 <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.21/ChatsRecall_0.1.21_aarch64.dmg" class="btn-cta download-button">
                     <i class="bi bi-download"></i>
@@ -84,6 +85,7 @@
                     <h2 class="download-title">Windows</h2>
                     <p class="download-description">For modern 64-bit Windows PCs.</p>
                     <span class="download-meta">Windows x64 MSI</span>
+                    <span id="windows-release-date" class="download-date">Created Jun 16, 2026</span>
                 </div>
                 <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.21/ChatsRecall_0.1.21_x64_en-US.msi" class="btn-cta download-button">
                     <i class="bi bi-download"></i>
@@ -143,15 +145,41 @@
 
         async function updateDesktopVersion() {
             const versionBadge = document.getElementById('desktop-version');
-            if (!versionBadge) return;
+            const releaseDateTargets = {
+                'darwin-aarch64': document.getElementById('mac-release-date'),
+                'windows-x86_64': document.getElementById('windows-release-date'),
+            };
+
+            function formatReleaseDate(value) {
+                if (!value) return '';
+
+                const date = new Date(value);
+                if (Number.isNaN(date.getTime())) return '';
+
+                return new Intl.DateTimeFormat(undefined, {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                }).format(date);
+            }
 
             try {
                 const response = await fetch('latest.json', { cache: 'no-store' });
                 if (!response.ok) return;
 
                 const release = await response.json();
-                if (release.version) {
+                if (versionBadge && release.version) {
                     versionBadge.textContent = `v${release.version}`;
+                }
+
+                for (const [platform, element] of Object.entries(releaseDateTargets)) {
+                    if (!element) continue;
+
+                    const publishedAt = release.platforms?.[platform]?.published_at || release.pub_date;
+                    const formatted = formatReleaseDate(publishedAt);
+                    if (formatted) {
+                        element.textContent = `Created ${formatted}`;
+                    }
                 }
             } catch {
                 // Keep the static fallback version if the release manifest cannot be loaded.
