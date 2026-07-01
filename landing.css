@@ -775,7 +775,7 @@ main {
 
 .desktop-downloads {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
     margin-bottom: 24px;
 }
@@ -784,7 +784,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-height: 300px;
+    max-width: 380px;
     padding: 28px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
@@ -889,12 +889,8 @@ main {
         font-size: 30px;
     }
 
-    .desktop-downloads {
-        grid-template-columns: 1fr;
-    }
-
     .download-card {
-        min-height: 0;
+        max-width: none;
         padding: 24px;
     }
 }

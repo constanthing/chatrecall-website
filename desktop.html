@@ -7,7 +7,7 @@
     <title>Desktop App - ChatsRecall</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Download the ChatsRecall desktop helper for macOS Apple Silicon or Windows.">
+    <meta name="description" content="Download the ChatsRecall desktop helper for Windows.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="ChatsRecall">
     <meta name="theme-color" content="#6366f1">
@@ -17,7 +17,7 @@
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Desktop App - ChatsRecall">
-    <meta property="og:description" content="Download the ChatsRecall desktop helper for macOS Apple Silicon or Windows.">
+    <meta property="og:description" content="Download the ChatsRecall desktop helper for Windows.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chatsrecall.com/desktop.html">
 
@@ -54,29 +54,13 @@
             <div>
                 <p class="desktop-kicker">Desktop release</p>
                 <h1 class="desktop-title">ChatsRecall for your desktop</h1>
-                <p class="desktop-subtitle">Install the desktop app for a more native ChatsRecall workflow on macOS and Windows. On first launch, the app walks you through connecting the browser extension so it can capture new conversations automatically.</p>
+                <p class="desktop-subtitle">Install the desktop app for a more native ChatsRecall workflow on Windows. On first launch, the app walks you through connecting the browser extension so it can capture new conversations automatically.</p>
             </div>
             <span id="desktop-version" class="desktop-version">v0.1.9</span>
         </header>
 
         <!-- Downloads -->
         <section class="desktop-downloads" aria-label="Desktop downloads">
-            <article class="download-card">
-                <div class="download-icon">
-                    <i class="bi bi-apple"></i>
-                </div>
-                <div class="download-content">
-                    <h2 class="download-title">Mac</h2>
-                    <p class="download-description">For Macs with Apple Silicon chips.</p>
-                    <span class="download-meta">macOS ARM64 DMG</span>
-                    <span id="mac-release-date" class="download-date">Created Jun 16, 2026</span>
-                </div>
-                <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.21/ChatsRecall_0.1.21_aarch64.dmg" class="btn-cta download-button">
-                    <i class="bi bi-download"></i>
-                    Download for Mac
-                </a>
-            </article>
-
             <article class="download-card">
                 <div class="download-icon">
                     <i class="bi bi-windows"></i>
@@ -92,11 +76,6 @@
                     Download for Windows
                 </a>
             </article>
-        </section>
-
-        <section class="desktop-note">
-            <i class="bi bi-info-circle"></i>
-            <p>The Mac download is built for ARM64 Apple Silicon Macs, not older Intel-based Macs.</p>
         </section>
 
         <!-- Footer -->
@@ -146,7 +125,6 @@
         async function updateDesktopVersion() {
             const versionBadge = document.getElementById('desktop-version');
             const releaseDateTargets = {
-                'darwin-aarch64': document.getElementById('mac-release-date'),
                 'windows-x86_64': document.getElementById('windows-release-date'),
             };
 
