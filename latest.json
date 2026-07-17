@@ -1,7 +1,7 @@
 {
-  "version": "0.1.28",
-  "notes": "Windows desktop update 0.1.28.",
-  "pub_date": "2026-07-13T20:30:11.095Z",
+  "version": "0.1.29",
+  "notes": "Windows desktop update 0.1.29.",
+  "pub_date": "2026-07-17T21:39:01.920Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.28/ChatsRecall_0.1.28_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk9zSG9sYWQwRmNyT1l6NGRRTnlHRzd1TzhDYlNEWmxiV2QxY1pJVzVNdGh0U2xKeE5iQWZmTXBINlFHaFpCVHpFdGhRMzBkMVpRY3RYWSs2amltUndVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTc0NjEwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjI4X3g2NC1zZXR1cC5leGUKRW4vYUFlVndhTHFITzhZTjBHUFNoSitlR2tXRFA3RXYyMjdONG5CUHA0cVBjcllJZUJCd3VZMWJYeWJhUFN0TWtVTnZ0azBUbkZHbW9iRlFEVnUyQlE9PQo=",
-      "published_at": "2026-07-13T20:30:11.095Z"
+      "url": "https://chatsrecall.com/releases/0.1.29/ChatsRecall_0.1.29_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk50Y1ZlTnA4VXNjaGRVY1pwbE55ZFBJNThOdllHWXp1MGRVU2pNUlFVM2FWa0VSNEwzenFJU0RTNFVwbk5nZHFzVGp5bmlob09Ja05OcmhCRzNxdGdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MzI0MzQxCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjI5X3g2NC1zZXR1cC5leGUKbWo0ZUVWQ3JtNU03YkxucXh0a1haUGtKcThSSE9aUWp2b0RRam81cEFzM2IvVXNiSVBJMFQrOTIyNVFMSUxIYWY2TzZORFNnVnFTMHprK1JKa2d1RHc9PQo=",
+      "published_at": "2026-07-17T21:39:01.920Z"
     }
   }
 }
