@@ -1,7 +1,7 @@
 {
-  "version": "0.1.46",
-  "notes": "Windows desktop update 0.1.46.",
-  "pub_date": "2026-07-23T00:47:26.637Z",
+  "version": "0.1.47",
+  "notes": "This update makes browsing large libraries and reviewing app updates more reliable.\n\n## Improved\n\n- Review formatted release notes in a new confirmation window before downloading and installing an update from the update banner or Settings.\n- Read release notes with clearer Markdown formatting in Settings.\n\n## Fixed\n\n- Pagination and infinite scrolling now continue loading conversations when the app is maximized.",
+  "pub_date": "2026-07-23T06:08:45.244Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.46/ChatsRecall_0.1.46_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkpwUnJmWk5BcjF1eW5HV2VkcjF6VlJXbG9iNDNVZGt0MFU4OGNBTCtxRklDbGVsRTlKZDFLM3NHeXJzN2JqYlZxR0FPcG83NGhwUzNqUWJWUjJNL3dvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0NzY3NjQ0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ2X3g2NC1zZXR1cC5leGUKMDk1aDVJQ3RPSUxIMmN4QllmUGczREhVZzFmZ0NSOEJOa2pTcjlha0V0RTBTSVRLT3NUZFpEOFU0ak5OK1p3Q3E3K05aN0xpbnFUM1lWY21ZbGNyRGc9PQo=",
-      "published_at": "2026-07-23T00:47:26.637Z"
+      "url": "https://chatsrecall.com/releases/0.1.47/ChatsRecall_0.1.47_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkQxWXArcUxpV0FRNXdEU2J5SjE5ZndlVE8rWFdybTVlOEdWOUNUMWlsc25mRENkYmhWTng3bnc1bVpDM3JSaGZtZ1lxdXhibnczUzlLc3pxSDZydEFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Nzg2OTIyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ3X3g2NC1zZXR1cC5leGUKaTl6TytsNmtnUUhuODgya0MzUEhpcFhpNVE1ZkhoUVk5Rlk1QmU0dGxQNXpoL0J2aUdGNHJ1UTdHVHZ4dzlzQzZjOEl1SGlaMUl5NlNJRUhhSTc1Qnc9PQo=",
+      "published_at": "2026-07-23T06:08:45.244Z"
     }
   }
 }
