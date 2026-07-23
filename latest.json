@@ -1,7 +1,7 @@
 {
-  "version": "0.1.48",
-  "notes": "This update makes the Sync page clearer by showing only sources that are ready to use.\n\n## Improved\n\n- Hide sources that are not yet supported for syncing, including Google AI Mode and Copilot.",
-  "pub_date": "2026-07-23T06:18:32.594Z",
+  "version": "0.1.49",
+  "notes": "This update makes it easier to diagnose sync problems and share useful details when something goes wrong.\n\n## Added\n\n- Add a temporary Debug section to the Sync page with a persistent, step-by-step log of the latest sync run and a button to copy the log for troubleshooting.",
+  "pub_date": "2026-07-23T21:07:23.172Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.48/ChatsRecall_0.1.48_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkF4VS8rQWlHUlRkUWlheTcrbG1MelRHcDc0OUsyeUl5SjdSN0JnYldteFZnY2hGL1dIWkJ0emwydHJWbVh0MVI4N3VOOFR5OGRJYUxhMnFXYXE0N3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Nzg3NTEwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ4X3g2NC1zZXR1cC5leGUKTzdERVl1T21EVGJ0dmRVMytzQ0ppNUpyVWg4QUZuM3dsRjEvY0hHd0VEK0FVb2ZxODNoa1p3RHZnTFd5bllmZXFkbUs4c0NtZjRlZ0RrYyt6OEE5RGc9PQo=",
-      "published_at": "2026-07-23T06:18:32.594Z"
+      "url": "https://chatsrecall.com/releases/0.1.49/ChatsRecall_0.1.49_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Skg5TWJ6NXVQNXZFMTRRemt4ODZmNXBHUHQ4b0pWZVVTYnVTOCs0WHhHZ0JMSjlWMkQvRG1nQmhzVjJScWNWUVBCOE56aThHbUtTODhhT1pVQzZoTFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0ODQwODQxCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ5X3g2NC1zZXR1cC5leGUKem94eFBWeTZMM3hEMG9pYjdIOVVDZTVWL3pITnBmcHNvWkpmZm1wdElKYjY4L1BlaXV3M0NhZFVOTXpCcUo5SWh2NUVuTVFGT20wVXJ3NGlJUkdtQnc9PQo=",
+      "published_at": "2026-07-23T21:07:23.172Z"
     }
   }
 }
