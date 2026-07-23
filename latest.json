@@ -1,7 +1,7 @@
 {
-  "version": "0.1.47",
-  "notes": "This update makes browsing large libraries and reviewing app updates more reliable.\n\n## Improved\n\n- Review formatted release notes in a new confirmation window before downloading and installing an update from the update banner or Settings.\n- Read release notes with clearer Markdown formatting in Settings.\n\n## Fixed\n\n- Pagination and infinite scrolling now continue loading conversations when the app is maximized.",
-  "pub_date": "2026-07-23T06:08:45.244Z",
+  "version": "0.1.48",
+  "notes": "This update makes the Sync page clearer by showing only sources that are ready to use.\n\n## Improved\n\n- Hide sources that are not yet supported for syncing, including Google AI Mode and Copilot.",
+  "pub_date": "2026-07-23T06:18:32.594Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.47/ChatsRecall_0.1.47_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkQxWXArcUxpV0FRNXdEU2J5SjE5ZndlVE8rWFdybTVlOEdWOUNUMWlsc25mRENkYmhWTng3bnc1bVpDM3JSaGZtZ1lxdXhibnczUzlLc3pxSDZydEFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Nzg2OTIyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ3X3g2NC1zZXR1cC5leGUKaTl6TytsNmtnUUhuODgya0MzUEhpcFhpNVE1ZkhoUVk5Rlk1QmU0dGxQNXpoL0J2aUdGNHJ1UTdHVHZ4dzlzQzZjOEl1SGlaMUl5NlNJRUhhSTc1Qnc9PQo=",
-      "published_at": "2026-07-23T06:08:45.244Z"
+      "url": "https://chatsrecall.com/releases/0.1.48/ChatsRecall_0.1.48_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkF4VS8rQWlHUlRkUWlheTcrbG1MelRHcDc0OUsyeUl5SjdSN0JnYldteFZnY2hGL1dIWkJ0emwydHJWbVh0MVI4N3VOOFR5OGRJYUxhMnFXYXE0N3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Nzg3NTEwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ4X3g2NC1zZXR1cC5leGUKTzdERVl1T21EVGJ0dmRVMytzQ0ppNUpyVWg4QUZuM3dsRjEvY0hHd0VEK0FVb2ZxODNoa1p3RHZnTFd5bllmZXFkbUs4c0NtZjRlZ0RrYyt6OEE5RGc9PQo=",
+      "published_at": "2026-07-23T06:18:32.594Z"
     }
   }
 }
