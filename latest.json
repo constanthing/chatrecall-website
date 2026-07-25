@@ -1,7 +1,7 @@
 {
-  "version": "0.1.49",
-  "notes": "This update makes it easier to diagnose sync problems and share useful details when something goes wrong.\n\n## Added\n\n- Add a temporary Debug section to the Sync page with a persistent, step-by-step log of the latest sync run and a button to copy the log for troubleshooting.",
-  "pub_date": "2026-07-23T21:07:23.172Z",
+  "version": "0.1.50",
+  "notes": "ChatsRecall now supports Microsoft Copilot conversations throughout the desktop app.\n\n## Added\n\n- Add Microsoft Copilot support, including conversation syncing, live capture of new conversations and prompts, and conversation deletion.",
+  "pub_date": "2026-07-25T08:12:37.076Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.49/ChatsRecall_0.1.49_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Skg5TWJ6NXVQNXZFMTRRemt4ODZmNXBHUHQ4b0pWZVVTYnVTOCs0WHhHZ0JMSjlWMkQvRG1nQmhzVjJScWNWUVBCOE56aThHbUtTODhhT1pVQzZoTFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0ODQwODQxCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjQ5X3g2NC1zZXR1cC5leGUKem94eFBWeTZMM3hEMG9pYjdIOVVDZTVWL3pITnBmcHNvWkpmZm1wdElKYjY4L1BlaXV3M0NhZFVOTXpCcUo5SWh2NUVuTVFGT20wVXJ3NGlJUkdtQnc9PQo=",
-      "published_at": "2026-07-23T21:07:23.172Z"
+      "url": "https://chatsrecall.com/releases/0.1.50/ChatsRecall_0.1.50_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkJrUUJ3SGxlTkMvYzMvRTJSdWtlbkNwMmp3NU8waTM0R05kWmMwQTVrcXBmOTJ4aFM0YWRiVVpNMDBoM2MyRS92ek1uT1AzK0lIZm0zWEpRUzU1RkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0OTY3MTU0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjUwX3g2NC1zZXR1cC5leGUKa2JqcXdhQTgwalAxM0VYSXBhazZHeWVWVUt4d1ZnT3B6emlvMkJQMDZ2VHhnWi9YSEpNQ2c1dGFXRERhcW0vdEFtUHQvSTB2KzBVbmRIbHdCcVo5REE9PQo=",
+      "published_at": "2026-07-25T08:12:37.076Z"
     }
   }
 }
