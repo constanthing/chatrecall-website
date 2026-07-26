@@ -1,7 +1,7 @@
 {
-  "version": "0.1.50",
-  "notes": "ChatsRecall now supports Microsoft Copilot conversations throughout the desktop app.\n\n## Added\n\n- Add Microsoft Copilot support, including conversation syncing, live capture of new conversations and prompts, and conversation deletion.",
-  "pub_date": "2026-07-25T08:12:37.076Z",
+  "version": "0.1.51",
+  "notes": "Start a new conversation with your chosen AI source in fewer steps.\n\n## Added\n\n- Add a New Chat button that lets you quickly open a new tab for a particular source.",
+  "pub_date": "2026-07-26T03:34:14.613Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.50/ChatsRecall_0.1.50_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkJrUUJ3SGxlTkMvYzMvRTJSdWtlbkNwMmp3NU8waTM0R05kWmMwQTVrcXBmOTJ4aFM0YWRiVVpNMDBoM2MyRS92ek1uT1AzK0lIZm0zWEpRUzU1RkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0OTY3MTU0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjUwX3g2NC1zZXR1cC5leGUKa2JqcXdhQTgwalAxM0VYSXBhazZHeWVWVUt4d1ZnT3B6emlvMkJQMDZ2VHhnWi9YSEpNQ2c1dGFXRERhcW0vdEFtUHQvSTB2KzBVbmRIbHdCcVo5REE9PQo=",
-      "published_at": "2026-07-25T08:12:37.076Z"
+      "url": "https://chatsrecall.com/releases/0.1.51/ChatsRecall_0.1.51_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkdCNitNZVQ1N3dCNEwrZVVXRHR3ek9Md0FTckJFdS8zTTZwWnBQS05HVWhuM3JZczlYQ3czQXdHR1M3cEpXUUwvOEszZEpyN01QNkxlamkwb2tZRUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MDM2ODUyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjUxX3g2NC1zZXR1cC5leGUKejRZUDJEMW9nVmtjU0FaYVVHYXdjQTdkaTd2QUVYVUlSd01oTVk5MzdoM1hFcGRaRE1xa1laUnplUlRiMVBWNjFvaVMyTGNkY2FCUGdJa0tQc0VlQ3c9PQo=",
+      "published_at": "2026-07-26T03:34:14.613Z"
     }
   }
 }
