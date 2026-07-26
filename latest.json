@@ -1,7 +1,7 @@
 {
-  "version": "0.1.51",
-  "notes": "Start a new conversation with your chosen AI source in fewer steps.\n\n## Added\n\n- Add a New Chat button that lets you quickly open a new tab for a particular source.",
-  "pub_date": "2026-07-26T03:34:14.613Z",
+  "version": "0.1.52",
+  "notes": "Ask questions across your archive and get answers grounded in the conversations you have saved.\n\n## Added\n\n- Ask questions across your archive and receive answers backed by cited conversations.",
+  "pub_date": "2026-07-26T07:37:42.422Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.51/ChatsRecall_0.1.51_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkdCNitNZVQ1N3dCNEwrZVVXRHR3ek9Md0FTckJFdS8zTTZwWnBQS05HVWhuM3JZczlYQ3czQXdHR1M3cEpXUUwvOEszZEpyN01QNkxlamkwb2tZRUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MDM2ODUyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjUxX3g2NC1zZXR1cC5leGUKejRZUDJEMW9nVmtjU0FaYVVHYXdjQTdkaTd2QUVYVUlSd01oTVk5MzdoM1hFcGRaRE1xa1laUnplUlRiMVBWNjFvaVMyTGNkY2FCUGdJa0tQc0VlQ3c9PQo=",
-      "published_at": "2026-07-26T03:34:14.613Z"
+      "url": "https://chatsrecall.com/releases/0.1.52/ChatsRecall_0.1.52_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkJ4N1lvUnIrVXVMWWMycXJUNmpZdjN0RzA5NUgzOWNYcUh6bk96YmY0YUtFSlFCNjYrN0h0Ti8zWHJTYUJ0Vk9NV3pBa25oZFFBMU1EOGRySlh4MndFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MDUxNDYxCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjUyX3g2NC1zZXR1cC5leGUKQlRDUzU2bDhuQU1FM0dSYTdYeVQ5K2R2MmZjRGtCTlU2VUJVOTJ3anFFQjBKcTIwMXFreDlHRkQvY1h1a3hwbGVXSks3by9TQ3FvR2EvNk5NLzM3QVE9PQo=",
+      "published_at": "2026-07-26T07:37:42.422Z"
     }
   }
 }
