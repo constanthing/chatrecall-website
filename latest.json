@@ -1,7 +1,7 @@
 {
-  "version": "0.1.54",
-  "notes": "See Claude Code context at a glance with cleaner labels across ChatsRecall.\n\n## Improved\n\n- Claude Code conversations now show repository and branch tags on cards and list rows.\n\n## Removed\n\n- Removed the \"Gen6 Search\" label from Settings; the feature is now called \"Agentic Search.\"\n- Removed the \"Create\" label above \"Start a new chat\" on the New Chat page.",
-  "pub_date": "2026-07-27T13:14:41.950Z",
+  "version": "0.1.55",
+  "notes": "Bring more complete conversations into ChatsRecall, including generated files and Claude Cowork chats from the web.\n\n## Improved\n\n- File attachment scraping now captures output files from ChatGPT, Gemini, Claude, Perplexity, and Grok conversations.\n- Claude Cowork conversations can now be scraped from the web, in addition to local conversations.",
+  "pub_date": "2026-07-28T12:13:48.111Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.54/ChatsRecall_0.1.54_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk1SbXlERVJ0cVBTM2RvT1BlRXd3YlVKUTE3U3hxZVV5dGRjK3pHRjNBTmNJRHlCVGFUUktta05VMDM0bTIvdnBvVGVHd21xSUluK1hRQTRBVzMvdndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTU4MDgwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU0X3g2NC1zZXR1cC5leGUKMkF3cjYvSGhDbStUUE1YdFBudzcyNnlkZnM0YnlDMmJOOGpDN0pIbGVOM081a2UwUTVCQzh5QUtDYW44Z1VRUVFIVlFBcnZOaWIyclYrSmcyT0ZnQ1E9PQo=",
-      "published_at": "2026-07-27T13:14:41.950Z"
+      "url": "https://chatsrecall.com/releases/0.1.55/ChatsRecall_0.1.55_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkFLRGYwd1lWV0xLdEpRQnAxQWpLRlpRK0pJUVhhUTRQTUl6NXBuOUhaM2dzVk1pQm1HNjFvRFViU0xDRUZTaktVUWNBMG5RbmJRekxBTlVXMmgwbUFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MjQwODI2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU1X3g2NC1zZXR1cC5leGUKVGpYSVdkbnQ1RGNnQ3JLVEhzL3I2RVoxSlFubG9uWEdGSlpnYnFsRjRoRUZncFFDSFhyMHpTV3JiUlNqQ0xxUWQ3cjdnNXNuZHVCK2xkWnNwZ2U3QkE9PQo=",
+      "published_at": "2026-07-28T12:13:48.111Z"
     }
   }
 }
