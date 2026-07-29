@@ -1,7 +1,7 @@
 {
-  "version": "0.1.55",
-  "notes": "Bring more complete conversations into ChatsRecall, including generated files and Claude Cowork chats from the web.\n\n## Improved\n\n- File attachment scraping now captures output files from ChatGPT, Gemini, Claude, Perplexity, and Grok conversations.\n- Claude Cowork conversations can now be scraped from the web, in addition to local conversations.",
-  "pub_date": "2026-07-28T12:13:48.111Z",
+  "version": "0.1.56",
+  "notes": "Make search more precise and Claude Cowork conversations more complete and reliable.\n\n## Added\n\n- Claude Cowork web conversations now include uploaded files and files delivered by Cowork.\n\n## Improved\n\n- Search now matches whole words or the start of a word, so short queries no longer match letters buried inside unrelated words. Highlighting follows the same rule, and result excerpts now center on the actual match.\n- Conversation timestamps older than four weeks now show a calendar date instead of an increasingly large number of weeks.\n- Claude Cowork conversations now update automatically when work finishes, including when returning to an already-open Chrome tab.\n- Existing Claude Cowork web conversations are refreshed once to add available attachment information.\n- Cowork transcripts now exclude internal skill instructions, system reminders, and tool-processing events.\n- Claude Code and Cowork conversations now show cleaner repository and branch information.\n\n## Removed\n\n- Internal Claude Cowork warning-placeholder conversations are removed from the library and search results.",
+  "pub_date": "2026-07-29T08:10:29.708Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.55/ChatsRecall_0.1.55_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkFLRGYwd1lWV0xLdEpRQnAxQWpLRlpRK0pJUVhhUTRQTUl6NXBuOUhaM2dzVk1pQm1HNjFvRFViU0xDRUZTaktVUWNBMG5RbmJRekxBTlVXMmgwbUFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MjQwODI2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU1X3g2NC1zZXR1cC5leGUKVGpYSVdkbnQ1RGNnQ3JLVEhzL3I2RVoxSlFubG9uWEdGSlpnYnFsRjRoRUZncFFDSFhyMHpTV3JiUlNqQ0xxUWQ3cjdnNXNuZHVCK2xkWnNwZ2U3QkE9PQo=",
-      "published_at": "2026-07-28T12:13:48.111Z"
+      "url": "https://chatsrecall.com/releases/0.1.56/ChatsRecall_0.1.56_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktXTFptZmx2c3BIRmlpWHY4dmdYTUYwaXpXL0R6K05kZzFBdERCMjZ5R2ZGWVB5a2ZjeHZ0WnIzaFVMWlM4cDExVyt5M1JSaUFYTVpCemg2dHpmT2c0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzEyNjI3CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU2X3g2NC1zZXR1cC5leGUKUDI4ODhMTHlGdmd5SkxFSTRZTktrTDlCRHRNUkprM0c1VFhPUkcrZStQcS9aejZ5c25ZRTRnR1A1ZjFORjNoZjI3bE1TaEg1T2RVdUVtM0orbzB3RFE9PQo=",
+      "published_at": "2026-07-29T08:10:29.708Z"
     }
   }
 }
