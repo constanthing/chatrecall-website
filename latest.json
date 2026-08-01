@@ -1,7 +1,7 @@
 {
-  "version": "0.1.56",
-  "notes": "Make search more precise and Claude Cowork conversations more complete and reliable.\n\n## Added\n\n- Claude Cowork web conversations now include uploaded files and files delivered by Cowork.\n\n## Improved\n\n- Search now matches whole words or the start of a word, so short queries no longer match letters buried inside unrelated words. Highlighting follows the same rule, and result excerpts now center on the actual match.\n- Conversation timestamps older than four weeks now show a calendar date instead of an increasingly large number of weeks.\n- Claude Cowork conversations now update automatically when work finishes, including when returning to an already-open Chrome tab.\n- Existing Claude Cowork web conversations are refreshed once to add available attachment information.\n- Cowork transcripts now exclude internal skill instructions, system reminders, and tool-processing events.\n- Claude Code and Cowork conversations now show cleaner repository and branch information.\n\n## Removed\n\n- Internal Claude Cowork warning-placeholder conversations are removed from the library and search results.",
-  "pub_date": "2026-07-29T08:10:29.708Z",
+  "version": "0.1.57",
+  "notes": "Connect every supported browser, jump straight to the search result you need, and keep your library accurate across accounts.\n\n## Added\n\n- Connect multiple Chrome and Microsoft Edge extensions at the same time, with account-safe syncing and browser-specific routing.\n- Use the new Extensions page to see every connected extension and copy the extension link for installation in another browser.\n- Open a matching prompt or message from search results either inside ChatsRecall or at its exact highlighted location in the source browser.\n\n> **Compatibility note:** Multiple extensions can connect and operate now, but ChatsRecall cannot identify a browser until that browser's extension is updated. Older extensions appear as unidentified legacy connectors.\n\n## Improved\n\n- Library search results are ordered newest-first, with relevance used as a secondary ranking factor.\n\n## Fixed\n\n- Internal Claude Cowork `*warming*` conversations are now cleaned up correctly; the previous implementation mistakenly targeted `*warning*` titles.",
+  "pub_date": "2026-08-01T23:03:03.728Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.56/ChatsRecall_0.1.56_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktXTFptZmx2c3BIRmlpWHY4dmdYTUYwaXpXL0R6K05kZzFBdERCMjZ5R2ZGWVB5a2ZjeHZ0WnIzaFVMWlM4cDExVyt5M1JSaUFYTVpCemg2dHpmT2c0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzEyNjI3CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU2X3g2NC1zZXR1cC5leGUKUDI4ODhMTHlGdmd5SkxFSTRZTktrTDlCRHRNUkprM0c1VFhPUkcrZStQcS9aejZ5c25ZRTRnR1A1ZjFORjNoZjI3bE1TaEg1T2RVdUVtM0orbzB3RFE9PQo=",
-      "published_at": "2026-07-29T08:10:29.708Z"
+      "url": "https://chatsrecall.com/releases/0.1.57/ChatsRecall_0.1.57_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktHaEVqSUxCODlXSW9GSHI1bGx1MElyY0lOeFpYZ3pVbDdrSlVQMFdOMUdnb3BWZHpreVFlZnhEVlJIc1RudmwvNldpSXVRNlZHWitYRTlnamZRVUFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjI1Mzc5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU3X3g2NC1zZXR1cC5leGUKTno5ZGU4N1lGc2xwT0tZTlVEY0lZb0hDVmg5Nk1HNWJ5ekNpZE00Z0xVbUlFaHdtdDg0QTFmOUVrbXZZZVVWQ0QxNVc5RWd1SVhYbkxwaDRPYkhpQWc9PQo=",
+      "published_at": "2026-08-01T23:03:03.728Z"
     }
   }
 }
