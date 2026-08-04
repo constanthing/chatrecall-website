@@ -980,6 +980,10 @@ main {
     color: #ef4444;
 }
 
+.update-section-title.improved {
+    color: #0ea5e9;
+}
+
 .update-section-title i {
     font-size: 14px;
 }
@@ -1008,6 +1012,22 @@ main {
     height: 4px;
     background: var(--text-tertiary);
     border-radius: 50%;
+}
+
+.update-intro {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.update-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding: 10px 14px;
+    background: rgba(99, 102, 241, 0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
 }
 
 @media (max-width: 768px) {
