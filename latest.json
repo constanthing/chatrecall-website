@@ -1,7 +1,7 @@
 {
-  "version": "0.1.57",
-  "notes": "Connect every supported browser, jump straight to the search result you need, and keep your library accurate across accounts.\n\n## Added\n\n- Connect multiple Chrome and Microsoft Edge extensions at the same time, with account-safe syncing and browser-specific routing.\n- Use the new Extensions page to see every connected extension and copy the extension link for installation in another browser.\n- Open a matching prompt or message from search results either inside ChatsRecall or at its exact highlighted location in the source browser.\n\n> **Compatibility note:** Multiple extensions can connect and operate now, but ChatsRecall cannot identify a browser until that browser's extension is updated. Older extensions appear as unidentified legacy connectors.\n\n## Improved\n\n- Library search results are ordered newest-first, with relevance used as a secondary ranking factor.\n\n## Fixed\n\n- Internal Claude Cowork `*warming*` conversations are now cleaned up correctly; the previous implementation mistakenly targeted `*warning*` titles.",
-  "pub_date": "2026-08-01T23:03:03.728Z",
+  "version": "0.1.58",
+  "notes": "Google AI Mode joins your library, and conversation cards now tell you at a glance where each conversation came from and what files it carries.\n\n## Added\n\n- Sync Google AI Mode searches into your library, including prompts, responses, and the Google account they belong to.\n- Open a saved AI Mode search back at its original thread in the browser.\n- Searches you delete on Google's side are reconciled into your library during sync.\n- Conversation cards show attachment counts, split between files you attached and files the assistant generated.\n- Each conversation card names its source in text next to the source icon.\n\n> **Compatibility note:** Google AI Mode searches are captured during sync today. Automatic capture as you browse arrives with the next browser connector update.\n\n## Improved\n\n- The sidebar shows how many browser connectors are attached right now, and the count stays current on every page instead of only inside the Developer Center.\n- Conversation cards are denser, with each source's color used as a subtle accent.\n\n## Removed\n\n- The Library list view and the list/grid switcher. Every conversation now appears in the card grid.",
+  "pub_date": "2026-08-04T03:15:36.687Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.57/ChatsRecall_0.1.57_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktHaEVqSUxCODlXSW9GSHI1bGx1MElyY0lOeFpYZ3pVbDdrSlVQMFdOMUdnb3BWZHpreVFlZnhEVlJIc1RudmwvNldpSXVRNlZHWitYRTlnamZRVUFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjI1Mzc5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU3X3g2NC1zZXR1cC5leGUKTno5ZGU4N1lGc2xwT0tZTlVEY0lZb0hDVmg5Nk1HNWJ5ekNpZE00Z0xVbUlFaHdtdDg0QTFmOUVrbXZZZVVWQ0QxNVc5RWd1SVhYbkxwaDRPYkhpQWc9PQo=",
-      "published_at": "2026-08-01T23:03:03.728Z"
+      "url": "https://chatsrecall.com/releases/0.1.58/ChatsRecall_0.1.58_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SlBldzhLNDRGZkdoVnRYYnJwVTJFellNaWRZOUhnSHhvM0RTRXdmQThkRHFtTkEyZDRUZEtadm91cyt5MGJKd0pWNUVPWlFYVE50UUh5cGtHV1VvdFFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1ODEzMzMzCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjU4X3g2NC1zZXR1cC5leGUKUHJXY0RFQWlzSnVjcWtBWm0vZU9SN3JJbS9TczNXT3dQNHdxUS8vdEhqbE1Uc0NMWmFNVnduVXZ5V2Z3eERrY2Zhb0o5OTJKV0krUXpHdDVMKzlpRGc9PQo=",
+      "published_at": "2026-08-04T03:15:36.687Z"
     }
   }
 }
