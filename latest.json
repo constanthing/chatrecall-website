@@ -1,7 +1,7 @@
 {
-  "version": "0.1.61",
-  "notes": "Search results can now open the original page at the exact message, a sync walks all your sources through one tab per browser, and the browser extension updates itself without a restart.\n\n## Added\n\n- Open a search result right at the message that matched. Choose \"open in browser\" on a result and the original page scrolls to that message, outlines it, and paints your search terms, even when the site loads older messages lazily or collapses long ones. Results from sessions that live only on this computer, such as Claude Code and Cowork, open in the reader as before.\n- The Extensions page now shows the version each connected browser extension is running and points out when a newer one is available.\n\n> **Early preview:** opening a conversation at the exact message is brand new and not finished yet. Some sites may scroll to the wrong spot, skip the highlight, or take a moment to settle; the conversation itself still opens normally. Support is being verified site by site, and highlighting works best with browser extension 0.1.6. Older extensions fall back to a simpler locator that can miss on some pages.\n\n## Improved\n\n- Sync now opens a single window per connected browser and moves through your sources in one tab, instead of piling up tabs as it goes.\n- The library remembers your place. Coming back from a conversation returns you to the same spot in the list, per filter.\n- The browser extension (0.1.6) applies Chrome Web Store updates on its own at the next quiet moment, instead of waiting for a full browser restart.\n\n## Fixed\n\n- The browser chooser for Google AI Mode only offers browsers that can actually open it, and when none of them can, the message names what is missing instead of failing with a generic error.\n\n## Removed\n\n- Google AI Mode in Chrome. AI Mode searches, sync, and New Chat now always use another connected browser, such as Edge, with extension 0.1.3 or newer.",
-  "pub_date": "2026-08-08T04:04:07.551Z",
+  "version": "0.1.62",
+  "notes": "Opening ChatsRecall while it is already running now brings back the window you already have instead of starting a second copy.\n\n## Fixed\n\n- Launching ChatsRecall from the Start menu while it was already running used to start a second copy of the app, with its own tray icon. The copies then competed for the browser connection and the conversation archive, which could quietly break live capture and make syncs fail. A second launch now simply brings the existing window to the front.\n\n## Improved\n\n- Opening ChatsRecall while it is hidden in the system tray now reopens its window right away, the same as clicking the tray icon.",
+  "pub_date": "2026-08-08T09:49:54.888Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.61/ChatsRecall_0.1.61_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkF1Uk1FSW1qNS8vcmlxOFd0SlEyanJnb01XVjdTdm5zclIvQTBQc0VhZTBLZEN1WVE2RjZ3U0JUUVVJb2xYZGFyT25qajl1R1UwU3M0NGpsVEd0dUFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MTYxODQ1CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjYxX3g2NC1zZXR1cC5leGUKUTFjN2tUWlJkK3IwSEZQUndYVjVNc3U1NlR6U0Y2RUJqREhHejFLbjdyOTYxVDFrWkt2VVVLdGVJR1hDWkNiczZ2NG1ReXJQcnBsTk9aMUJ5ODBFQUE9PQo=",
-      "published_at": "2026-08-08T04:04:07.551Z"
+      "url": "https://chatsrecall.com/releases/0.1.62/ChatsRecall_0.1.62_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SlBPcWl1YzI5Z0ZOMmhxbzFRRE04OHZvOWRNM0o0dERkeVJwdTlqLytTd3JiMnFieXJXdUIrd3JJblU5RzJSSjlyR0dhNE15OXY2b2wrNlZCTE9IVWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MTgyNTkyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjYyX3g2NC1zZXR1cC5leGUKeW8wTDgwRHVlLzlTZUwzQWdKYW5neXZqbGxMajBjMmplbnROaEk4dGFibnNuWlpLeGJQSjBaeXVKSzJRMmNRZjlxbU5QRzJ4YllUcjRPdkVjRVVhQmc9PQo=",
+      "published_at": "2026-08-08T09:49:54.888Z"
     }
   }
 }
