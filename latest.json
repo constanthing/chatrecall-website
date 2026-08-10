@@ -1,7 +1,7 @@
 {
-  "version": "0.1.63",
-  "notes": "Read AI meetings now capture their full content, and scheduled syncs clean up after themselves instead of leaving a stray browser window open.\n\n## Fixed\n\n- Read AI meetings were coming through nearly empty: summaries were blank, the conversation itself was missing, and meetings with nothing captured kept being retried on every sync without ever finishing. Read AI sends its data in a different shape than ChatsRecall expected. ChatsRecall now reads what Read AI actually sends, so meeting summaries and everything that was said are captured again.\n- Long sync runs could leave a minimized browser window behind when the browser briefly lost its connection to ChatsRecall partway through, and that window then stayed open forever. ChatsRecall now remembers any window it could not close and quietly closes it once the browser reconnects, after checking that the window is still only showing sync pages.\n\n## Improved\n\n- Sync history is clearer when Read AI cannot be reached: if the browser connector is too old for Read AI (0.1.5 or newer is needed), the sync now says exactly that instead of reporting an empty result, and when ChatsRecall cannot tell whether you are signed in to a source, the message now includes the reason.",
-  "pub_date": "2026-08-10T18:26:51.761Z",
+  "version": "0.1.64",
+  "notes": "Read AI meetings now show up in your library.\n\n## Fixed\n\n- Read AI meetings were being saved but never shown: sync reported them as saved, yet the library and its counts left them out because Read AI was missing from the list of sources the library displays. Read AI meetings now appear in the library like every other source, including everything synced before this update, with no re-sync needed.\n- The Usage page now includes Read AI alongside your other sources.",
+  "pub_date": "2026-08-10T19:44:49.499Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.63/ChatsRecall_0.1.63_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktGeGhOeE1JWTl5cHZDY0R0Y2h3ZzJWOTl4NDNyV0tqTXdGNzE1aEM0RCs2dzlyQnBRRjEweDQwWktTbE9LUVg2YU95TTRQMXpuQjZhQmtBaG9GR2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2Mzg2NDA5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjYzX3g2NC1zZXR1cC5leGUKTzJWODRaMzdWb0pzNW94NXo3WjVqQ3JubFBrbzBjR0VyR2dnK09pelEyOGVFblpyWWZMMnE2QXVJRHc5T0VHWVV1OHkvTUtPcjVDRkVoeDdMeGVwQ2c9PQo=",
-      "published_at": "2026-08-10T18:26:51.761Z"
+      "url": "https://chatsrecall.com/releases/0.1.64/ChatsRecall_0.1.64_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkxQdjBmTHZoRmxkZjFzcFFSVlgrRnYvZGJkNTdGblhkbG9XeHNCd1J2by9VVVc4T1JNYzJPN205U1dJdnlzZ3d4SXI1N24raWF0eitQNWNxWGNCNXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzkxMDg2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY0X3g2NC1zZXR1cC5leGUKbDR1azBodEw5NFA1NUN1ZmwwWHBnVFl2L1lUVVZUNmphM080N2FBS0p2eFk0R1h3V2x1M3QvVUNXM1VaUEgrL3JTSnVGbEpZMzJGM0hHSHVTQ2Q2Q3c9PQo=",
+      "published_at": "2026-08-10T19:44:49.499Z"
     }
   }
 }
