@@ -1,7 +1,7 @@
 {
-  "version": "0.1.64",
-  "notes": "Read AI meetings now show up in your library.\n\n## Fixed\n\n- Read AI meetings were being saved but never shown: sync reported them as saved, yet the library and its counts left them out because Read AI was missing from the list of sources the library displays. Read AI meetings now appear in the library like every other source, including everything synced before this update, with no re-sync needed.\n- The Usage page now includes Read AI alongside your other sources.",
-  "pub_date": "2026-08-10T19:44:49.499Z",
+  "version": "0.1.65",
+  "notes": "Decide which sources fill your sidebar, and a temporary change of source icons.\n\n## Added\n\n- Pick which sources appear in the sidebar. A new button next to the SOURCES\n  label opens a picker where you turn sources on or off. Hidden sources keep\n  syncing, their conversations stay under All Sources, and search still finds\n  them; only the sidebar row is hidden.\n- The onboarding tour has a new step that introduces the sources list and the\n  visibility picker.\n\n## Improved\n\n- The sidebar starts with six everyday sources visible (ChatGPT, Claude,\n  Gemini, Perplexity, Grok, and Copilot). The rest can be turned on from the\n  picker at any time. Nothing about your saved conversations changes.\n- The source icons across the app have been temporarily changed to a new set.",
+  "pub_date": "2026-08-11T11:03:04.837Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.64/ChatsRecall_0.1.64_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkxQdjBmTHZoRmxkZjFzcFFSVlgrRnYvZGJkNTdGblhkbG9XeHNCd1J2by9VVVc4T1JNYzJPN205U1dJdnlzZ3d4SXI1N24raWF0eitQNWNxWGNCNXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzkxMDg2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY0X3g2NC1zZXR1cC5leGUKbDR1azBodEw5NFA1NUN1ZmwwWHBnVFl2L1lUVVZUNmphM080N2FBS0p2eFk0R1h3V2x1M3QvVUNXM1VaUEgrL3JTSnVGbEpZMzJGM0hHSHVTQ2Q2Q3c9PQo=",
-      "published_at": "2026-08-10T19:44:49.499Z"
+      "url": "https://chatsrecall.com/releases/0.1.65/ChatsRecall_0.1.65_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk9wUW8vYkY3dXRwNTRTTEc0VEQ0RHZmRlJhUWlvNHdzR0l4L2IyYmxmZm93KzB3Tm56eUFIbUl0clZqUUFleXg1SlpUR3ZlUUpBSFRqZy9CeUQxcVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NDQ2MTgyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY1X3g2NC1zZXR1cC5leGUKMVZwaGtlVmhZNFNsOC9rSFZ3ZnR6Wnc5K05mMSs1OVNQa3RGTi9ITXRmSWRXalpBejY0SzFRRm1TME1wRWlTNVpkS1ZNckZNa2ZFRS94cDBNY0NXQ3c9PQo=",
+      "published_at": "2026-08-11T11:03:04.837Z"
     }
   }
 }
