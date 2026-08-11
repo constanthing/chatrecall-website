@@ -16,9 +16,15 @@
 
     --gpt: #10a37f;
     --claude: #d97757;
+    --claude-code: #b0492f;
+    --claude-cowork: #c15f3c;
     --gemini: #4285f4;
+    --google-ai: #1a73e8;
     --perplexity: #4b5563;
     --wave: #8b5cf6;
+    --grok: #8e8e93;
+    --copilot: #16b8c4;
+    --readai: #7c6ce8;
 
     --radius-sm: 6px;
     --radius-md: 10px;
@@ -535,6 +541,17 @@ main {
     font-size: 22px;
 }
 
+/* Source glyphs are stroke-drawn line art, same style as the desktop app */
+.source-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .source-name {
     font-size: 14px;
     font-weight: 600;
@@ -565,6 +582,36 @@ main {
 .source-card.wave .source-icon {
     background: rgba(139, 92, 246, 0.12);
     color: var(--wave);
+}
+
+.source-card.claude-code .source-icon {
+    background: rgba(176, 73, 47, 0.12);
+    color: var(--claude-code);
+}
+
+.source-card.claude-cowork .source-icon {
+    background: rgba(193, 95, 60, 0.12);
+    color: var(--claude-cowork);
+}
+
+.source-card.google-ai-mode .source-icon {
+    background: rgba(26, 115, 232, 0.12);
+    color: var(--google-ai);
+}
+
+.source-card.grok .source-icon {
+    background: rgba(142, 142, 147, 0.12);
+    color: var(--grok);
+}
+
+.source-card.copilot .source-icon {
+    background: rgba(22, 184, 196, 0.12);
+    color: var(--copilot);
+}
+
+.source-card.readai .source-icon {
+    background: rgba(124, 108, 232, 0.12);
+    color: var(--readai);
 }
 
 /* Coming soon cards */
