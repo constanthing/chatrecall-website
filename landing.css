@@ -1609,6 +1609,32 @@ main {
     font-weight: 600;
 }
 
+/* Small inline chip mirroring an in-app button, so an answer can point at the
+   exact control using the app's own glyph instead of a screenshot */
+.help-inline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin: 0 3px;
+    vertical-align: -6px;
+    background: var(--bg-active);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    color: var(--text-secondary);
+}
+
+.help-inline-icon svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .help-contact {
     display: flex;
     flex-direction: column;

@@ -211,7 +211,8 @@
                     <details class="help-item">
                         <summary>Why do only some sources show in the sidebar?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Six common sources are visible out of the box. Open the sources filter next to the SOURCES label to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
+                            <!-- Same sliders glyph as the app's sidebar filter button (desktop src/shared/dom.ts) -->
+                            <p>Six common sources are visible out of the box. Open the sources filter <span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span> next to the SOURCES label in the sidebar to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -309,7 +310,6 @@
             <ul>
                 <li><strong>App version</strong>, shown in Settings</li>
                 <li><strong>Browser and extension version</strong>, shown on the Extensions page</li>
-                <li>For sync problems, the <strong>Debug log</strong> from the Sync page. It has a copy button.</li>
             </ul>
             <a href="mailto:support@chatsrecall.com?subject=ChatsRecall%20support" class="btn-cta">
                 <i class="bi bi-envelope"></i>
