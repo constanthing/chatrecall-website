@@ -1,7 +1,7 @@
 {
-  "version": "0.1.66",
-  "notes": "Blank conversations now fill in reliably, duplicate accounts are repaired,\nand Claude Code sessions show their files.\n\n## Added\n\n- Claude Code sessions now capture file attachments: images pasted into a\n  prompt and files the agent created or edited. File names and types only;\n  file contents are never read. Sessions saved before this update gain their\n  files automatically on an upcoming sync.\n- A Select all / Unselect all button on the Sync page flips every source\n  switch at once.\n- A conversation whose transcript is not saved yet now explains itself in\n  the Reader: still queued, tried a few times so far, or given up with the\n  recorded reason, instead of a bare \"No messages\".\n\n## Improved\n\n- Sync runs now rotate which source goes first, so every source gets its\n  fair share of long runs.\n- Automatic transcript backfill focuses on your most recent 18 months.\n  Older conversations stay in your library, and a Full Refresh sync fetches\n  them on request.\n\n## Fixed\n\n- A few unsaveable conversations could silently freeze the entire transcript\n  backlog behind them; large backlogs of blank conversations now fill in\n  over successive syncs (most visible on Perplexity).\n- A sign-in hiccup during sync could create a duplicate \"default\" account\n  holding an empty copy of your library (seen with Wave meetings). This no\n  longer happens, and existing duplicates are folded back into the real\n  account automatically, keeping the newest content and any pins.\n- Scrolling the library no longer occasionally shows the same conversation\n  twice.\n- The minimized browser window a sync uses is now closed reliably after the\n  run ends.",
-  "pub_date": "2026-08-12T15:41:15.306Z",
+  "version": "0.1.67",
+  "notes": "Pages open instantly while a sync runs, sync activity lives on the Sync\nrow, and the new website Help page is one click away.\n\n## Added\n\n- A Help page on the ChatsRecall website with answers to common questions\n  about setup, syncing, and your data, plus an Open Help page button in the\n  app's Help & Support dialog that takes you straight there.\n- A sync activity indicator on the Sync row of the sidebar: while a sync\n  runs, a small orange ring appears at the right edge of the row, or on the\n  corner of the sync button when the sidebar is collapsed. It is visible\n  from every page of the app.\n\n## Improved\n\n- The status line in the sidebar's bottom corner now shows when your\n  library last synced on every page. The conversation Reader, Extensions,\n  and New Chat pages used to always say \"Local\".\n- The search field shows a quiet accent border when focused instead of a\n  thick outline ring.\n- The Help & Support dialog closes with an X in its corner and fits its\n  actions on one line.\n\n## Fixed\n\n- Opening a page while a sync was running could show a blank window for a\n  second or two before anything appeared. Pages now show immediately and\n  fill in as their content loads.\n\n## Removed\n\n- The orange \"Syncing\" pill in the sidebar's bottom corner. The Sync row's\n  activity ring replaces it.",
+  "pub_date": "2026-08-13T15:10:58.523Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.66/ChatsRecall_0.1.66_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkJQelU2em9TMWNTSjFxYTFXN3B4Z0xQbktaQ2krM25sbExWTmQ0elRKYlMwWHlXNGVHbEJYS2VkYkdtWVd3TEhvTWhYK0ZwYmZXZmlsU0N6bkJRSEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTQ5MjcyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY2X3g2NC1zZXR1cC5leGUKOTZXWUZkVnI1L3E2TE5OU3lhbS94dnBTS09GTFRacTY1QVlza2dZQ2R6NWFtVnFla0E0NEJ4ZENwRWFOYjZ6NjhzNEtSZHNzUVdXZ0JCOHJYT3hXREE9PQo=",
-      "published_at": "2026-08-12T15:41:15.306Z"
+      "url": "https://chatsrecall.com/releases/0.1.67/ChatsRecall_0.1.67_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkxqNXNXcWRGaGJaVlQvQWlEdURBeHYxMTdRSTZ4L0JNc0I2UVJTbEhRYStlNGRXSFFLaXN0M1hrRDZELzZDam1MOXhJZ2dEWFNEMXdvRlZkb2tqdVFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NjMzODU1CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY3X3g2NC1zZXR1cC5leGUKNWxLODhFanBBdHFhMnZEWmhuNzNHcGREd0VTeE80UnJza1Rya1ZnSGxwQmwvV0tIZlNURGlzNHRvYklmeERxM05GUnJBWGhWa3QvK2E0cndUL0ViRGc9PQo=",
+      "published_at": "2026-08-13T15:10:58.523Z"
     }
   }
 }
