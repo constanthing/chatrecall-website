@@ -367,13 +367,14 @@
         const faqItems = Array.from(document.querySelectorAll('.help-item'));
         const noResults = document.getElementById('faq-no-results');
         const initiallyOpen = new Set(faqItems.filter((item) => item.open));
+        const normalizeFaqText = (value) => value.toLowerCase().replace(/\./g, '');
 
         faqFilter.addEventListener('input', () => {
-            const query = faqFilter.value.trim().toLowerCase();
+            const query = normalizeFaqText(faqFilter.value.trim());
             let anyVisible = false;
 
             faqItems.forEach((item) => {
-                const matches = !query || item.textContent.toLowerCase().includes(query);
+                const matches = !query || normalizeFaqText(item.textContent).includes(query);
                 item.style.display = matches ? '' : 'none';
                 if (matches) anyVisible = true;
                 // Open matches while filtering; restore the defaults when cleared

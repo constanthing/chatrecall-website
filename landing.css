@@ -1299,6 +1299,23 @@ main {
     max-width: 760px;
 }
 
+/* Anchor jumps must clear the fixed navbar so section headings stay visible */
+#getting-started,
+#faq,
+#contact {
+    scroll-margin-top: 96px;
+}
+
+@media (max-width: 600px) {
+
+    /* The navbar wraps to two rows at this width */
+    #getting-started,
+    #faq,
+    #contact {
+        scroll-margin-top: 132px;
+    }
+}
+
 .help-header {
     margin-bottom: 40px;
 }
