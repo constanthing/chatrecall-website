@@ -1618,11 +1618,23 @@ main {
     width: 22px;
     height: 22px;
     margin: 0 3px;
-    vertical-align: -6px;
+    vertical-align: middle;
     background: var(--bg-active);
     border: 1px solid var(--border-subtle);
     border-radius: 6px;
     color: var(--text-secondary);
+}
+
+.help-inline-icon img {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+/* Browsers may break lines around atomic inline boxes even across a
+   non-breaking space, so word-plus-chip clusters get glued explicitly */
+.help-nowrap {
+    white-space: nowrap;
 }
 
 .help-inline-icon svg {

@@ -103,11 +103,12 @@
                     </li>
                     <li>
                         <div class="help-step-title">Connect your browser</div>
-                        <div class="help-step-desc">Install the ChatsRecall extension in Chrome or Edge, using the link on the app's Extensions page. It connects to the desktop app automatically, and the sidebar shows how many browsers are attached.</div>
+                        <!-- The inline icon chips on this page copy glyphs from the desktop app's icon set (src/shared/dom.ts); keep them in sync. -->
+                        <div class="help-step-desc">Install the ChatsRecall extension in Chrome or Edge, using the link on the app's Extensions <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 3H5a2 2 0 0 0-2 2v3.5a2.5 2.5 0 1 1 0 5V19a2 2 0 0 0 2 2h5.5a2.5 2.5 0 1 1 5 0H19a2 2 0 0 0 2-2v-5.5a2.5 2.5 0 1 1 0-5V5a2 2 0 0 0-2-2h-3.5a2.5 2.5 0 1 1-5 0h-2Z"/></svg></span>.</span> It connects to the desktop app automatically, and the sidebar shows how many browsers are attached.</div>
                     </li>
                     <li>
                         <div class="help-step-title">Sync, then just chat</div>
-                        <div class="help-step-desc">On the Sync page, pick your sources and run the first sync. Make sure the browser is signed in to each source you choose. From then on, new conversations are saved live as you chat.</div>
+                        <div class="help-step-desc">On the Sync <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.6 7.1A6.8 6.8 0 0 0 6 8.5"/><path d="M6.2 4.7V8.5H10"/><path d="M6.4 16.9A6.8 6.8 0 0 0 18 15.5"/><path d="M17.8 19.3v-3.8H14"/></svg></span>,</span> pick your sources and run the first sync. Make sure the browser is signed in to each source you choose. From then on, new conversations are saved live as you chat.</div>
                     </li>
                 </ol>
             </div>
@@ -211,8 +212,7 @@
                     <details class="help-item">
                         <summary>Why do only some sources show in the sidebar?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <!-- Same sliders glyph as the app's sidebar filter button (desktop src/shared/dom.ts) -->
-                            <p>Six common sources are visible out of the box. Open the sources filter <span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span> next to the SOURCES label in the sidebar to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
+                            <p>Six common sources are visible out of the box. Open the sources <span class="help-nowrap">filter&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span></span> next to the SOURCES label in the sidebar to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -284,7 +284,7 @@
                     <details class="help-item" open>
                         <summary>I closed the window but the app is still running<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Closing the window hides ChatsRecall to the system tray so capture keeps working while you chat. Click the tray icon to bring the window back. To exit completely, use Quit in the tray icon's menu.</p>
+                            <p>Closing the window hides ChatsRecall to the system tray so capture keeps working while you chat. Click the tray <span class="help-nowrap">icon&nbsp;<span class="help-inline-icon" aria-hidden="true"><img src="icon_32.png" alt=""></span></span> to bring the window back. To exit completely, use Quit in the tray icon's menu.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -308,8 +308,8 @@
             <h2 class="help-contact-title">Still stuck?</h2>
             <p>Email us and a developer will get back to you. Including a few details up front usually saves a round trip:</p>
             <ul>
-                <li><strong>App version</strong>, shown in Settings</li>
-                <li><strong>Browser and extension version</strong>, shown on the Extensions page</li>
+                <li><strong>App version</strong>, shown in <span class="help-nowrap">Settings&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.05.05a2.18 2.18 0 1 1-3.08 3.08l-.05-.05a1.8 1.8 0 0 0-1.98-.36 1.8 1.8 0 0 0-1.1 1.66V21.5a2.18 2.18 0 1 1-4.36 0v-.14A1.8 1.8 0 0 0 8.14 19.7a1.8 1.8 0 0 0-1.98.36l-.05.05a2.18 2.18 0 1 1-3.08-3.08l.05-.05A1.8 1.8 0 0 0 3.44 15a1.8 1.8 0 0 0-1.66-1.1H1.64a2.18 2.18 0 1 1 0-4.36h.14a1.8 1.8 0 0 0 1.66-1.1 1.8 1.8 0 0 0-.36-1.98l-.05-.05a2.18 2.18 0 1 1 3.08-3.08l.05.05a1.8 1.8 0 0 0 1.98.36h.01A1.8 1.8 0 0 0 9.24 2.1V1.96a2.18 2.18 0 1 1 4.36 0v.14a1.8 1.8 0 0 0 1.1 1.66 1.8 1.8 0 0 0 1.98-.36l.05-.05a2.18 2.18 0 1 1 3.08 3.08l-.05.05a1.8 1.8 0 0 0-.36 1.98v.01a1.8 1.8 0 0 0 1.66 1.1h.14a2.18 2.18 0 1 1 0 4.36h-.14A1.8 1.8 0 0 0 19.4 15Z"/></svg></span></span></li>
+                <li><strong>Browser and extension version</strong>, shown on the Extensions <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 3H5a2 2 0 0 0-2 2v3.5a2.5 2.5 0 1 1 0 5V19a2 2 0 0 0 2 2h5.5a2.5 2.5 0 1 1 5 0H19a2 2 0 0 0 2-2v-5.5a2.5 2.5 0 1 1 0-5V5a2 2 0 0 0-2-2h-3.5a2.5 2.5 0 1 1-5 0h-2Z"/></svg></span></span></li>
             </ul>
             <a href="mailto:support@chatsrecall.com?subject=ChatsRecall%20support" class="btn-cta">
                 <i class="bi bi-envelope"></i>
