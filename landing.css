@@ -1304,7 +1304,8 @@ main {
 /* Anchor jumps must clear the fixed navbar so section headings stay visible */
 #getting-started,
 #faq,
-#contact {
+#contact,
+#release-notes {
     scroll-margin-top: 96px;
 }
 
@@ -1313,7 +1314,8 @@ main {
     /* The navbar wraps to two rows at this width */
     #getting-started,
     #faq,
-    #contact {
+    #contact,
+    #release-notes {
         scroll-margin-top: 132px;
     }
 }
