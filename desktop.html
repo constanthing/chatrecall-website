@@ -48,33 +48,29 @@
     </nav>
 
     <main class="desktop-main">
-        <!-- Desktop Header -->
-        <header class="desktop-header">
-            <div>
-                <p class="desktop-kicker">Desktop release</p>
-                <h1 class="desktop-title">ChatsRecall for your desktop</h1>
-                <p class="desktop-subtitle">Install the desktop app for a more native ChatsRecall workflow on Windows. On first launch, the app walks you through connecting the browser extension so it can capture new conversations automatically.</p>
-            </div>
-            <span id="desktop-version" class="desktop-version">v0.1.9</span>
+        <!-- Download header -->
+        <header class="dl-header">
+            <h1>Download ChatsRecall</h1>
+            <p>On first launch, the app walks you through connecting the browser extension so new conversations are captured automatically.</p>
         </header>
 
-        <!-- Downloads -->
-        <section class="desktop-downloads" aria-label="Desktop downloads">
-            <article class="download-card">
-                <div class="download-icon">
-                    <i class="bi bi-windows"></i>
+        <!-- Download row. The href is rewritten by the release pipeline
+             (scripts/update-website-downloads.mjs); the version chip and date
+             are refreshed from latest.json by the script below. -->
+        <section class="dl-row" aria-label="Download ChatsRecall for Windows">
+            <div class="download-icon"><i class="bi bi-windows"></i></div>
+            <div>
+                <h2 class="dl-row-title">Windows <span id="desktop-version" class="dl-version">v0.1.66</span></h2>
+                <div class="dl-row-meta">
+                    <span>Windows x64 installer</span>
+                    <span id="windows-release-date">Updated Aug 12, 2026</span>
+                    <span>For modern 64-bit PCs</span>
                 </div>
-                <div class="download-content">
-                    <h2 class="download-title">Windows</h2>
-                    <p class="download-description">For modern 64-bit Windows PCs.</p>
-                    <span class="download-meta">Windows x64 Installer</span>
-                    <span id="windows-release-date" class="download-date">Created Jun 16, 2026</span>
-                </div>
-                <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.66/ChatsRecall_0.1.66_x64-setup.exe" class="btn-cta download-button">
-                    <i class="bi bi-download"></i>
-                    Download for Windows
-                </a>
-            </article>
+            </div>
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.66/ChatsRecall_0.1.66_x64-setup.exe" class="btn-cta">
+                <i class="bi bi-download"></i>
+                Download for Windows
+            </a>
         </section>
 
         <!-- Release Notes. Cards are generated from releases/<version>/notes.md by scripts/update-website-updates.mjs; never hand-edit them. -->
@@ -1222,7 +1218,7 @@
                     const publishedAt = release.platforms?.[platform]?.published_at || release.pub_date;
                     const formatted = formatReleaseDate(publishedAt);
                     if (formatted) {
-                        element.textContent = `Created ${formatted}`;
+                        element.textContent = `Updated ${formatted}`;
                     }
                 }
             } catch {

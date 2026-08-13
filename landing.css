@@ -772,80 +772,80 @@ main {
     color: var(--text-secondary);
 }
 
-/* Desktop Page */
+/* Download Page */
 .desktop-main {
     max-width: 760px;
 }
 
-.desktop-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 40px;
+.dl-header {
+    margin-bottom: 32px;
 }
 
-.desktop-kicker {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-tertiary);
-    margin-bottom: 12px;
-}
-
-.desktop-title {
-    font-size: 40px;
+.dl-header h1 {
+    font-size: 32px;
     font-weight: 700;
-    letter-spacing: -0.6px;
-    line-height: 1.1;
+    letter-spacing: -0.5px;
     color: var(--text);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
-.desktop-subtitle {
-    max-width: 560px;
-    font-size: 16px;
+.dl-header p {
+    font-size: 15px;
     color: var(--text-secondary);
+    max-width: 560px;
 }
 
-.desktop-version {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 12px;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--accent);
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-}
-
-.desktop-downloads {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.download-card {
+.dl-row {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 380px;
-    padding: 28px;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 24px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
-    transition: all 0.15s ease;
+    margin-bottom: 48px;
 }
 
-.download-card:hover {
-    border-color: var(--border);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+.dl-row .download-icon {
+    flex: 0 0 auto;
+}
+
+.dl-row-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.dl-version {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.dl-row-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.dl-row .btn-cta {
+    margin-left: auto;
+    white-space: nowrap;
 }
 
 .download-icon {
@@ -860,87 +860,19 @@ main {
     font-size: 22px;
 }
 
-.download-content {
-    flex: 1;
-}
-
-.download-title {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    color: var(--text);
-    margin-bottom: 8px;
-}
-
-.download-description {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 12px;
-}
-
-.download-meta {
-    display: inline-flex;
-    padding: 4px 8px;
-    background: var(--bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-tertiary);
-}
-
-.download-date {
-    display: block;
-    margin-top: 10px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.download-button {
-    justify-content: center;
-    width: 100%;
-    white-space: nowrap;
-}
-
-.download-button:hover {
-    transform: none;
-}
-
-.desktop-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 16px 18px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    color: var(--text-secondary);
-    margin-bottom: 80px;
-}
-
-.desktop-note i {
-    color: var(--accent);
-    margin-top: 2px;
-}
-
-.desktop-note p {
-    font-size: 14px;
-}
-
 @media (max-width: 768px) {
-    .desktop-header {
-        flex-direction: column;
-        margin-bottom: 32px;
+    .dl-header h1 {
+        font-size: 26px;
     }
 
-    .desktop-title {
-        font-size: 30px;
+    .dl-row {
+        flex-wrap: wrap;
     }
 
-    .download-card {
-        max-width: none;
-        padding: 24px;
+    .dl-row .btn-cta {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
     }
 }
 
