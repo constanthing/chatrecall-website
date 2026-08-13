@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - ChatsRecall</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ChatsRecall help and support. Setup guides, answers to common questions about syncing and capture, and how to reach us.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ChatsRecall">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://chatsrecall.com/help.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Help & Support - ChatsRecall">
+    <meta property="og:description" content="Setup guides, answers to common questions about syncing and capture, and how to reach us.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chatsrecall.com/help.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon_16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">ChatsRecall <span class="beta-badge">beta</span></div>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="desktop.html" class="nav-link">Desktop</a>
+                <a href="updates.html" class="nav-link">Updates</a>
+                <a href="help.html" class="nav-link active">Help</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+            </div>
+            <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
+                <i class="bi bi-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="help-main">
+        <!-- Help Header -->
+        <header class="help-header">
+            <h1 class="help-title">Help & Support</h1>
+            <p class="help-subtitle">Answers to common questions about setup, syncing, and your data. If you get stuck, email us: we read everything.</p>
+        </header>
+
+        <!-- Quick Links -->
+        <section class="help-links" aria-label="Quick links">
+            <a href="#getting-started" class="help-link-card">
+                <div class="help-link-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                <div>
+                    <div class="help-link-title">Getting started</div>
+                    <div class="help-link-desc">Install, connect a browser, run your first sync</div>
+                </div>
+            </a>
+            <a href="desktop.html" class="help-link-card">
+                <div class="help-link-icon"><i class="bi bi-download"></i></div>
+                <div>
+                    <div class="help-link-title">Download the app</div>
+                    <div class="help-link-desc">Get the Windows desktop app</div>
+                </div>
+            </a>
+            <a href="updates.html" class="help-link-card">
+                <div class="help-link-icon"><i class="bi bi-clock-history"></i></div>
+                <div>
+                    <div class="help-link-title">Release notes</div>
+                    <div class="help-link-desc">What changed in each version</div>
+                </div>
+            </a>
+            <a href="#contact" class="help-link-card">
+                <div class="help-link-icon"><i class="bi bi-envelope"></i></div>
+                <div>
+                    <div class="help-link-title">Contact support</div>
+                    <div class="help-link-desc">Email the developer directly</div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Getting Started -->
+        <section id="getting-started" class="help-group">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="help-card">
+                <ol class="help-steps">
+                    <li>
+                        <div class="help-step-title">Install the desktop app</div>
+                        <div class="help-step-desc">Download the Windows installer from the <a href="desktop.html">Desktop page</a> and run it. The app is where all your conversations live, on your computer.</div>
+                    </li>
+                    <li>
+                        <div class="help-step-title">Take the quick tour</div>
+                        <div class="help-step-desc">First launch walks you through the app using sample conversations. The samples are removed when the tour ends, so your library starts empty until the first sync.</div>
+                    </li>
+                    <li>
+                        <div class="help-step-title">Connect your browser</div>
+                        <div class="help-step-desc">Install the ChatsRecall extension in Chrome or Edge, using the link on the app's Extensions page. It connects to the desktop app automatically, and the sidebar shows how many browsers are attached.</div>
+                    </li>
+                    <li>
+                        <div class="help-step-title">Sync, then just chat</div>
+                        <div class="help-step-desc">On the Sync page, pick your sources and run the first sync. Make sure the browser is signed in to each source you choose. From then on, new conversations are saved live as you chat.</div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" aria-label="Frequently asked questions">
+            <div class="help-search">
+                <i class="bi bi-search"></i>
+                <input type="search" id="faq-filter" placeholder="Filter questions, for example: sync, tray, signed out" aria-label="Filter questions">
+            </div>
+            <p class="help-no-results" id="faq-no-results">No questions match. Try a different word, or email us below.</p>
+
+            <!-- Setup and connection -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Setup &amp; Connection</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>The app says no browser is connected<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>The connection needs three things: the desktop app running, the ChatsRecall extension installed, and that browser open. If the connector count in the sidebar stays at zero:</p>
+                            <ul>
+                                <li>Open Chrome or Edge and give it a few seconds. The count updates on its own.</li>
+                                <li>Check that the extension is still enabled in the browser's extension settings.</li>
+                                <li>Restart the browser.</li>
+                            </ul>
+                            <p>The desktop app may already be running in the system tray even if you see no window. Launching it again never starts a second copy; it just brings the window back.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Can I connect more than one browser?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Yes. Chrome and Microsoft Edge can be connected at the same time, and syncing runs in every connected browser. Each conversation remembers the account it came from, so using different accounts in different browsers or profiles stays tidy. The Extensions page lists every connected browser and the extension version it runs.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Do I need to share my passwords?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Never. ChatsRecall does not ask for or store any credentials. It reads conversations through the browser where you are already signed in. If a source shows a signed-out note in the sync history, sign in to that site in the connected browser and run the sync again.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Syncing and capture -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Syncing &amp; Capture</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>A minimized browser window appeared on its own<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>That is a sync run at work. Each run opens one minimized window per connected browser, visits your sources one after another in a single tab, and closes the window when the run finishes. You can keep using your other windows normally the whole time.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>What is the difference between live capture and sync?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p><strong>Live capture</strong> saves new prompts and responses within moments, while you chat on a source site in a connected browser. <strong>Sync</strong> is the scheduled or manual pass that brings in your existing history and anything live capture could not see. Both feed the same library, so nothing shows up twice.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Sync is not running on its own<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Scheduled sync only runs while a connected browser is open. ChatsRecall never launches a browser by itself; a scheduled run simply waits until the browser is open again.</p>
+                            <p>Also check that the source is switched on on the Sync page. Copilot and Read AI ship switched off until you opt in.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>A conversation opens but shows no messages yet<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Finding a conversation and saving its messages are separate steps, so a conversation can appear in the library before its content arrives. Content is fetched in the background across sync runs.</p>
+                            <p>The conversation itself tells you where things stand: still queued for an upcoming sync, tried a few times so far, or given up with the reason recorded. A <strong>Full Refresh</strong> from the Sync page retries everything, including conversations sync had given up on.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>How far back does syncing reach?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Automatic syncing fills in content for roughly the last 18 months. Older conversations still get their entry in the library. To pull in their full content as well, run a Full Refresh from the Sync page.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>I deleted a conversation on the source site. What happens in ChatsRecall?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Deletions carry over: the next sync notices the conversation is gone on the source side and removes it from the library as well.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Sources -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Sources</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>Which sources are supported?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Eleven today: ChatGPT, Claude, Claude Code, Claude Cowork, Gemini, Google AI Mode, Perplexity, Grok, Copilot, Wave, and Read AI. All of them sync; most also capture live as you chat.</p>
+                            <p>Copilot and Read AI ship switched off. Turn them on from the Sync page when you want them. Read AI needs extension version 0.1.5 or newer.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Why do only some sources show in the sidebar?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Six common sources are visible out of the box. Open the sources filter next to the SOURCES label to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Google AI Mode does not work in Chrome<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>That is by design. Google AI Mode is captured through a non-Chrome browser, such as Edge, with extension version 0.1.3 or newer. This applies to syncing, opening saved searches, and New Chat.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>What is the "local" account?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Claude Code and Claude Cowork sessions that ran on this computer are read from files on this computer, and they are grouped under a "local" account in the sidebar. These conversations always open inside ChatsRecall, since there is no web page to send you to.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Are my attached files saved?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Only their names and types. Cards and the conversation view show which files went into a prompt and which files the assistant produced, but file contents are never read or stored. Wave and Read AI are meeting sources, so file attachments do not apply there.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Search</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>How does search match my words?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Search covers every conversation from every source. Queries match whole words and the beginnings of words, so short queries stay precise. Results are ordered newest first.</p>
+                            <p>Long pasted code blocks are deliberately left out of the index so a common identifier does not flood your results. Short snippets, error messages, and inline code remain searchable.</p>
+                            <p>From a result you can open the conversation inside the app, or on the original site: the page scrolls to the exact message and highlights your search terms.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>What is Agentic Search?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Ask a question in plain language, like "what did I decide about the kitchen renovation?", and get an answer grounded in the conversations you actually saved, with citations that open the exact conversations behind it. It is set up under Settings, and every run reports the tokens it used.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Data and privacy -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Your Data &amp; Privacy</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>Where does my data live?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>In a local database on your computer. Your conversations are never uploaded, and there is no ChatsRecall server holding a copy. The full details are on the <a href="privacy.html">Privacy page</a>.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Does anything ever leave my device?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Conversation content stays local. Anonymous usage analytics may be sent to help improve the app; they never include conversation content, titles, or links, and the <a href="privacy.html">Privacy page</a> lists exactly what is and is not included.</p>
+                            <p>The one content exception is Agentic Search, and only when you use it: answering your question sends the small set of excerpts the run selects to the model provider. Nothing runs in the background.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Updates and troubleshooting -->
+            <div class="help-group" data-group>
+                <h2 class="section-title">Updates &amp; Troubleshooting</h2>
+                <div class="help-group-card">
+                    <details class="help-item" open>
+                        <summary>I closed the window but the app is still running<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Closing the window hides ChatsRecall to the system tray so capture keeps working while you chat. Click the tray icon to bring the window back. To exit completely, use Quit in the tray icon's menu.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>How do updates work?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>When a new version is available, an update strip appears in the app. You see the release notes first, then the update installs in place and the app restarts. Updates install cleanly even while a browser is connected. Release history lives on the <a href="updates.html">Updates page</a>.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>Windows warned me about the installer<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>During the beta, a fresh installer can be new to Microsoft SmartScreen, so Windows may show "Windows protected your PC". First make sure your download came from this site's <a href="desktop.html">Desktop page</a>. Then choose "More info", followed by "Run anyway".</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="help-contact">
+            <h2 class="help-contact-title">Still stuck?</h2>
+            <p>Email us and a developer will get back to you. Including a few details up front usually saves a round trip:</p>
+            <ul>
+                <li><strong>App version</strong>, shown in Settings</li>
+                <li><strong>Browser and extension version</strong>, shown on the Extensions page</li>
+                <li>For sync problems, the <strong>Debug log</strong> from the Sync page. It has a copy button.</li>
+            </ul>
+            <a href="mailto:support@chatsrecall.com?subject=ChatsRecall%20support" class="btn-cta">
+                <i class="bi bi-envelope"></i>
+                support@chatsrecall.com
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="copyright">&copy; 2026 ChatsRecall. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const icon = themeToggle.querySelector('i');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                icon.classList.replace('bi-moon', 'bi-sun');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                icon.classList.replace('bi-sun', 'bi-moon');
+            }
+        }
+
+        // Check for saved preference, otherwise use system preference
+        const savedTheme = localStorage.getItem('chatrecall-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            setTheme(savedTheme === 'dark');
+        } else {
+            setTheme(systemPrefersDark);
+        }
+
+        // Listen for system theme changes (only if user hasn't set a preference)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('chatrecall-theme')) {
+                setTheme(e.matches);
+            }
+        });
+
+        // Manual toggle saves preference
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
+            setTheme(!isDark);
+        });
+
+        // FAQ filter
+        const faqFilter = document.getElementById('faq-filter');
+        const faqGroups = Array.from(document.querySelectorAll('[data-group]'));
+        const faqItems = Array.from(document.querySelectorAll('.help-item'));
+        const noResults = document.getElementById('faq-no-results');
+        const initiallyOpen = new Set(faqItems.filter((item) => item.open));
+
+        faqFilter.addEventListener('input', () => {
+            const query = faqFilter.value.trim().toLowerCase();
+            let anyVisible = false;
+
+            faqItems.forEach((item) => {
+                const matches = !query || item.textContent.toLowerCase().includes(query);
+                item.style.display = matches ? '' : 'none';
+                if (matches) anyVisible = true;
+                // Open matches while filtering; restore the defaults when cleared
+                item.open = query ? matches : initiallyOpen.has(item);
+            });
+
+            faqGroups.forEach((group) => {
+                const visibleItems = group.querySelectorAll('.help-item:not([style*="display: none"])');
+                group.style.display = visibleItems.length ? '' : 'none';
+            });
+
+            noResults.style.display = anyVisible ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
