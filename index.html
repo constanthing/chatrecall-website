@@ -58,13 +58,16 @@
     <nav class="navbar">
         <div class="navbar-content">
             <a href="index.html" class="navbar-logo">ChatsRecall <span class="beta-badge">beta</span></a>
-            <div class="navbar-links">
+            <div class="navbar-links" id="navbar-links">
                 <a href="desktop.html" class="nav-link">Download</a>
                 <a href="help.html" class="nav-link">Help</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
             </div>
             <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
                 <i class="bi bi-moon"></i>
+            </button>
+            <button id="nav-toggle" class="btn-icon nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navbar-links">
+                <i class="bi bi-list"></i>
             </button>
         </div>
     </nav>
@@ -306,6 +309,15 @@
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
             setTheme(!isDark);
+        });
+
+        // Mobile nav: the hamburger reveals the links column.
+        const navToggle = document.getElementById('nav-toggle');
+        const navbarContent = navToggle.closest('.navbar-content');
+        navToggle.addEventListener('click', () => {
+            const open = navbarContent.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', String(open));
+            navToggle.querySelector('i').className = open ? 'bi bi-x-lg' : 'bi bi-list';
         });
     </script>
 </body>

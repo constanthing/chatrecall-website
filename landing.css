@@ -112,6 +112,10 @@ body {
         flex-wrap: wrap;
         row-gap: 12px;
     }
+
+    #theme-toggle {
+        margin-left: auto;
+    }
 }
 
 /* The logo is the home link; there is no separate Home nav item. */
@@ -143,12 +147,27 @@ body {
     gap: 24px;
 }
 
+/* On phones the links collapse behind the hamburger: hidden until .nav-open,
+   then a full-width column under the top row. */
 @media (max-width: 600px) {
     .navbar-links {
-        order: 3;
+        display: none;
+        order: 4;
         width: 100%;
-        justify-content: space-between;
-        gap: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border-subtle);
+    }
+
+    .navbar-content.nav-open .navbar-links {
+        display: flex;
+    }
+
+    .navbar-links .nav-link {
+        padding: 10px 2px;
+        font-size: 15px;
     }
 }
 
@@ -187,6 +206,20 @@ body {
     background: var(--bg-hover);
     color: var(--text);
     box-shadow: var(--shadow-md);
+}
+
+/* Hamburger menu button: phones only, to the right of the theme toggle. Kept
+   after .btn-icon so the hide wins at desktop widths; the media rule below
+   comes later still and wins on phones. */
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: flex;
+        margin-left: 10px;
+    }
 }
 
 main {
