@@ -261,11 +261,6 @@ main {
         grid-template-columns: 1fr;
         gap: 48px;
     }
-
-    /* Single column leads with the conversation-card collage, not text. */
-    .hero-visual {
-        order: -1;
-    }
 }
 
 .hero-content {
