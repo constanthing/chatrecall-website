@@ -1,7 +1,7 @@
 {
-  "version": "0.1.67",
-  "notes": "Pages open instantly while a sync runs, sync activity lives on the Sync\nrow, and the new website Help page is one click away.\n\n## Added\n\n- A Help page on the ChatsRecall website with answers to common questions\n  about setup, syncing, and your data, plus an Open Help page button in the\n  app's Help & Support dialog that takes you straight there.\n- A sync activity indicator on the Sync row of the sidebar: while a sync\n  runs, a small orange ring appears at the right edge of the row, or on the\n  corner of the sync button when the sidebar is collapsed. It is visible\n  from every page of the app.\n\n## Improved\n\n- The status line in the sidebar's bottom corner now shows when your\n  library last synced on every page. The conversation Reader, Extensions,\n  and New Chat pages used to always say \"Local\".\n- The search field shows a quiet accent border when focused instead of a\n  thick outline ring.\n- The Help & Support dialog closes with an X in its corner and fits its\n  actions on one line.\n\n## Fixed\n\n- Opening a page while a sync was running could show a blank window for a\n  second or two before anything appeared. Pages now show immediately and\n  fill in as their content loads.\n\n## Removed\n\n- The orange \"Syncing\" pill in the sidebar's bottom corner. The Sync row's\n  activity ring replaces it.",
-  "pub_date": "2026-08-13T15:10:58.523Z",
+  "version": "0.1.68",
+  "notes": "Experimental search upgrades you can switch on, sync history that tells\nyour browsers apart, and an early access point for AI tools.\n\n## Added\n\n- An Experimental features switch in Settings. It gathers still-settling\n  capabilities in one place: the new Ladder search engine lives behind it,\n  and the agent search button, previously always visible, now lives there\n  too. With the switch off, nothing about the app changes.\n- Ladder search (experimental): a second search engine you can flip to\n  right inside the search field. When an exact match comes up empty, it\n  progressively loosens the query (all terms, word variants, related\n  concepts, soundalikes, partial matches) and stops at the first rung that\n  finds enough, labeling every result page with how it matched. A sort\n  control picks newest first or best match. Classic stays the default and\n  is unchanged.\n- An early access point for connecting AI tools to your archive: a local,\n  read-only interface (REST and MCP) that listens only on your own\n  machine, with per-tool tokens, scopes, daily quotas, and an audit log\n  that never records message content. For advanced users for now: tokens\n  are created from the command line until a proper in-app page arrives.\n\n## Improved\n\n- Sync History now tells your browsers apart. When more than one browser\n  syncs the same source, the run shows one row per source with a small\n  status badge per browser; clicking the row expands each browser's own\n  result. If one browser fails while another succeeds, the row shows an\n  amber warning instead of a red failure.\n\n## Fixed\n\n- After a large database upgrade on first launch, the app could open to an\n  empty library until restarted. It now reloads itself when the upgrade\n  finishes instead of accepting emptiness as an answer.",
+  "pub_date": "2026-08-15T03:20:05.270Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.67/ChatsRecall_0.1.67_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkxqNXNXcWRGaGJaVlQvQWlEdURBeHYxMTdRSTZ4L0JNc0I2UVJTbEhRYStlNGRXSFFLaXN0M1hrRDZELzZDam1MOXhJZ2dEWFNEMXdvRlZkb2tqdVFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NjMzODU1CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY3X3g2NC1zZXR1cC5leGUKNWxLODhFanBBdHFhMnZEWmhuNzNHcGREd0VTeE80UnJza1Rya1ZnSGxwQmwvV0tIZlNURGlzNHRvYklmeERxM05GUnJBWGhWa3QvK2E0cndUL0ViRGc9PQo=",
-      "published_at": "2026-08-13T15:10:58.523Z"
+      "url": "https://chatsrecall.com/releases/0.1.68/ChatsRecall_0.1.68_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkROK2pMYUhnLzdpU00wR0NSNGlKek5aZmlONGRqdzF1enh4RU9hWklVZGU3ampFd2lQYkFuVkNXTVRUcnlmamhnN1JEbnY4QStxMVQ2R2dWQUFLQlFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NzY0MDAyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY4X3g2NC1zZXR1cC5leGUKZGFLdjkwcnBFNXppZ3VUMXB1MTRGd29Ld2pBOXBOa2FqOUN6ZjVhNXo1WkY3SmRCbXFSdlI0WEQvUThpZ3UxSkkxOU1KMGZsYkQrd0JPMlJnRmFFQ3c9PQo=",
+      "published_at": "2026-08-15T03:20:05.270Z"
     }
   }
 }
