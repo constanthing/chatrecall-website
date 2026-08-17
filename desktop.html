@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.68/ChatsRecall_0.1.68_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.69/ChatsRecall_0.1.69_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -81,6 +81,40 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.69 -->
+            <article class="update-card" data-version="0.1.69">
+                <div class="update-meta">
+                    <span class="update-version">0.1.69</span>
+                    <span class="update-date">August 17, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A Files page that gathers every attachment across your chats in one</p>
+                    <p class="update-intro">place, and a simpler, more informative sidebar.</p>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>A Files page, sitting between Projects and Usage in the sidebar. It lists every file across your whole archive: the ones you attached to prompts and the ones the chats produced in their replies, newest conversation first, each row showing where the file came from. A search box covers file names and conversation titles, and one filter chip per file type (with counts) makes &quot;show me every PDF&quot; a single click. The sidebar's source rows narrow the list in place, exactly as they do for your chats, and newly captured files appear while a sync runs without leaving the page.</li>
+                            <li>Every file offers two ways to open it: inside ChatsRecall, with the conversation opened right at the message that carries the file, or on the original chat page in a connected browser, scrolled to that message and highlighted. ChatsRecall stores file names and types, never the file contents, so opening a file always means finding it where it lives.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>The Sync row in the sidebar now shows when the last sync finished (&quot;5m ago&quot;) right on the row, replacing the small status line that used to sit at the bottom of the sidebar. While a sync runs, the familiar activity ring takes its place.</li>
+                            <li>Help is now a labeled row in the sidebar footer instead of a bare icon, and the Help dialog is more focused: open the Help page or replay onboarding from the beginning. The extension setup guide on its own is still available from Settings.</li>
+                            <li>The dark mode switch moved to Settings, under a new Appearance section, instead of a small icon at the bottom of the sidebar. The choice still applies everywhere and is remembered between launches.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.68 -->
             <article class="update-card" data-version="0.1.68">
