@@ -1,7 +1,7 @@
 {
-  "version": "0.1.70",
-  "notes": "A calmer, more consistent look across the app in both themes, and Claude Code's on-disk sessions now sync as their own lane.\n\n## Added\n\n- Claude Code and Claude Cowork conversations stored on this computer now sync as their own \"This computer\" lane beside the browser lanes, with its own badge on the Sync page, its own rows in the live view and Sync History, and its own counts. Session files are read directly from disk, no browser window needed.\n- Sync page sources are now compact badges with a status dot. Hovering shows the stored conversation count and last synced time; right-clicking a source with stored data offers to remove its local copy.\n\n## Improved\n\n- A visual refresh across every page in both themes: flat surfaces with hairline borders replace gradients, glows, and blur; a single refined accent covers the primary action, active navigation, focus, and links; typography is calmer; status colors are softer tints. Light mode now sits on a near-white background with white cards. The website matches.\n- Source names on cards, list rows, and the Files page read in quiet text while the colored source mark carries identity, keeping busy pages readable.\n- While a sync runs, every row in the live view leads with the source's own tinted glyph, so a glance shows which source is being worked on.",
-  "pub_date": "2026-08-19T14:27:21.729Z",
+  "version": "0.1.71",
+  "notes": "Your projects and folders from Claude, Grok, Perplexity, and Copilot now sync into your library.\n\n## Added\n\n- Projects and folders now sync from Claude, Grok (Projects), Perplexity (Spaces), and Copilot, joining ChatGPT. Conversations appear under their folder, and a folder deleted on the source never deletes your saved conversations.\n- Copilot conversations inside a project are now captured at all: Copilot only lists them inside the project, so earlier versions never saw them.\n- The sync view shows a dedicated projects step with live counts, and Sync History gains a Projects column.\n\n## Improved\n\n- Copilot now syncs only in browsers that can actually read it. Microsoft Edge blocks extensions on copilot.microsoft.com, so those doomed attempts are skipped instead of failing every run.\n- The New Chat button moved from the sidebar into the top right of the chats page.\n\n## Fixed\n\n- Ask your archive no longer fails with \"reached its round limit\": the search now wraps up with its best answer from the evidence it gathered.",
+  "pub_date": "2026-08-19T20:23:39.193Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.70/ChatsRecall_0.1.70_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktBOXpGNVNwVm5ZdUswNFlaTHBFbGxJS1ZuTWc4aFIrSnNqcDlvS2hFNTBENXlTOENvN0ViUHNZMUkvMTJWZU1KNkw5WE1pRkRQcDZHSDRBaFNEUVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MTQ5NjM5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjcwX3g2NC1zZXR1cC5leGUKMlNnWHVaNmd4WEpSMmo0UHBTMVphbUVlcHZCQm95UStrbWNzR212bGZnVDdldjRVNlcrR2gxTVZkVjhjK0tlYlMyMW5GdVVrajllcm9CbTRxSndyQ1E9PQo=",
-      "published_at": "2026-08-19T14:27:21.729Z"
+      "url": "https://chatsrecall.com/releases/0.1.71/ChatsRecall_0.1.71_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkcrMUsxQkgrWWhXMk9LcGsrelhQM2JLek5qN3dGRldzbm1qYjVaQ2ZKTWIySWp0L3QyclkrSlRCaDNjSlFqTlh2VHp5UFhiNHBzeGN1TTA3VlVWSHdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MTcxMDE0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjcxX3g2NC1zZXR1cC5leGUKSy90clA2YVliK3J5azgxK2doakM2T01NTG9IYWRRRnRYQTRtWUpNV0FzcXVzaFpCZFU5V3pONW0xRGZCRlpmeTZQejZOMnNEWlUreUQ0T3FCVklMRHc9PQo=",
+      "published_at": "2026-08-19T20:23:39.193Z"
     }
   }
 }
