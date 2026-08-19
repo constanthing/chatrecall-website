@@ -1,7 +1,7 @@
 {
-  "version": "0.1.69",
-  "notes": "A Files page that gathers every attachment across your chats in one\nplace, and a simpler, more informative sidebar.\n\n## Added\n\n- A Files page, sitting between Projects and Usage in the sidebar. It\n  lists every file across your whole archive: the ones you attached to\n  prompts and the ones the chats produced in their replies, newest\n  conversation first, each row showing where the file came from. A search\n  box covers file names and conversation titles, and one filter chip per\n  file type (with counts) makes \"show me every PDF\" a single click. The\n  sidebar's source rows narrow the list in place, exactly as they do for\n  your chats, and newly captured files appear while a sync runs without\n  leaving the page.\n- Every file offers two ways to open it: inside ChatsRecall, with the\n  conversation opened right at the message that carries the file, or on\n  the original chat page in a connected browser, scrolled to that message\n  and highlighted. ChatsRecall stores file names and types, never the\n  file contents, so opening a file always means finding it where it\n  lives.\n\n## Improved\n\n- The Sync row in the sidebar now shows when the last sync finished\n  (\"5m ago\") right on the row, replacing the small status line that used\n  to sit at the bottom of the sidebar. While a sync runs, the familiar\n  activity ring takes its place.\n- Help is now a labeled row in the sidebar footer instead of a bare icon,\n  and the Help dialog is more focused: open the Help page or replay\n  onboarding from the beginning. The extension setup guide on its own is\n  still available from Settings.\n- The dark mode switch moved to Settings, under a new Appearance section,\n  instead of a small icon at the bottom of the sidebar. The choice still\n  applies everywhere and is remembered between launches.",
-  "pub_date": "2026-08-17T18:41:31.839Z",
+  "version": "0.1.70",
+  "notes": "A calmer, more consistent look across the app in both themes, and Claude Code's on-disk sessions now sync as their own lane.\n\n## Added\n\n- Claude Code and Claude Cowork conversations stored on this computer now sync as their own \"This computer\" lane beside the browser lanes, with its own badge on the Sync page, its own rows in the live view and Sync History, and its own counts. Session files are read directly from disk, no browser window needed.\n- Sync page sources are now compact badges with a status dot. Hovering shows the stored conversation count and last synced time; right-clicking a source with stored data offers to remove its local copy.\n\n## Improved\n\n- A visual refresh across every page in both themes: flat surfaces with hairline borders replace gradients, glows, and blur; a single refined accent covers the primary action, active navigation, focus, and links; typography is calmer; status colors are softer tints. Light mode now sits on a near-white background with white cards. The website matches.\n- Source names on cards, list rows, and the Files page read in quiet text while the colored source mark carries identity, keeping busy pages readable.\n- While a sync runs, every row in the live view leads with the source's own tinted glyph, so a glance shows which source is being worked on.",
+  "pub_date": "2026-08-19T14:27:21.729Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.69/ChatsRecall_0.1.69_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk5OZVVSb2VlQUROVmt0ZVhoK1ZtK2NpVjhscnJYTGR6VVZQalI1SU1vTWEyVjEzYVpOM0xZc1pVK0tDYVVIR211eUZkaTR1Ukh3V21uK3Z6emxyWlFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTkyMDg5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjY5X3g2NC1zZXR1cC5leGUKT3pjNWVSM3h6UUorOE80OG5qOXBTY00yZXMrQUZ6VlBiN3BxM0FGVVE2cEhRUXNSSmZSNHBRaGVvT0xzY3Nkd2M5ZHlBWWhtZ2JOUVMvYm02TW1xQXc9PQo=",
-      "published_at": "2026-08-17T18:41:31.839Z"
+      "url": "https://chatsrecall.com/releases/0.1.70/ChatsRecall_0.1.70_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktBOXpGNVNwVm5ZdUswNFlaTHBFbGxJS1ZuTWc4aFIrSnNqcDlvS2hFNTBENXlTOENvN0ViUHNZMUkvMTJWZU1KNkw5WE1pRkRQcDZHSDRBaFNEUVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MTQ5NjM5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjcwX3g2NC1zZXR1cC5leGUKMlNnWHVaNmd4WEpSMmo0UHBTMVphbUVlcHZCQm95UStrbWNzR212bGZnVDdldjRVNlcrR2gxTVZkVjhjK0tlYlMyMW5GdVVrajllcm9CbTRxSndyQ1E9PQo=",
+      "published_at": "2026-08-19T14:27:21.729Z"
     }
   }
 }
