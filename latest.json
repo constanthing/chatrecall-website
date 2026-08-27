@@ -1,7 +1,7 @@
 {
-  "version": "0.1.73",
-  "notes": "Pinning now reaches your Claude Code and Cowork sessions.\n\n## Added\n\n- Two-way pinning for Claude Code and Cowork cloud sessions. A session pinned on claude.ai shows as pinned in your library after a sync, and the Reader's pin button pins or unpins the session at claude.ai itself, through the same synced store the claude.ai sidebar reads. Pins made anywhere follow your account, not the browser they were made in.\n- Pins on local sessions are captured too. A Claude Code or Cowork session pinned in the Claude desktop app on this computer arrives in your library as pinned on the next sync.\n- Zoom appears in the sync source list. Connecting a Zoom account is not possible yet, so selecting the source finds nothing until that lands.\n\n## Improved\n\n- The Reader's pin button now explains itself on sessions whose pin the app cannot change, instead of attempting a push that cannot succeed: sessions that live on this computer point you to the Claude desktop app.",
-  "pub_date": "2026-08-27T03:34:31.589Z",
+  "version": "0.1.74",
+  "notes": "Search works again on installs where the Ladder engine had gone quiet.\n\n## Fixed\n\n- Ladder search returned zero results for every query on databases that skipped the search index build during an earlier upgrade. The missing indexes are now detected and rebuilt automatically on the next launch; the repair takes a few seconds on a large archive.\n- Fireflies conversations were filtered out of the library pages. They now appear alongside every other source.",
+  "pub_date": "2026-08-27T20:13:26.948Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.73/ChatsRecall_0.1.73_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkNyWWU3dVd6S3ZpNlhSS1JEWWxMYkF2ZVZWM1pINHlZdmRKU1cxdElUdFNvRStjMG5Oalg4MTBzQVhmN25KeWZxYUtaM3crSlNLbWRNaGZEcTJGM0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3ODAxNjY5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjczX3g2NC1zZXR1cC5leGUKdmZwUHl4elBpb2ZrY2FsNWdaQVdwb0ZyUVp1Y01kdGl1TGFtSVZvT3VJc3pWRTZaNWx6Q3p3UmxacEhLWTlXY0trY1ZrWWwxd2d4Z09uUStEMDRCQUE9PQo=",
-      "published_at": "2026-08-27T03:34:31.589Z"
+      "url": "https://chatsrecall.com/releases/0.1.74/ChatsRecall_0.1.74_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkluUTVVYzFjNFNBYVJiU1ZuSnBMZTFmaWFHOXd6dDBEZGNsTU5jRWZXMURKcjVUTjFJTlJTVnp1Wm4wM3BYWDF6RmR3R05yOWVrcFdGa1pBd1FHOWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3ODYxNjA2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc0X3g2NC1zZXR1cC5leGUKemsrWFY2M3VhZ0FGazgxYUNHK0pxaC91MTdhMTd5QWxCNmZVK3kxTjlCYXhYKzd0R0lOUFpzNURadk1GY2JmNk9mQS9TVWYzNWFsemd4bE1XZ0FTQ3c9PQo=",
+      "published_at": "2026-08-27T20:13:26.948Z"
     }
   }
 }
