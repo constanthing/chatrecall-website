@@ -1,7 +1,7 @@
 {
-  "version": "0.1.74",
-  "notes": "Search works again on installs where the Ladder engine had gone quiet.\n\n## Fixed\n\n- Ladder search returned zero results for every query on databases that skipped the search index build during an earlier upgrade. The missing indexes are now detected and rebuilt automatically on the next launch; the repair takes a few seconds on a large archive.\n- Fireflies conversations were filtered out of the library pages. They now appear alongside every other source.",
-  "pub_date": "2026-08-27T20:13:26.948Z",
+  "version": "0.1.75",
+  "notes": "The sidebar is reorganized around a simpler idea: your content on top, the app itself in the footer.\n\n## Added\n\n- A one-time tip after updating highlights Sync's new home in the sidebar footer.\n\n## Improved\n\n- Sidebar navigation is grouped under small Library and Insights headers instead of divider lines.\n- Sync moved to the sidebar footer next to Extensions, Settings, and Help: the corner where you take care of the app itself.\n- Usage is now a tab on the Sync page instead of a separate page.\n- The Sync page is lighter: the per-source library visibility switches moved to Settings, and bulk selection is a single button.\n- The app name now leads the sidebar, with the collapse button on the right.",
+  "pub_date": "2026-08-27T23:58:51.293Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.74/ChatsRecall_0.1.74_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkluUTVVYzFjNFNBYVJiU1ZuSnBMZTFmaWFHOXd6dDBEZGNsTU5jRWZXMURKcjVUTjFJTlJTVnp1Wm4wM3BYWDF6RmR3R05yOWVrcFdGa1pBd1FHOWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3ODYxNjA2CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc0X3g2NC1zZXR1cC5leGUKemsrWFY2M3VhZ0FGazgxYUNHK0pxaC91MTdhMTd5QWxCNmZVK3kxTjlCYXhYKzd0R0lOUFpzNURadk1GY2JmNk9mQS9TVWYzNWFsemd4bE1XZ0FTQ3c9PQo=",
-      "published_at": "2026-08-27T20:13:26.948Z"
+      "url": "https://chatsrecall.com/releases/0.1.75/ChatsRecall_0.1.75_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkVCdGFrSCthUWYzT25JQkFyaDl6UThQV1NsdHl3cDZNRTV2emRmSFdoYmx1enQyNzJuQTJ5eWtIYXZMRWFFclR0UWcrc2JqM3lELzRJeFJ1K2FjV1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3ODc1MTI4CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc1X3g2NC1zZXR1cC5leGUKM1FPWERSUU00Sk1nOFBDOXR4R3llWlRzdTVMbEY1VEhnMkJSVVlGeG82bUpaVytDbVpWK1pOTjlaQTJXVWk2T1hWd3F1Z251NWJQMnVPODdoKzJVQ3c9PQo=",
+      "published_at": "2026-08-27T23:58:51.293Z"
     }
   }
 }
