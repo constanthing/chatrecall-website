@@ -1,7 +1,7 @@
 {
-  "version": "0.1.76",
-  "notes": "Source visibility now lives in one place, and the update window catches you up on releases you skipped.\n\n## Added\n\n- Sources popover: the filter button next to the SOURCES label now manages\n  everything about source visibility in one place. Each source can be Shown,\n  kept out of the sidebar only, or hidden from the library and search\n  entirely, and you can drag sources into your own sidebar order. Hiding is\n  display only: every source keeps syncing and its data stays put.\n\n## Improved\n\n- The update window now catches you up. If you skipped versions, it also\n  shows the release notes for every update between your version and the new\n  one, each under its own heading.\n- The per-source library switches moved from Settings into the sources\n  popover, so visibility lives in one place.",
-  "pub_date": "2026-08-28T04:34:06.847Z",
+  "version": "0.1.77",
+  "notes": "Create your own projects that mix conversations from any source, and search options now live in one place.\n\n## Added\n\n- ChatsRecall projects: create a project inside the app and fill it with\n  conversations from any mix of sources. Right-click a conversation card to\n  add or move it, or use the folder button while reading a conversation.\n  Projects live only in ChatsRecall: syncing never touches them, and deleting\n  one never deletes any conversations.\n- Claude Code sessions now group into folders by the repository they worked\n  in, covering both cloud and local sessions.\n- A short one-time walkthrough after this update points out where the search\n  filters moved and how to create your first project.\n\n## Improved\n\n- The search field is now the single place for finding things. A sliders icon\n  inside it opens the search options: the choice between Classic and Ladder\n  search, Ladder's result sorting, and the file-type filter. A small dot on\n  the icon shows when any of these is set away from the default. The sparkles\n  button in the same field opens Ask your archive.\n- Starting a new chat moved from the header button to a dashed card ahead of\n  the first conversation.\n- Conversation cards show a folder chip naming the project or folder they\n  belong to.\n- While a search is still running, a \"Searching\" indicator shows instead of\n  claiming there are no results.\n- The filter button next to SOURCES shows a dot while any source is hidden,\n  and the sidebar's conversation counts always match the conversations shown.",
+  "pub_date": "2026-08-29T04:18:30.671Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.76/ChatsRecall_0.1.76_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkRyN0JPNDhheUs2VVFXOHNrQ3ZjTjN4Z0h1cmZpR3FzdUpCcFhRb3RUb3E2eU14a3JubS9ZTzc3SWtXczh4RnNSL2xPYnlsemdsZkhRS056RW1UaFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3ODkxNjQ0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc2X3g2NC1zZXR1cC5leGUKU2lLNndVbXZMcEExWEN6YzYrY0hueDVtYk56RnIya01GaVBtWXJDSlJSbFc4RkJxRFZCSzF4OWFWRzg1VkVTVnIxSUd0cENXU253dSt6dWN5d0dJQlE9PQo=",
-      "published_at": "2026-08-28T04:34:06.847Z"
+      "url": "https://chatsrecall.com/releases/0.1.77/ChatsRecall_0.1.77_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk9zL0JUQXY2Q2trS1hPdWUyajhUTU0wczg1SFY3dDJJNmtwUHhsNGs4OEhHNzNnT1lnUmg5ZWdqeTFRcS95VCtIWmdaQmpudW1wekZQdVVYZlJUN0FVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3OTc3MTA4CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc3X3g2NC1zZXR1cC5leGUKSGR3NWdKYy9lc0t1R29UQkdUN3R0aGhUdFdsbDlOSEsvVUtGNmIxb21YdlBJZXMzMGFpRXRTenFKMFpMT1lqY3FJdjhucVJKMEJiaEEyWDFlSi8vRHc9PQo=",
+      "published_at": "2026-08-29T04:18:30.671Z"
     }
   }
 }
