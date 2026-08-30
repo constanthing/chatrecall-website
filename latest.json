@@ -1,7 +1,7 @@
 {
-  "version": "0.1.77",
-  "notes": "Create your own projects that mix conversations from any source, and search options now live in one place.\n\n## Added\n\n- ChatsRecall projects: create a project inside the app and fill it with\n  conversations from any mix of sources. Right-click a conversation card to\n  add or move it, or use the folder button while reading a conversation.\n  Projects live only in ChatsRecall: syncing never touches them, and deleting\n  one never deletes any conversations.\n- Claude Code sessions now group into folders by the repository they worked\n  in, covering both cloud and local sessions.\n- A short one-time walkthrough after this update points out where the search\n  filters moved and how to create your first project.\n\n## Improved\n\n- The search field is now the single place for finding things. A sliders icon\n  inside it opens the search options: the choice between Classic and Ladder\n  search, Ladder's result sorting, and the file-type filter. A small dot on\n  the icon shows when any of these is set away from the default. The sparkles\n  button in the same field opens Ask your archive.\n- Starting a new chat moved from the header button to a dashed card ahead of\n  the first conversation.\n- Conversation cards show a folder chip naming the project or folder they\n  belong to.\n- While a search is still running, a \"Searching\" indicator shows instead of\n  claiming there are no results.\n- The filter button next to SOURCES shows a dot while any source is hidden,\n  and the sidebar's conversation counts always match the conversations shown.",
-  "pub_date": "2026-08-29T04:18:30.671Z",
+  "version": "0.1.78",
+  "notes": "Syncing keeps your place in the list, and a few rough edges in the sidebar are gone.\n\n## Improved\n\n- Headings across the app use one consistent weight and letter spacing.\n\n## Fixed\n\n- Syncing no longer interrupts the conversation list. Conversations appear as\n  they are saved, and the list keeps your scroll position instead of jumping\n  back to the top.\n- Changing a source's visibility quickly no longer leaves an empty row behind\n  in the sidebar.\n- \"All Sources\" no longer appears selected when no source filter is set.",
+  "pub_date": "2026-08-30T08:09:20.946Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.77/ChatsRecall_0.1.77_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk9zL0JUQXY2Q2trS1hPdWUyajhUTU0wczg1SFY3dDJJNmtwUHhsNGs4OEhHNzNnT1lnUmg5ZWdqeTFRcS95VCtIWmdaQmpudW1wekZQdVVYZlJUN0FVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3OTc3MTA4CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc3X3g2NC1zZXR1cC5leGUKSGR3NWdKYy9lc0t1R29UQkdUN3R0aGhUdFdsbDlOSEsvVUtGNmIxb21YdlBJZXMzMGFpRXRTenFKMFpMT1lqY3FJdjhucVJKMEJiaEEyWDFlSi8vRHc9PQo=",
-      "published_at": "2026-08-29T04:18:30.671Z"
+      "url": "https://chatsrecall.com/releases/0.1.78/ChatsRecall_0.1.78_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Sk9ucmNjOE1EZGZ3NGYvbDE2dGxBSE5mdXY3UkRNenA5NlJaSzh6VlRRUy9NRTVheEpLNDdOU3JLN0JySENtQk5BRzJTSndTbkpuV01JZzlQQ0VCS0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDc3MzU4CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc4X3g2NC1zZXR1cC5leGUKMmVYR0EyaTcwVzgvdCtmUGZYUmZYVm96bXp5eGZsY201eDF2TTUxbkl6cHlvVUNQeDJzTzg0OVg0UUJna3N0cG8yZTlLQng4S1JEN0U2RWlZaDVUQnc9PQo=",
+      "published_at": "2026-08-30T08:09:20.946Z"
     }
   }
 }
