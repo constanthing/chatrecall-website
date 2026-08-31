@@ -1,8 +1,13 @@
 {
   "releases": [
     {
+      "version": "0.1.79",
+      "pub_date": "2026-08-31T04:00:34.487Z",
+      "notes": "Ask your archive handles long questions without stopping, and every answer\nshows what it cost.\n\n## Added\n\n- Every answer from Ask your archive shows the tokens the run used, what it\n  cost, and how long it took.\n- A thumbs up or thumbs down under each answer sends feedback on whether it\n  was useful.\n\n## Fixed\n\n- Ask your archive no longer stops partway through a long question with a\n  token budget error. When a run does reach its ceiling, it answers from the\n  evidence it already gathered and tells you it finished early."
+    },
+    {
       "version": "0.1.78",
-      "pub_date": "2026-08-30T08:03:57.900Z",
+      "pub_date": "2026-08-30T01:12:11-07:00",
       "notes": "Syncing keeps your place in the list, and a few rough edges in the sidebar are gone.\n\n## Improved\n\n- Headings across the app use one consistent weight and letter spacing.\n\n## Fixed\n\n- Syncing no longer interrupts the conversation list. Conversations appear as\n  they are saved, and the list keeps your scroll position instead of jumping\n  back to the top.\n- Changing a source's visibility quickly no longer leaves an empty row behind\n  in the sidebar.\n- \"All Sources\" no longer appears selected when no source filter is set."
     },
     {
