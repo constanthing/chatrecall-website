@@ -25,5 +25,8 @@ Create your own projects that mix conversations from any source, and search opti
   belong to.
 - While a search is still running, a "Searching" indicator shows instead of
   claiming there are no results.
+- The choices in the sources popover now explain themselves in short bullet
+  points: what each visibility option hides, with the reminder that syncing
+  never stops and no data is deleted.
 - The filter button next to SOURCES shows a dot while any source is hidden,
   and the sidebar's conversation counts always match the conversations shown.
