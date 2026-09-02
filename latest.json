@@ -1,7 +1,7 @@
 {
-  "version": "0.1.79",
-  "notes": "Ask your archive handles long questions without stopping, and every answer\nshows what it cost.\n\n## Added\n\n- Every answer from Ask your archive shows the tokens the run used, what it\n  cost, and how long it took.\n- A thumbs up or thumbs down under each answer sends feedback on whether it\n  was useful.\n\n## Fixed\n\n- Ask your archive no longer stops partway through a long question with a\n  token budget error. When a run does reach its ceiling, it answers from the\n  evidence it already gathered and tells you it finished early.",
-  "pub_date": "2026-08-31T04:08:16.449Z",
+  "version": "0.1.80",
+  "notes": "Capture keeps up with the site changes that landed on Gemini, Perplexity,\nChatGPT and Wave.\n\n## Fixed\n\n- Gemini prompts are saved the way you typed them. Prompts captured since late\n  August were stored twice over, with a cut-off copy stuck to the front.\n- Gemini conversation titles no longer contain stray \"&nbsp;\" text. Titles\n  already saved that way are repaired on first launch.\n- Perplexity prompts are captured again after Perplexity redesigned its\n  conversation page.\n- Deleting a Perplexity thread from ChatsRecall removes it on Perplexity again.\n- Conversations you delete on ChatGPT are recognized again, so they no longer\n  linger in your library.\n- Wave conversations load their titles again instead of stalling on the way in.",
+  "pub_date": "2026-09-02T04:43:06.690Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.79/ChatsRecall_0.1.79_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SktZS1lOT2dxZjV3RVRQbHYyVDlwZmpnd2RGQ1FXbkhtNDE0ckdnVGdsU0gxQXBqMkZJTjVvV0ppeFF2bngybDdkVkpSeERtWUE0ZzFjWEtvcS9rSEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MTQ5MjkzCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjc5X3g2NC1zZXR1cC5leGUKMWtqTUZPYTAwZnJLRndLZFdrYyt3cVBabGg2MWhEWW1GbUc0ZjlrY1k3Kzdaa2c1OHlHNnM1ZjVBbnNodU1aWnlqRjFGdGlDODk4UDNwMWwvUm03QVE9PQo=",
-      "published_at": "2026-08-31T04:08:16.449Z"
+      "url": "https://chatsrecall.com/releases/0.1.80/ChatsRecall_0.1.80_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkZNYmZQMG52amVsdFNkeXdTQmR3NzZSTUltZUVjdUNBb0l6Q3hZRkk4a0dRazBMYU9maDRDb0l3TUg2L0d4eHRLbmJUV2Rra1RxWGUyMzRvSU1tZGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MzI0MTg0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjgwX3g2NC1zZXR1cC5leGUKakVDUzYzeVBpU3RERXl5cnlRMUdmVU9tQ2t6anYwNERrOVdzTkJzNFNNY3BCamZET2dWWThjd0N0VGt0WVd6ejdpMThBdEZ1SlRIWFVPL3d0ZHdHRFE9PQo=",
+      "published_at": "2026-09-02T04:43:06.690Z"
     }
   }
 }

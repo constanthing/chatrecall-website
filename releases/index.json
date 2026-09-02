@@ -1,8 +1,13 @@
 {
   "releases": [
     {
+      "version": "0.1.80",
+      "pub_date": "2026-09-02T04:38:34.050Z",
+      "notes": "Capture keeps up with the site changes that landed on Gemini, Perplexity,\nChatGPT and Wave.\n\n## Fixed\n\n- Gemini prompts are saved the way you typed them. Prompts captured since late\n  August were stored twice over, with a cut-off copy stuck to the front.\n- Gemini conversation titles no longer contain stray \"&nbsp;\" text. Titles\n  already saved that way are repaired on first launch.\n- Perplexity prompts are captured again after Perplexity redesigned its\n  conversation page.\n- Deleting a Perplexity thread from ChatsRecall removes it on Perplexity again.\n- Conversations you delete on ChatGPT are recognized again, so they no longer\n  linger in your library.\n- Wave conversations load their titles again instead of stalling on the way in."
+    },
+    {
       "version": "0.1.79",
-      "pub_date": "2026-08-31T04:00:34.487Z",
+      "pub_date": "2026-08-30T21:12:53-07:00",
       "notes": "Ask your archive handles long questions without stopping, and every answer\nshows what it cost.\n\n## Added\n\n- Every answer from Ask your archive shows the tokens the run used, what it\n  cost, and how long it took.\n- A thumbs up or thumbs down under each answer sends feedback on whether it\n  was useful.\n\n## Fixed\n\n- Ask your archive no longer stops partway through a long question with a\n  token budget error. When a run does reach its ceiling, it answers from the\n  evidence it already gathered and tells you it finished early."
     },
     {
