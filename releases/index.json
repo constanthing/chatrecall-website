@@ -1,8 +1,13 @@
 {
   "releases": [
     {
+      "version": "0.1.81",
+      "pub_date": "2026-09-03T04:20:30.911Z",
+      "notes": "Start a chat straight from a project, and search stays fast while a sync runs.\n\n## Added\n\n- Inside a ChatsRecall project, a New Chat card leads the grid. The first\n  conversation you start from it is saved to that project automatically, with\n  a \"Saved to <project>\" confirmation.\n\n## Improved\n\n- Searching with Ladder no longer pauses to rebuild its indexes. New and\n  changed conversations are indexed as they are saved, so a search stays quick\n  even while a sync or backfill is running.\n- New Chat opens the source in your primary connected browser and brings that\n  window to the front. Google AI Mode picks the first browser allowed to run\n  it.\n\n## Fixed\n\n- Clicking outside the search options popover only closes it; the sidebar row\n  or conversation card under the pointer is no longer activated by that click."
+    },
+    {
       "version": "0.1.80",
-      "pub_date": "2026-09-02T04:38:34.050Z",
+      "pub_date": "2026-09-01T21:46:33-07:00",
       "notes": "Capture keeps up with the site changes that landed on Gemini, Perplexity,\nChatGPT and Wave.\n\n## Fixed\n\n- Gemini prompts are saved the way you typed them. Prompts captured since late\n  August were stored twice over, with a cut-off copy stuck to the front.\n- Gemini conversation titles no longer contain stray \"&nbsp;\" text. Titles\n  already saved that way are repaired on first launch.\n- Perplexity prompts are captured again after Perplexity redesigned its\n  conversation page.\n- Deleting a Perplexity thread from ChatsRecall removes it on Perplexity again.\n- Conversations you delete on ChatGPT are recognized again, so they no longer\n  linger in your library.\n- Wave conversations load their titles again instead of stalling on the way in."
     },
     {

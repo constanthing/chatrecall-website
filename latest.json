@@ -1,7 +1,7 @@
 {
-  "version": "0.1.80",
-  "notes": "Capture keeps up with the site changes that landed on Gemini, Perplexity,\nChatGPT and Wave.\n\n## Fixed\n\n- Gemini prompts are saved the way you typed them. Prompts captured since late\n  August were stored twice over, with a cut-off copy stuck to the front.\n- Gemini conversation titles no longer contain stray \"&nbsp;\" text. Titles\n  already saved that way are repaired on first launch.\n- Perplexity prompts are captured again after Perplexity redesigned its\n  conversation page.\n- Deleting a Perplexity thread from ChatsRecall removes it on Perplexity again.\n- Conversations you delete on ChatGPT are recognized again, so they no longer\n  linger in your library.\n- Wave conversations load their titles again instead of stalling on the way in.",
-  "pub_date": "2026-09-02T04:43:06.690Z",
+  "version": "0.1.81",
+  "notes": "Start a chat straight from a project, and search stays fast while a sync runs.\n\n## Added\n\n- Inside a ChatsRecall project, a New Chat card leads the grid. The first\n  conversation you start from it is saved to that project automatically, with\n  a \"Saved to <project>\" confirmation.\n\n## Improved\n\n- Searching with Ladder no longer pauses to rebuild its indexes. New and\n  changed conversations are indexed as they are saved, so a search stays quick\n  even while a sync or backfill is running.\n- New Chat opens the source in your primary connected browser and brings that\n  window to the front. Google AI Mode picks the first browser allowed to run\n  it.\n\n## Fixed\n\n- Clicking outside the search options popover only closes it; the sidebar row\n  or conversation card under the pointer is no longer activated by that click.",
+  "pub_date": "2026-09-03T04:25:32.826Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.80/ChatsRecall_0.1.80_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkZNYmZQMG52amVsdFNkeXdTQmR3NzZSTUltZUVjdUNBb0l6Q3hZRkk4a0dRazBMYU9maDRDb0l3TUg2L0d4eHRLbmJUV2Rra1RxWGUyMzRvSU1tZGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MzI0MTg0CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjgwX3g2NC1zZXR1cC5leGUKakVDUzYzeVBpU3RERXl5cnlRMUdmVU9tQ2t6anYwNERrOVdzTkJzNFNNY3BCamZET2dWWThjd0N0VGt0WVd6ejdpMThBdEZ1SlRIWFVPL3d0ZHdHRFE9PQo=",
-      "published_at": "2026-09-02T04:43:06.690Z"
+      "url": "https://chatsrecall.com/releases/0.1.81/ChatsRecall_0.1.81_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Skh2YVhUVWt4bytaRjBhL1M1REJUUWM2cG5iK3NCdzlBOXpYbHVWNFpvNjVGUVFsQVBnQXRPTDJCNGhmUDRkQ2FXbmRVMlpwazNreHoxK3Q0RDF3bEFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4NDA5NTMwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjgxX3g2NC1zZXR1cC5leGUKTEZrTmZKQXhKaFRXVGc4dlZDcFJqbDhaMjgyWm9NRFZJQVc2MVNVUStUdjNkSEpVcWJFTXBXR1ZMSlF4Rk5kWmhZNS94b2hSOGNPQ09ZREpJZHFpQ3c9PQo=",
+      "published_at": "2026-09-03T04:25:32.826Z"
     }
   }
 }
