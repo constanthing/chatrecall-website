@@ -1,8 +1,13 @@
 {
   "releases": [
     {
+      "version": "0.1.82",
+      "pub_date": "2026-09-06T01:18:35.163Z",
+      "notes": "Rename a conversation in ChatsRecall and the source follows.\n\n## Added\n\n- Two-way renaming. The Reader's header has a rename action: click the pencil,\n  type the new title, press Enter, and the conversation is renamed at its\n  source. The title in your library only changes once the source confirms.\n  Works for ChatGPT, Claude, Gemini, Grok, Perplexity, Copilot, Wave, and\n  Claude Code and Cowork cloud sessions. Where a source has no rename (Google\n  AI Mode, meeting notetakers, imports, local Claude sessions), the action\n  stays visible but disabled, with a tooltip saying why.\n- Open at source from any message. Every prompt and response in the Reader\n  has an action that opens the original conversation in your browser scrolled\n  to that exact message, with the message outlined on the page.\n\n## Fixed\n\n- Wave favourites. Wave moved its favourite toggle into a \"Session tools\"\n  dialog, which left favourite status stuck at \"not favourited\" for captured\n  sessions and broke pinning from the app. Both follow the dialog now."
+    },
+    {
       "version": "0.1.81",
-      "pub_date": "2026-09-03T04:20:30.911Z",
+      "pub_date": "2026-09-02T21:28:58-07:00",
       "notes": "Start a chat straight from a project, and search stays fast while a sync runs.\n\n## Added\n\n- Inside a ChatsRecall project, a New Chat card leads the grid. The first\n  conversation you start from it is saved to that project automatically, with\n  a \"Saved to <project>\" confirmation.\n\n## Improved\n\n- Searching with Ladder no longer pauses to rebuild its indexes. New and\n  changed conversations are indexed as they are saved, so a search stays quick\n  even while a sync or backfill is running.\n- New Chat opens the source in your primary connected browser and brings that\n  window to the front. Google AI Mode picks the first browser allowed to run\n  it.\n\n## Fixed\n\n- Clicking outside the search options popover only closes it; the sidebar row\n  or conversation card under the pointer is no longer activated by that click."
     },
     {

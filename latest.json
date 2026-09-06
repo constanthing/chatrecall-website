@@ -1,7 +1,7 @@
 {
-  "version": "0.1.81",
-  "notes": "Start a chat straight from a project, and search stays fast while a sync runs.\n\n## Added\n\n- Inside a ChatsRecall project, a New Chat card leads the grid. The first\n  conversation you start from it is saved to that project automatically, with\n  a \"Saved to <project>\" confirmation.\n\n## Improved\n\n- Searching with Ladder no longer pauses to rebuild its indexes. New and\n  changed conversations are indexed as they are saved, so a search stays quick\n  even while a sync or backfill is running.\n- New Chat opens the source in your primary connected browser and brings that\n  window to the front. Google AI Mode picks the first browser allowed to run\n  it.\n\n## Fixed\n\n- Clicking outside the search options popover only closes it; the sidebar row\n  or conversation card under the pointer is no longer activated by that click.",
-  "pub_date": "2026-09-03T04:25:32.826Z",
+  "version": "0.1.82",
+  "notes": "Rename a conversation in ChatsRecall and the source follows.\n\n## Added\n\n- Two-way renaming. The Reader's header has a rename action: click the pencil,\n  type the new title, press Enter, and the conversation is renamed at its\n  source. The title in your library only changes once the source confirms.\n  Works for ChatGPT, Claude, Gemini, Grok, Perplexity, Copilot, Wave, and\n  Claude Code and Cowork cloud sessions. Where a source has no rename (Google\n  AI Mode, meeting notetakers, imports, local Claude sessions), the action\n  stays visible but disabled, with a tooltip saying why.\n- Open at source from any message. Every prompt and response in the Reader\n  has an action that opens the original conversation in your browser scrolled\n  to that exact message, with the message outlined on the page.\n\n## Fixed\n\n- Wave favourites. Wave moved its favourite toggle into a \"Session tools\"\n  dialog, which left favourite status stuck at \"not favourited\" for captured\n  sessions and broke pinning from the app. Both follow the dialog now.",
+  "pub_date": "2026-09-06T01:23:11.787Z",
   "platforms": {
     "darwin-aarch64": {
       "url": "https://chatsrecall.com/releases/0.1.21/ChatsRecall.app.tar.gz",
@@ -9,9 +9,9 @@
       "published_at": "2026-06-16T04:25:26.372Z"
     },
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.81/ChatsRecall_0.1.81_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2Skh2YVhUVWt4bytaRjBhL1M1REJUUWM2cG5iK3NCdzlBOXpYbHVWNFpvNjVGUVFsQVBnQXRPTDJCNGhmUDRkQ2FXbmRVMlpwazNreHoxK3Q0RDF3bEFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4NDA5NTMwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjgxX3g2NC1zZXR1cC5leGUKTEZrTmZKQXhKaFRXVGc4dlZDcFJqbDhaMjgyWm9NRFZJQVc2MVNVUStUdjNkSEpVcWJFTXBXR1ZMSlF4Rk5kWmhZNS94b2hSOGNPQ09ZREpJZHFpQ3c9PQo=",
-      "published_at": "2026-09-03T04:25:32.826Z"
+      "url": "https://chatsrecall.com/releases/0.1.82/ChatsRecall_0.1.82_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWmw2eVhwTmU2SkV1aXFyNis3TkcwREZrTWU2MDZOQzJUdmk4aXYyUkFCdEhFaEovTk1XbUU3bXJ1ZmJhejNHVDJiN0xxdS9ROFlVVlBwTjRPc05qa0pKOVhpR2NSemc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4NjU3Nzg5CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjgyX3g2NC1zZXR1cC5leGUKaFg5eEFSTGk1bmFSdnFQQ01tUGZ4U243L3NITXJxdWNJUFNPRnltdUhqeVpscEd4KzRydWxUZmtFRC9IRmhFZll0d0lQN2FBVEVwZ2RtQVFaS1JyQmc9PQo=",
+      "published_at": "2026-09-06T01:23:11.787Z"
     }
   }
 }
