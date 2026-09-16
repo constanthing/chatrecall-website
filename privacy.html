@@ -7,7 +7,7 @@
     <title>Privacy Policy - ChatsRecall</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="ChatsRecall privacy policy. Learn how we handle your data. All chat data stays local on your device.">
+    <meta name="description" content="ChatsRecall privacy policy. How the desktop app and the browser connector handle your data. Your chat archive stays on your own computer.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="ChatsRecall">
     <meta name="theme-color" content="#5b5cd6">
@@ -17,7 +17,7 @@
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Privacy Policy - ChatsRecall">
-    <meta property="og:description" content="ChatsRecall privacy policy. Learn how we handle your data. All chat data stays local on your device.">
+    <meta property="og:description" content="ChatsRecall privacy policy. How the desktop app and the browser connector handle your data. Your chat archive stays on your own computer.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chatsrecall.com/privacy.html">
 
@@ -55,7 +55,7 @@
         <!-- Privacy Header -->
         <header class="privacy-header">
             <h1 class="privacy-title">Privacy Policy</h1>
-            <p class="privacy-subtitle">Last updated May 20, 2026</p>
+            <p class="privacy-subtitle">Last updated September 15, 2026</p>
         </header>
 
         <!-- Privacy Content -->
@@ -64,136 +64,144 @@
             <!-- Overview -->
             <section class="privacy-section">
                 <h2 class="privacy-heading">Overview</h2>
-                <p>ChatsRecall is a Chrome extension that helps you search and organize your AI chat history across multiple platforms. This privacy policy explains what data the extension accesses, how it uses that data, where it is stored, and what data is or is not shared with third parties.</p>
+                <p>ChatsRecall saves your AI chat history so you can search, read, and organize it in one place. It has two parts, and this policy covers both:</p>
+                <ul class="privacy-list">
+                    <li><strong>The desktop app</strong> (Windows). This is where everything lives: your conversations, the search index, and all settings are stored in a database file on your own computer.</li>
+                    <li><strong>The browser connector extension</strong>. This is a bridge, not a storage place. It lets the desktop app read the AI chat sites you are already signed in to, in your own browser. It keeps no conversation archive of its own.</li>
+                </ul>
+                <p>There is no ChatsRecall account, no cloud sync, and no ChatsRecall server that receives your conversations. We cannot see your data.</p>
+                <p>Earlier versions of ChatsRecall were a browser extension only, which stored conversations in the browser and sent anonymous usage analytics. That design is gone: the archive moved to the desktop app, and analytics were removed entirely. This policy describes the current product.</p>
             </section>
 
-            <!-- Data Collection -->
+            <!-- What Is Saved -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Data Collection</h2>
+                <h2 class="privacy-heading">What ChatsRecall Saves</h2>
 
-                <h3 class="privacy-subheading">What We Collect From Supported Chat Platforms</h3>
-                <p>When you use ChatsRecall on supported AI platforms, the extension may collect and store the following information from those pages so the extension can index and search your conversations locally:</p>
+                <h3 class="privacy-subheading">From Supported Sources</h3>
+                <p>For each conversation ChatsRecall captures, it stores the following on your computer:</p>
                 <ul class="privacy-list">
-                    <li><strong>Chat titles</strong>: The names/titles of your conversations</li>
-                    <li><strong>Conversation messages</strong>: User prompts and, when available, AI assistant responses that appear in the supported chat interface</li>
-                    <li><strong>Chat URLs</strong>: Links to your conversations</li>
-                    <li><strong>Timestamps and metadata</strong>: Information such as when conversations were added, updated, or last visited</li>
-                    <li><strong>Source platform metadata</strong>: Which supported AI service the conversation came from, such as ChatGPT, Claude, Gemini, Perplexity, Wave, or Google AI Mode search results</li>
+                    <li><strong>Titles</strong>: the name of the conversation, including later renames</li>
+                    <li><strong>Messages</strong>: your prompts and the assistant's replies</li>
+                    <li><strong>Links</strong>: the address of the conversation at its source, so it can be reopened there</li>
+                    <li><strong>Dates and state</strong>: when a conversation was created, updated, captured, or last opened, and whether it is pinned or starred at the source</li>
+                    <li><strong>Source and account</strong>: which service a conversation came from, and which signed-in account produced it. Account identity is typically the email address or display name the source itself shows, and it is used to keep multiple accounts and browser profiles apart</li>
+                    <li><strong>Projects and folders</strong>: the source's own grouping of conversations, plus any projects you create inside ChatsRecall</li>
+                    <li><strong>Attachment names and types only</strong>: the file name and the type the source reports, for files you attached and files a reply generated. <strong>File contents are never read or downloaded.</strong></li>
+                    <li><strong>Meeting details</strong>, for meeting notetaker sources: the summary, action items, key questions, and who said what, as the meeting tool recorded them</li>
+                    <li><strong>Session details</strong>, for coding-agent sources: the repository and branch a session ran against</li>
                 </ul>
 
-                <!--
-                <h3 class="privacy-subheading">Imported Files</h3>
-                <p>If you choose to use the import feature, ChatsRecall reads the conversation export file you select, such as a <code>conversations.json</code> file, directly in your browser and stores the imported conversation data locally on your device. The selected file is not uploaded to our servers.</p>
-                -->
+                <h3 class="privacy-subheading">Derived From What Was Saved</h3>
+                <p>To make the archive searchable, ChatsRecall builds indexes locally from the conversations it already holds: a full-text search index, an index of the terms and named things your conversations mention, and, if you choose to run it, an index of notable moments with the sentence each one came from quoted verbatim. It also records what the built-in AI features cost you, and any thumbs up or down you give an answer.</p>
 
-                <h3 class="privacy-subheading">Optional Contact Information</h3>
-                <p>If you voluntarily provide your email address through an onboarding or contact form in the extension, we may store that email locally in extension storage and send it to our contact database so we can follow up with updates, bug-fix notices, or replies to your feedback.</p>
+                <h3 class="privacy-subheading">Files On Your Computer</h3>
+                <p>For local coding-agent sessions, ChatsRecall reads session transcripts that other apps have already written to your own disk. It reads only those session directories. If you use manual import, it reads the transcript file you pick, or the text you paste.</p>
 
-                <h3 class="privacy-subheading">What We Do NOT Collect</h3>
+                <h3 class="privacy-subheading">Your Email Address, If You Give It</h3>
+                <p>The setup wizard asks for your email address once, and the step can be skipped. If you enter it, see "When Data Leaves Your Device" below for where it goes.</p>
+
+                <h3 class="privacy-subheading">What ChatsRecall Never Collects</h3>
                 <ul class="privacy-list">
-                    <li>Account credentials or login information</li>
-                    <li>Any data from websites outside the supported platforms</li>
-                </ul>
-            </section>
-
-            <!-- Data Handling -->
-            <section class="privacy-section">
-                <h2 class="privacy-heading">How We Handle Your Data</h2>
-                <p>ChatsRecall uses the collected data only to provide extension features such as indexing conversations, displaying them in the extension popup, allowing you to search them, organizing them into folders, and enabling optional background sync across supported sites.</p>
-                <ul class="privacy-list">
-                    <li>Conversation data is processed locally in your browser</li>
-                    <li>On supported sites, injected scripts may inspect page content and intercept specific in-page network requests or responses needed to detect conversation titles, prompts, assistant responses, timestamps, title changes, and completion events</li>
-                    <li>Conversation data is used to power search, filtering, organization, and reopening saved chats</li>
-                    <li>Google AI Mode searches on <code>www.google.com</code> may be saved locally as chat entries so they can be reopened from the extension</li>
-                    <!-- <li>Imported conversation files are processed locally in your browser</li> -->
-                    <li>Optional contact information is used only to contact you about updates, bug fixes, or your submitted feedback</li>
-                    <li>Some sync and debugging flows may temporarily store additional local copies of scraped sidebar HTML or intercepted conversation metadata in extension storage on your device</li>
-                    <li>We do not sell your data</li>
-                    <li>We do not use your conversation content for advertising</li>
+                    <li>Passwords, login details, or the session cookies of any source. ChatsRecall works through a browser you are already signed in to and never handles your credentials</li>
+                    <li>The contents of attached or generated files</li>
+                    <li>Anything from sites that are not supported sources</li>
+                    <li>Usage analytics or telemetry of any kind, in the app, the extension, or on this website</li>
                 </ul>
             </section>
 
-            <!-- Data Storage -->
+            <!-- Where Data Is Stored -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Data Storage</h2>
-                <p><strong>All conversation data is stored locally on your device.</strong> Specifically:</p>
+                <h2 class="privacy-heading">Where Your Data Is Stored</h2>
+                <p><strong>On your computer, in files that belong to you.</strong></p>
                 <ul class="privacy-list">
-                    <li>Chat data is stored in your browser's IndexedDB database</li>
-                    <!-- <li>Imported conversation data is stored locally after you choose to import it</li> -->
-                    <li>Some extension preferences, settings, optional contact details, and support/debugging data are stored locally in extension storage or local storage on your device</li>
-                    <li>Chat titles, messages, URLs, and conversation content stay in your browser unless you export, sync, or share them yourself outside the extension</li>
-                    <li>We do not have access to your chat data</li>
+                    <li>Conversations, indexes, and app settings are in a single SQLite database, <code>chatsrecall.db</code>, in the desktop app's data folder in your Windows user profile</li>
+                    <li>API keys you add for the optional AI features are stored in Windows Credential Manager, not in the database and not in plain text</li>
+                    <li>Access tokens for the app's local programmatic interface are stored only as irreversible hashes</li>
+                    <li>Answer feedback is written to a local file in the same app folder. The question you asked is stored only as a short hash of itself, so the only question-shaped text ever written is a comment you type yourself</li>
+                    <li>Small preferences, such as your theme and whether setup is finished, are kept in the app's own local storage</li>
+                    <li>The extension stores only what it needs to do its job right now: which sources are awaiting your approval, and a rolling log of the commands it ran, which exists for support and can be cleared from its popup. No conversations are stored in the browser</li>
                 </ul>
-                <p>The only exception is anonymous usage analytics sent to PostHog (see "Third-Party Services" below). <strong>No chat content, titles, URLs, or prompts are included in analytics data.</strong></p>
+                <p>Nothing is backed up to us. If you delete the database file, that data is gone.</p>
             </section>
 
-            <!-- Data Sharing -->
+            <!-- How Data Gets In -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Data Sharing</h2>
-                <p>ChatsRecall does not sell, rent, or share your conversation content with third parties. Your conversation titles, messages, and URLs are stored locally and are not transmitted to us.</p>
-                <p>Data sent to third parties is limited to the specific cases described in this policy, such as anonymous analytics if analytics is enabled and optional contact information if you choose to submit it. These transfers do not include your conversation titles, prompts, responses, or URLs unless you separately choose to share that information outside the extension.</p>
+                <h2 class="privacy-heading">How Conversations Reach the App</h2>
+                <p>ChatsRecall captures conversations in four ways, all of them started by you:</p>
+                <ul class="privacy-list">
+                    <li><strong>Through your browser.</strong> The desktop app sends commands to the extension over Chrome native messaging, a private channel between the two programs on your machine. On a supported site, the extension reads what is on the page and records the requests the page itself makes, which is how titles, prompts, replies, renames, and deletions are detected. It acts inside your existing signed-in session, exactly as you would if you clicked through the site yourself. Some sync steps open a supported site in a background browser window to read pages that are not currently on screen</li>
+                    <li><strong>Directly from a service's API</strong>, for meeting tools you connect yourself with your own API key or by granting access. These touch no browser</li>
+                    <li><strong>From local session files</strong> written by coding-agent apps already installed on your computer</li>
+                    <li><strong>By manual import</strong> of a transcript file or pasted text</li>
+                </ul>
+                <p>Sources are individually switchable, and several ship switched off until you turn them on. Some require a one-time permission approval in your browser, which only you can grant, from the extension's own popup.</p>
             </section>
 
-            <!-- Third-Party Services -->
+            <!-- Actions At The Source -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Third-Party Services</h2>
-
-                <h3 class="privacy-subheading">PostHog (Anonymous Usage Analytics)</h3>
-                <p>ChatsRecall uses <a href="https://posthog.com" target="_blank" rel="noopener noreferrer">PostHog</a> to collect anonymous usage analytics. This helps us understand how the extension is used and identify bugs.</p>
-
-                <p><strong>How it works:</strong></p>
+                <h2 class="privacy-heading">Actions ChatsRecall Takes On Your Accounts</h2>
+                <p>ChatsRecall is not read-only at the source. When you ask it to, and only then, it acts on your behalf in your own signed-in session:</p>
                 <ul class="privacy-list">
-                    <li>A random anonymous user ID is generated locally (e.g., <code>user_abc123</code>). It is not linked to any account, email, or personal identity</li>
-                    <li>Analytics data is sent to <code>us.i.posthog.com</code></li>
+                    <li>Rename a conversation at its source, so the new title shows there too</li>
+                    <li>Pin or unpin a conversation at its source</li>
+                    <li>Delete a conversation at its source. When a source offers no delete ChatsRecall can reach, the confirmation says so and only the local copy is removed</li>
+                    <li>Move a conversation into or out of a project at the source</li>
+                    <li>Start a new chat at a source, or open a source's composer with text prefilled so you can continue a conversation elsewhere. Prefilled text is never sent for you; you review it and press send</li>
                 </ul>
+                <p>Each of these is triggered by a click in the app. Nothing is written back automatically, and syncing on its own never changes anything at a source.</p>
+            </section>
 
-                <p><strong>What IS sent to PostHog:</strong></p>
+            <!-- When Data Leaves -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">When Data Leaves Your Device</h2>
+                <p>This is the complete list. Apart from these cases, no conversation data leaves your computer.</p>
+
+                <h3 class="privacy-subheading">Optional AI Features, Using Your Own API Key</h3>
+                <p>Some features answer questions or index meaning by calling a model provider. They are off until you add your own API key in Settings, you pay the provider directly, and nothing runs on a schedule or during a sync.</p>
                 <ul class="privacy-list">
-                    <li>Event names (e.g., <code>popup_opened</code>, <code>searched</code>, <code>filter_clicked</code>, <code>chat_clicked</code>, <code>scraped</code>)</li>
-                    <li>Search query length (not the query text itself)</li>
-                    <li>Source platform names (e.g., "ChatGPT", "Claude")</li>
-                    <li>Filter values selected (e.g., date filter type)</li>
-                    <li>Scrape counts (number of chats indexed, not their content)</li>
-                    <li>Error messages and context (for debugging)</li>
-                    <li>Theme and hotkey preferences</li>
-                    <li>Extension install/update events</li>
+                    <li><strong>Asking your archive a question</strong> sends the question and a bounded set of relevant excerpts to OpenAI. It requires a per-feature consent checkbox in the panel. The full archive is never sent, and neither are file contents</li>
+                    <li><strong>Indexing notable moments</strong> sends conversation text to OpenAI, and for long transcripts to Anthropic instead, because only that model reads a long conversation all the way through. The page states the cost before anything runs, and indexes a limited batch at a time</li>
+                    <li><strong>Suggesting extra wordings for a term</strong> is one clearly marked button that asks a model. It is never required</li>
+                    <li><strong>Indexing the terms and named things your conversations mention</strong> involves no model and no network at all. It is entirely local</li>
                 </ul>
+                <p>Before excerpts are sent, titles and text are scanned for things that look like secrets, such as keys and tokens, and those are removed. Runs are bounded in rounds, evidence, tokens, and time, and can be cancelled. What you send is then handled under your own agreement with that provider.</p>
 
-                <p><strong>What is NOT sent to PostHog:</strong></p>
+                <h3 class="privacy-subheading">Your Email Address, If You Entered It</h3>
+                <p>If you fill in the optional email step, the app posts it to our contact database, hosted on Supabase, so we can reach you about updates, fixes, or a reply to your feedback. Sent with it: your operating system and the app version. No identifier is attached, because the app has no analytics ID. It is sent once, and the step never asks again.</p>
+
+                <h3 class="privacy-subheading">Update Checks</h3>
+                <p>The app checks <code>chatsrecall.com</code> for a new version and, when one exists, fetches the release notes. These are ordinary web requests, so our host sees the request and the IP address it came from, as with any website visit. No conversation data or identifier is included. Installers are cryptographically signed, and the app verifies the signature before installing.</p>
+
+                <h3 class="privacy-subheading">Services You Connect Yourself</h3>
+                <p>If you connect a meeting tool, the app calls that tool's API with the credentials you provided, to fetch your own meetings. If you use a feature that opens a source site, the request goes to that site as it normally would from your browser.</p>
+
+                <h3 class="privacy-subheading">What We Never Do</h3>
                 <ul class="privacy-list">
-                    <li>Chat titles</li>
-                    <li>Chat prompts, assistant responses, or conversation content</li>
-                    <li>Chat URLs</li>
-                    <!-- <li>Imported file contents</li> -->
-                    <li>Any personal data or account information</li>
+                    <li>We do not sell, rent, or trade your data</li>
+                    <li>We do not use your conversations for advertising, or to train any model of our own</li>
+                    <li>We run no analytics, telemetry, crash reporting, or tracking pixels</li>
+                    <li>We operate no cloud storage for your conversations</li>
                 </ul>
+            </section>
 
-                <p>You can disable analytics at any time from the extension's Settings page.</p>
-                <p>For more details, see <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog's Privacy Policy</a>.</p>
-
-                <h3 class="privacy-subheading">Supabase (Optional Email Sign-Up)</h3>
-                <p>If you choose to provide your email address through the extension's optional onboarding or contact flow, that email address may be sent to a Supabase-hosted database so we can contact you about product updates, bug fixes, or your submitted feedback. This submission is optional and happens only when you provide the email address yourself.</p>
-
-                <p><strong>What may be sent with an optional email submission:</strong></p>
+            <!-- Local API -->
+            <section class="privacy-section">
+                <h2 class="privacy-heading">The Local Interface For Your Own Tools</h2>
+                <p>The app can expose a read-only interface so tools you run on the same computer, such as an AI agent or a script, can search your archive. It is off until you create an access token in the app.</p>
                 <ul class="privacy-list">
-                    <li>Your email address</li>
-                    <li>Your operating system and browser information</li>
-                    <li>The extension version number</li>
-                    <li>The extension's anonymous internal user ID, if available</li>
-                </ul>
-
-                <p><strong>Other third-party services we do not use for conversation content:</strong></p>
-                <ul class="privacy-list">
-                    <li>No tracking pixels</li>
-                    <li>No cloud storage</li>
-                    <li>No advertising networks</li>
+                    <li>It listens on your own machine only (<code>127.0.0.1</code>) and is never reachable from the network</li>
+                    <li>Every client needs a token you create. Tokens carry narrowly defined scopes, can be limited to certain sources or accounts, can expire, are rate limited, and can be revoked at any time</li>
+                    <li>Everything it offers is read-only. Nothing can write, delete, or start a sync through it</li>
+                    <li>Asking a question through it needs its own separate scope, because that is the one operation that sends excerpts to a model provider and spends your key</li>
+                    <li>An append-only log records that each request happened, deliberately without message content or the text of queries. Questions appear only as a short hash</li>
+                    <li>Conversation text handed to an agent is labeled as untrusted data rather than instructions</li>
                 </ul>
             </section>
 
             <!-- Permissions Explained -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Permissions Explained</h2>
-                <p>The extension requires certain permissions to function. Here's why each is needed:</p>
+                <h2 class="privacy-heading">Extension Permissions Explained</h2>
+                <p>The connector extension asks for the following. It contains no knowledge of any particular site: every selector and rule arrives from the desktop app at runtime, and it never downloads or evaluates remote code.</p>
 
                 <div class="privacy-table-wrapper">
                     <table class="privacy-table">
@@ -205,77 +213,81 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td><code>nativeMessaging</code></td>
+                                <td>Connects to the ChatsRecall desktop app on the same computer. This is the only thing the extension talks to</td>
+                            </tr>
+                            <tr>
                                 <td><code>scripting</code></td>
-                                <td>Runs content scripts on supported sites so the extension can read conversation metadata and, when available, conversation messages needed for local indexing and search</td>
+                                <td>Runs the two bundled scripts on supported sites so conversations can be read and captured</td>
                             </tr>
                             <tr>
                                 <td><code>tabs</code></td>
-                                <td>Opens chat links in new tabs when clicked from the extension popup</td>
+                                <td>Opens, focuses, and reads the addresses of tabs, so a conversation can be opened at its source and the right tab can be captured</td>
+                            </tr>
+                            <tr>
+                                <td><code>storage</code></td>
+                                <td>Remembers pending source approvals and the recent command log shown in the popup</td>
                             </tr>
                             <tr>
                                 <td><code>alarms</code></td>
-                                <td>Runs optional scheduled background sync checks on supported sources</td>
+                                <td>Keeps the connection to the desktop app alive and retries it when the browser suspends the extension</td>
                             </tr>
                             <tr>
-                                <td><code>host_permissions</code> (AI platform domains)</td>
-                                <td>Lets the extension access supported chat pages in order to read conversation metadata and content for local storage and search</td>
+                                <td>Site access (supported sources)</td>
+                                <td>Lets the extension read conversation pages on the AI chat and meeting sites described below</td>
                             </tr>
                             <tr>
-                                <td><code>host_permissions</code> (<code>www.google.com</code>)</td>
-                                <td>Supports Google AI Mode search pages that the extension treats as Gemini-related conversations for saving and reopening</td>
-                            </tr>
-                            <tr>
-                                <td><code>host_permissions</code> (<code>us.i.posthog.com</code>)</td>
-                                <td>Sends anonymous usage analytics (no user content)</td>
+                                <td>Optional site access</td>
+                                <td>Sites for newly added sources are optional and stay inactive until you approve each one from the extension's popup. You can revoke them in your browser at any time</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h3 class="privacy-subheading">Supported Domains</h3>
-                <p>The extension has access to:</p>
-                <ul class="privacy-list">
-                    <li><code>chatgpt.com</code>: OpenAI's ChatGPT (chat history scraping)</li>
-                    <li><code>claude.ai</code>: Anthropic's Claude (chat history scraping)</li>
-                    <li><code>gemini.google.com</code>: Google's Gemini (chat history scraping)</li>
-                    <li><code>perplexity.ai</code>: Perplexity AI (chat history scraping)</li>
-                    <li><code>app.wave.co</code>: Wave AI (chat history scraping)</li>
-                    <li><code>www.google.com</code>: Google AI Mode search pages used for Gemini-related conversation capture and reopening</li>
-                    <li><code>us.i.posthog.com</code>: PostHog (anonymous usage analytics only, not content scraping)</li>
-                </ul>
+                <h3 class="privacy-subheading">Which Sites Are Captured Today</h3>
+                <p>The desktop app captures conversations from thirteen sources: ChatGPT, Claude, Claude Code, Cowork, Gemini, Google AI Mode search results, Perplexity, Grok, Microsoft Copilot, Wave, Read AI, Fireflies, and Zoom cloud recording transcripts. Several of these are switched off until you enable them, and Zoom cannot sync yet.</p>
+                <p>The extension's site list is broader than that. It is prepared in advance for additional AI chat, research, meeting, and coding sites, so that support for a new one does not require a new extension release, which browsers would otherwise treat as a permission change that disables the extension until every user re-approves it. <strong>Having access to a site is not the same as capturing it.</strong> The extension does nothing on a site until the desktop app sends it a command for a source you have enabled, and the list of enabled sources is always visible in the app.</p>
             </section>
 
             <!-- Your Rights -->
             <section class="privacy-section">
-                <h2 class="privacy-heading">Your Rights</h2>
+                <h2 class="privacy-heading">Your Choices and Controls</h2>
 
-                <h3 class="privacy-subheading">Viewing Your Data</h3>
-                <p>All your chat data is visible within the extension popup. You can search and browse all collected conversations.</p>
+                <h3 class="privacy-subheading">Seeing Your Data</h3>
+                <p>Everything ChatsRecall holds is visible in the app: every conversation, message, attachment name, project, and index. There is no hidden copy anywhere else.</p>
 
                 <h3 class="privacy-subheading">Deleting Your Data</h3>
-                <p>You can delete all stored data by:</p>
                 <ol class="privacy-list privacy-list-ordered">
-                    <li><strong>Removing the extension</strong>: Uninstalling ChatsRecall removes the extension from your browser and may remove associated local extension storage depending on your browser's behavior</li>
-                    <li><strong>Clearing browser data</strong>: Clearing extension/browser storage such as IndexedDB will remove locally stored ChatsRecall data</li>
+                    <li><strong>Delete one conversation</strong> in the app. Where the source allows it, you can delete it there in the same step; the confirmation always says which will happen</li>
+                    <li><strong>Delete everything</strong> by removing the app's database file from its data folder, or by uninstalling the desktop app</li>
+                    <li><strong>Remove the extension</strong> in your browser. Nothing of your archive lives there, so nothing is lost by doing so</li>
+                    <li><strong>Ask us to delete your email address</strong> from our contact database by writing to the address below</li>
                 </ol>
 
-                <h3 class="privacy-subheading">Analytics Controls</h3>
-                <p>You can disable anonymous analytics at any time from the extension's Settings page.</p>
+                <h3 class="privacy-subheading">Keeping Everything Local</h3>
+                <p>If you never add an API key, nothing about your conversations is ever sent to a model provider, and every other feature keeps working, including search.</p>
+
+                <h3 class="privacy-subheading">Limiting What Is Captured</h3>
+                <p>Turn individual sources off, decline or revoke site permissions in your browser, or simply do not connect an account. Capture only happens for sources that are on.</p>
 
                 <h3 class="privacy-subheading">Data Portability</h3>
-                <p>Since all data is stored locally in standard browser storage (IndexedDB), you maintain full control over your data at all times.</p>
+                <p>Your archive is a standard SQLite database in your own user profile, so you can copy it, back it up, or read it with ordinary tools. It is yours.</p>
             </section>
 
             <!-- Security -->
             <section class="privacy-section">
                 <h2 class="privacy-heading">Security</h2>
                 <ul class="privacy-list">
-                    <li>All chat data remains on your local device</li>
-                    <li>No chat content is transmitted to any external server</li>
-                    <li>The extension uses standard browser security mechanisms</li>
-                    <li>Content scripts only run on the specific supported domains</li>
-                    <li>Analytics data contains no personally identifiable information</li>
+                    <li>Your conversations stay on your device, in your user profile, protected by your operating system's own account protections</li>
+                    <li>API keys live in Windows Credential Manager; local access tokens are stored only as irreversible hashes</li>
+                    <li>The local interface binds to your own machine only and requires a scoped token for every request</li>
+                    <li>The desktop app and the extension talk over Chrome native messaging, a channel no web page can reach</li>
+                    <li>The extension runs only on its listed sites, and never fetches or evaluates remote code</li>
+                    <li>Updates are signed, and the app verifies the signature before installing</li>
+                    <li>Conversation text passed to any model or agent is framed as untrusted data, so text inside a conversation cannot act as an instruction</li>
+                    <li>ChatsRecall never handles your passwords for any source</li>
                 </ul>
+                <p>ChatsRecall is in beta and provided as is. Keep your own backups of anything you cannot afford to lose.</p>
             </section>
 
             <!-- Children's Privacy -->
@@ -287,23 +299,22 @@
             <!-- Changes to This Policy -->
             <section class="privacy-section">
                 <h2 class="privacy-heading">Changes to This Policy</h2>
-                <p>We may update this privacy policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document.</p>
+                <p>We may update this policy as the product changes. Any change is reflected in the "Last updated" date at the top of this page.</p>
             </section>
 
             <!-- Contact -->
             <section class="privacy-section">
                 <h2 class="privacy-heading">Contact</h2>
-                <p>If you have questions about this privacy policy or the extension's data practices, please:</p>
+                <p>Questions about this policy, or about how ChatsRecall handles your data:</p>
                 <ul class="privacy-list">
-                    <li>Open an issue on our GitHub repository</li>
-                    <li>Contact us at: <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a></li>
+                    <li>Email <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a></li>
                 </ul>
             </section>
 
             <!-- Summary -->
             <section class="privacy-section privacy-summary">
                 <h2 class="privacy-heading">Summary</h2>
-                <p><strong>Your chat data stays on your device.</strong> We collect anonymous usage analytics (via PostHog) to improve the extension, but no chat titles, prompts, URLs, or conversation content is ever transmitted externally. The extension works entirely with local data. Analytics only track how features are used, not what you search for or chat about.</p>
+                <p><strong>Your conversations stay on your computer.</strong> ChatsRecall stores them in a database in your own user profile, has no account and no cloud, and collects no analytics of any kind. It reads AI chat sites through a browser you are already signed in to, and only for the sources you switch on. It changes something at a source, such as a title, a pin, or a deletion, only when you click to do it. The one way conversation text leaves your device is the optional AI features, which need an API key you add yourself and send only bounded excerpts to the model provider. Everything else, including search, is local.</p>
             </section>
 
         </div>
