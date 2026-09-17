@@ -214,7 +214,19 @@
                     <details class="help-item">
                         <summary>Why do only some sources show in the sidebar?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Six common sources are visible out of the box. Open the sources <span class="help-nowrap">filter&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span></span> next to the SOURCES label in the sidebar to show the rest. Hiding a row is purely visual: hidden sources still sync, and their conversations are still saved.</p>
+                            <p>Six common sources are visible out of the box. Open the sources <span class="help-nowrap">filter&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span></span> next to the SOURCES label in the sidebar to show the rest, reorder them, or hide the ones you do not use.</p>
+                        </div>
+                    </details>
+                    <details class="help-item">
+                        <summary>How do I hide or remove a source from the list?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Open the sources <span class="help-nowrap">filter&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 5h-6"/><path d="M11 5H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 19h-5"/><path d="M12 19H3"/><path d="M15 3v4"/><path d="M8 10v4"/><path d="M16 17v4"/></svg></span></span> next to the SOURCES label in the sidebar. Every source has a row there, with three settings:</p>
+                            <ul>
+                                <li><strong>Shown</strong>: hides nothing.</li>
+                                <li><strong>No sidebar</strong>: removes the sidebar row only. That source's conversations still appear under All Sources and in search.</li>
+                                <li><strong>Hidden</strong>: removes the sidebar row and keeps that source's conversations out of the list and out of search.</li>
+                            </ul>
+                            <p>Nothing you hide stops syncing, and nothing is deleted. Set a source back to Shown whenever you want it back in the list. Drag a row by its <span class="help-nowrap">handle&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5.5h.01"/><path d="M15 5.5h.01"/><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M9 18.5h.01"/><path d="M15 18.5h.01"/></svg></span></span> to change the order the sources appear in.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -381,15 +393,18 @@
         const normalizeFaqText = (value) => value.toLowerCase().replace(/\./g, '');
 
         faqFilter.addEventListener('input', () => {
-            const query = normalizeFaqText(faqFilter.value.trim());
+            // Every word has to appear somewhere in the item, in any order, so a
+            // query like "hide source" finds "How do I hide or remove a source".
+            const terms = normalizeFaqText(faqFilter.value.trim()).split(/\s+/).filter(Boolean);
             let anyVisible = false;
 
             faqItems.forEach((item) => {
-                const matches = !query || normalizeFaqText(item.textContent).includes(query);
+                const text = normalizeFaqText(item.textContent);
+                const matches = terms.every((term) => text.includes(term));
                 item.style.display = matches ? '' : 'none';
                 if (matches) anyVisible = true;
                 // Open matches while filtering; restore the defaults when cleared
-                item.open = query ? matches : initiallyOpen.has(item);
+                item.open = terms.length ? matches : initiallyOpen.has(item);
             });
 
             faqGroups.forEach((group) => {
