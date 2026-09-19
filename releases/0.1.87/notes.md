@@ -1,6 +1,15 @@
-Quality-of-life work throughout: the app tells you when it is still looking,
-files have one name everywhere, and leaving a page takes you back where you
-came from.
+A small release: quality-of-life work throughout, nothing new to learn.
+
+## Highlights
+
+- :sync: **A list that is still loading no longer says "nothing here"** Chats,
+  Projects, Files and Extensions all show that they are still looking.
+  Searching says so too, instead of flashing "No matching conversations" first.
+- :help: **The guided tour was rebuilt** It now covers source filtering,
+  Projects and opening a chat, and every step that had gone stale was
+  rewritten.
+
+> list view, file names, back links, hover hints
 
 ## Added
 

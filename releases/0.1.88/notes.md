@@ -1,6 +1,17 @@
-Your meetings are now stored whole — Wave's summary and the words actually
-said — and read as documents rather than chats, while long Gemini
-conversations stop shrinking when you open them.
+A big update, and the largest change to how meetings are stored so far.
+
+## Highlights
+
+- :srcWave: **Wave meetings keep the full transcript** Not just the summary —
+  every turn, who said it, and when. Switch between Summary and Transcript in
+  the Reader. All of it is searchable.
+- :srcGemini: **Long Gemini conversations no longer shrink** Re-opening a chat
+  used to save Gemini's shortened view over the full one. A re-scrape can now
+  only ever add to what is stored — on every source.
+- :file: **Recordings read as documents** One sheet across a wider page,
+  instead of the chat bubbles a meeting never had.
+
+> the update window, icons, prompt counts, Wave fixes
 
 ## Added
 

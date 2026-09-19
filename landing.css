@@ -1046,6 +1046,64 @@ main {
     line-height: 1.6;
 }
 
+/* The highlights tier: the two or three changes of a release someone will
+   actually notice, lifted above the full Added/Improved/Fixed record. That
+   record stays visible — this page is the reference for every version and
+   find-in-page has to keep working across all of it. */
+.update-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px;
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+    border-radius: var(--radius-md, 10px);
+}
+
+.update-highlight {
+    display: flex;
+    gap: 12px;
+}
+
+/* Keeps a highlight without a glyph on the same left edge as one with it. */
+.update-highlight-plain {
+    padding-left: 30px;
+}
+
+/* The glyphs are the desktop app's own stroked paths, so they need its stroke
+   treatment rather than a fill. */
+.update-highlight-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    margin-top: 2px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: var(--accent);
+}
+
+.update-highlight-text {
+    min-width: 0;
+}
+
+.update-highlight-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+.update-highlight-body {
+    margin-top: 3px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
 .update-note {
     font-size: 13px;
     color: var(--text-secondary);
