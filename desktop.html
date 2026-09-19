@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.88/ChatsRecall_0.1.88_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.89/ChatsRecall_0.1.89_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -82,6 +82,74 @@
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
 
+            <!-- Version 0.1.89 -->
+            <article class="update-card" data-version="0.1.89">
+                <div class="update-meta">
+                    <span class="update-version">0.1.89</span>
+                    <span class="update-date">September 18, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">Mostly repair work, finishing the meeting capture the last release started.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Wave meetings keep every word, and every voice</p>
+                                <p class="update-highlight-body">A recording could be stored missing a third of what was said, with its turns run together and unattributed. Both are fixed, and sessions already stored that way are re-read for you.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19.5 8.5a2.12 2.12 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Rename and pin without opening a conversation</p>
+                                <p class="update-highlight-body">Right-click any row or card in the Library. The new title now appears the moment you press Enter, instead of when the source gets round to confirming it.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 5v8.5A2.5 2.5 0 0 1 18 16h-6l-5.5 5V16H6a2.5 2.5 0 0 1-2.5-2.5V5A2.5 2.5 0 0 1 6 2.5h12A2.5 2.5 0 0 1 20.5 5Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Conversations open instantly</p>
+                                <p class="update-highlight-body">The Reader draws its real shape straight away and fills it in, rather than sitting blank and then telling you the conversation is not available while it is still looking.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li><strong>Rename</strong> and <strong>Pin</strong> in the Library's right-click menu, in the list and the card view alike, above Add to Project and Delete. Rename turns the row's title, or the card's heading, into an editor in place. An action the source cannot take stays in the menu, disabled, with a tooltip saying why, and progress appears in the same corner cards a delete uses.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>A rename shows its new title immediately, in the Library and in the Reader. It goes back to the old one only if the source refuses, with the status card saying why. Pushing a rename drives a browser in the background and takes around fifteen seconds on some sources, which read as the pencil having done nothing at all.</li>
+                            <li>Opening a conversation no longer means waiting on a blank window. The header, the toolbar and the message area are drawn before anything is requested, as placeholders the real content lands in without the page moving, and &quot;Conversation not available&quot; now appears only when the conversation really is gone.</li>
+                            <li>The update window reads in two tiers. The opening line and the release's two or three highlights come first, and everything else collapses into one row you can expand, labelled with what it covers. Releases you skipped read the same way, and Settings shows the same notes with the record already open. A release with no highlights shows its full record, as before.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>A Wave recording is stored with all of its words and with the speaker label Wave itself shows above each turn — a real name where its diarizer has one, Speaker 1 or Unknown Speaker where it does not. Turns are checked against the recording's own flat transcript before anything is stored, and where a passage cannot be put to a voice the words are kept without one rather than attributed to the wrong person.</li>
+                            <li>A Wave session no longer loses its transcript to a scrape that could read only the summary: it keeps the words it already had, and the Summary | Transcript switch stays where it was.</li>
+                            <li>Wave summaries are read from the session's own data rather than off the page, so a session cannot be caught mid-render or read out of the summary editor while it is open. A summary that comes back holding less than the one already stored is refused, and one holding more is always accepted, so a session stored short repairs itself the next time it is read.</li>
+                            <li>A scrape whose title read comes back empty leaves the stored title alone instead of erasing it. On every source: a conversation no longer goes untitled in the Library because one scrape missed a heading, and no longer drops out of search by name in the meantime.</li>
+                            <li>Speaker 1 and Unknown Speaker are no longer counted as people when the app works out who was in a meeting.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+
             <!-- Version 0.1.88 -->
             <article class="update-card" data-version="0.1.88">
                 <div class="update-meta">
@@ -89,7 +157,30 @@
                     <span class="update-date">September 18, 2026</span>
                 </div>
                 <div class="update-body">
-                    <p class="update-intro">Your meetings are now stored whole — Wave's summary and the words actually said — and read as documents rather than chats, while long Gemini conversations stop shrinking when you open them.</p>
+                    <p class="update-intro">A big update, and the largest change to how meetings are stored so far.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Wave meetings keep the full transcript</p>
+                                <p class="update-highlight-body">Not just the summary — every turn, who said it, and when. Switch between Summary and Transcript in the Reader. All of it is searchable.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5c2.3 1.3 4.6 2 7 2s4.7-.7 7-2"/><path d="M5 19.5c2.3-1.3 4.6-2 7-2s4.7.7 7 2"/><path d="M9 7v10"/><path d="M15 7v10"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Long Gemini conversations no longer shrink</p>
+                                <p class="update-highlight-body">Re-opening a chat used to save Gemini's shortened view over the full one. A re-scrape can now only ever add to what is stored — on every source.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Recordings read as documents</p>
+                                <p class="update-highlight-body">One sheet across a wider page, instead of the chat bubbles a meeting never had.</p>
+                            </div>
+                        </li>
+                    </ul>
                     <div class="update-section">
                         <h3 class="update-section-title added">
                             <i class="bi bi-plus-circle"></i>
@@ -137,7 +228,23 @@
                     <span class="update-date">September 17, 2026</span>
                 </div>
                 <div class="update-body">
-                    <p class="update-intro">Quality-of-life work throughout: the app tells you when it is still looking, files have one name everywhere, and leaving a page takes you back where you came from.</p>
+                    <p class="update-intro">A small release: quality-of-life work throughout, nothing new to learn.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 7.1A6.8 6.8 0 0 0 6 8.5"/><path d="M6.2 4.7V8.5H10"/><path d="M6.4 16.9A6.8 6.8 0 0 0 18 15.5"/><path d="M17.8 19.3v-3.8H14"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">A list that is still loading no longer says &quot;nothing here&quot;</p>
+                                <p class="update-highlight-body">Chats, Projects, Files and Extensions all show that they are still looking. Searching says so too, instead of flashing &quot;No matching conversations&quot; first.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.5"/><path d="M12 17h.01"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">The guided tour was rebuilt</p>
+                                <p class="update-highlight-body">It now covers source filtering, Projects and opening a chat, and every step that had gone stale was rewritten.</p>
+                            </div>
+                        </li>
+                    </ul>
                     <div class="update-section">
                         <h3 class="update-section-title added">
                             <i class="bi bi-plus-circle"></i>
