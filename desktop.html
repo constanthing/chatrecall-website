@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.89/ChatsRecall_0.1.89_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.90/ChatsRecall_0.1.90_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -81,6 +81,74 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.90 -->
+            <article class="update-card" data-version="0.1.90">
+                <div class="update-meta">
+                    <span class="update-version">0.1.90</span>
+                    <span class="update-date">September 21, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A release that widens what syncs and leaves what already syncs as it was.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="m21 9-4 3 4 3V9Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Zoom meeting summaries, with nothing to connect</p>
+                                <p class="update-highlight-body">Turn Zoom on in Sources and its AI Companion summaries come in from the zoom.us session already signed in to your browser, laid out the way Zoom lays them out.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m10.8 5.8-1.6-3"/><path d="m13.2 5.8 1.6-3"/><path d="M12 5.5c1.4 0 2.2 1 2.2 2.3v4.4c0 1.3-.8 2.3-2.2 2.3s-2.2-1-2.2-2.3V7.8c0-1.3.8-2.3 2.2-2.3Z"/><path d="M9.8 8.5 4.5 7.2c-1 2.6.4 4.8 5.3 4.3"/><path d="m14.2 8.5 5.3-1.3c1 2.6-.4 4.8-5.3 4.3"/><circle cx="12" cy="18.3" r="2.3"/><path d="M12 14.5v1.5"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Fireflies without an API key</p>
+                                <p class="update-highlight-body">Fireflies now syncs from your signed-in app.fireflies.ai session, like Read AI, and opens in the Reader on its own Notes, with the transcript one click away.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9.2" cy="12" r="5.7"/><circle cx="14.8" cy="12" r="5.7"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Cowork tasks sit inside their Claude projects</p>
+                                <p class="update-highlight-body">A claude.ai project is one card holding its chats and its Cowork tasks together, with the project's description under its name.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>Zoom syncs AI Companion meeting summaries from the zoom.us session signed in to your browser, with no Zoom account to connect; regional Zoom domains work too. Each meeting with a summary becomes one conversation, titled with the meeting's topic and dated when it started, and reads as a single sheet: Quick recap, Next steps, then one titled section per topic. Times follow the timezone set in your Zoom profile. Transcripts are not included, since Zoom makes them only for cloud recordings. Zoom starts switched off; turn it on in Sources.</li>
+                            <li>Fireflies syncs without an API key, from the app.fireflies.ai session signed in to your browser. With a key configured it keeps using the Fireflies API, and moving between the two never duplicates a meeting. Fireflies still starts switched off; turn it on in Sources.</li>
+                            <li>Claude Cowork tasks are filed into the claude.ai project they belong to. The project stays a single card, and opening it lists its chats and its Cowork tasks together, each with its own source badge. Cowork spaces that live only on this computer appear as projects of their own under Claude Cowork.</li>
+                            <li>A Claude project card shows the project's description under its name, two lines at most, with the full text on hover. A description removed on claude.ai is cleared on the next sync.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>A Fireflies meeting reads like a Wave session: a Notes | Transcript switch, Fireflies' own Notes with their headings and nested bullets intact, and the time into the recording above each turn. Meetings already stored are read again once on the next sync to gain the switch and, on the browser path, their Notes in place of the shorter Overview.</li>
+                            <li>Continue in another app is disabled on meeting recordings (Wave, Read AI, Fireflies, Zoom), with a tooltip saying why: a recording is not a chat another AI can pick up. The What's new walkthrough's &quot;open any chat&quot; step offers only chats that can be continued.</li>
+                            <li>Open Original on a Zoom meeting goes to its summary page on zoom.us.</li>
+                            <li>Fireflies has a new icon: a firefly seen from above, in place of the dot and spark that read as a stick at small sizes. Its color moves from orange to a pinkish purple, closer to the Fireflies app.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>A Claude account no longer looks empty when an API-only console organization is listed before the one you chat in. ChatsRecall now reads the first organization that can chat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.89 -->
             <article class="update-card" data-version="0.1.89">
