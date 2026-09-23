@@ -1,4 +1,6 @@
-A release that widens what syncs and leaves what already syncs as it was.
+Won't install? Download it from chatsrecall.com and run it over your current
+version; your library stays. A release that widens what syncs and leaves what
+already syncs as it was.
 
 ## Highlights
 
