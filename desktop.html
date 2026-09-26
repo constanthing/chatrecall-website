@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.91/ChatsRecall_0.1.91_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.92/ChatsRecall_0.1.92_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -81,6 +81,70 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.92 -->
+            <article class="update-card" data-version="0.1.92">
+                <div class="update-meta">
+                    <span class="update-version">0.1.92</span>
+                    <span class="update-date">September 26, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A substantial compatibility update, with a round of reliability fixes.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.7 8.3-2.2 5.2-5.2 2.2 2.2-5.2Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Copilot works on its new site</p>
+                                <p class="update-highlight-body">ChatsRecall can sync, open, continue, and capture chats on copilot.com in Chrome and Edge, while still supporting accounts on the old Copilot site.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.25 3.75L17 8l-3.75 1.25L12 13l-1.25-3.75L7 8l3.75-1.25L12 3Z"/><path d="m18.5 14 .75 2.25L21.5 17l-2.25.75L18.5 20l-.75-2.25L15.5 17l2.25-.75L18.5 14Z"/><path d="m5 12 .75 2.25L8 15l-2.25.75L5 18l-.75-2.25L2 15l2.25-.75L5 12Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Ask archive explains what it needs</p>
+                                <p class="update-highlight-body">The Ask button now tells you when a key or consent is missing, and closing a search no longer leaves the sheet stuck on “Researching…”.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>ChatsRecall reads the new Copilot app at copilot.com, including its chat list, messages, pins, and account, while continuing to read the old app for accounts still served there.</li>
+                            <li>On Windows, an OpenAI or Anthropic key saved in the shared FollowThrough credential store can be used when no environment variable or ChatsRecall key is set. Existing key choices keep their priority.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>When Copilot needs permission for copilot.com, the Sync page explains the steps and opens the extension’s Allow page in the right browser. If several browsers need permission, you can choose which one to open; an older extension gets update steps. The Library, Reader, and sidebar also show when Copilot needs attention.</li>
+                            <li>Copilot sync reads every page of the new app’s chat list and complete long conversations, even when its background window is minimized. A full sync can also remove local copies of chats deleted at Copilot after the list has been read completely.</li>
+                            <li>New prompts and finished replies in an open copilot.com chat are saved automatically, including follow-up prompts in the same conversation.</li>
+                            <li>Sidebar navigation and source rows are more compact, so more fit without scrolling.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>Continue in another app fills Copilot’s new message box after the redirect to copilot.com, and opening a Copilot conversation at a particular message highlights the right prompt or reply on the new page.</li>
+                            <li>Copilot rename, pin, and delete actions work from a collapsed sidebar and wait for the source to confirm the change. Rejected renames and pins no longer appear to succeed locally.</li>
+                            <li>Ask archive explains a missing key or unticked consent box instead of only disabling Ask. Closing or cancelling a running search leaves the sheet ready for another question, and pressing Ask cannot start a duplicate run.</li>
+                            <li>Renaming or pinning a conversation stored under multiple accounts updates only the right account’s copy; source errors from another signed-in browser no longer override the result.</li>
+                            <li>A failed desktop update now opens the website’s download page, where the installer can be run over the current version.</li>
+                            <li>The separator between dates on conversation cards displays correctly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.91 -->
             <article class="update-card" data-version="0.1.91">
