@@ -149,7 +149,7 @@
                     <details class="help-item">
                         <summary>Do I need to share my passwords?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Never. ChatsRecall does not ask for or store any credentials. It reads conversations through the browser where you are already signed in. If a source shows a signed-out note in the sync history, sign in to that site in the connected browser and run the sync again.</p>
+                            <p>Never. ChatsRecall does not ask for or store the password to any source. It reads conversations through the browser where you are already signed in. If a source shows a signed-out note in the sync history, sign in to that site in the connected browser and run the sync again.</p>
                         </div>
                     </details>
                 </div>
@@ -284,8 +284,8 @@
                     <details class="help-item">
                         <summary>Does anything ever leave my device?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Your archive stays on your computer, and the app runs no analytics or telemetry. A few things do go out: update checks against chatsrecall.com, and your email address if you entered it during setup. The <a href="privacy.html">Privacy page</a> lists every case.</p>
-                            <p>Conversation content leaves only through the optional AI features, which are off until you add your own API key. Agentic Search sends your question and a small set of relevant excerpts to the model provider, and indexing notable moments sends conversation text to OpenAI or Anthropic. Both run only when you start them; nothing runs in the background.</p>
+                            <p>Your archive stays on your computer, and the app runs no analytics or telemetry. A few things do go out: update checks against chatsrecall.com, your email address if you entered it during setup, calls to meeting tools you connect yourself, and images inside a conversation you open, which load from where they are hosted. The <a href="privacy.html">Privacy page</a> lists every case.</p>
+                            <p>Conversation content leaves only through the optional AI features, which do nothing until an OpenAI or Anthropic API key is connected. Once one is, session cards are on by default: after each sync they send the text of changed conversations to the model provider to write a short summary for each card. Switch them off in Settings to stop that. Agentic Search, indexing notable moments, and summarizing a chat to continue it elsewhere send text only when you start them.</p>
                         </div>
                     </details>
                 </div>
