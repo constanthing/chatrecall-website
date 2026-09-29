@@ -31,6 +31,8 @@
     --grok: #8e8e93;
     --copilot: #16b8c4;
     --readai: #7c6ce8;
+    --fireflies: #c13ccf;
+    --zoom: #2d8cff;
 
     --radius-sm: 6px;
     --radius-md: 10px;
@@ -659,6 +661,16 @@ main {
 .source-card.readai .source-icon {
     background: rgba(124, 108, 232, 0.12);
     color: var(--readai);
+}
+
+.source-card.fireflies .source-icon {
+    background: rgba(193, 60, 207, 0.12);
+    color: var(--fireflies);
+}
+
+.source-card.zoom .source-icon {
+    background: rgba(45, 140, 255, 0.12);
+    color: var(--zoom);
 }
 
 /* Coming soon cards */
