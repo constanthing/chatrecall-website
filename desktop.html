@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.94/ChatsRecall_0.1.94_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.95/ChatsRecall_0.1.95_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -81,6 +81,80 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.95 -->
+            <article class="update-card" data-version="0.1.95">
+                <div class="update-meta">
+                    <span class="update-version">0.1.95</span>
+                    <span class="update-date">October 5, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A big update: a new source, a new way to organize projects, and a lot of groundwork for installs at work.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.25 3.75L17 8l-3.75 1.25L12 13l-1.25-3.75L7 8l3.75-1.25L12 3Z"/><path d="m18.5 14 .75 2.25L21.5 17l-2.25.75L18.5 20l-.75-2.25L15.5 17l2.25-.75L18.5 14Z"/><path d="m5 12 .75 2.25L8 15l-2.25.75L5 18l-.75-2.25L2 15l2.25-.75L5 12Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Littlebird joins your library</p>
+                                <p class="update-highlight-body">ChatsRecall now reads the Littlebird desktop app's own copy of your account: chats, routine runs and meetings, with no browser needed.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Search finds more of what you meant</p>
+                                <p class="update-highlight-body">What Claude Code's tools printed is now searchable, and a glossary of your own names and misspellings finds a conversation whichever spelling you remember.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.2A2.2 2.2 0 0 1 5.7 5h4.1l1.8 2h6.7a2.2 2.2 0 0 1 2.2 2.2v7.1a2.2 2.2 0 0 1-2.2 2.2H5.7a2.2 2.2 0 0 1-2.2-2.2V7.2Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">A conversation can sit in several projects</p>
+                                <p class="update-highlight-body">Projects now mix sources freely, each has a stable folder, and your assistants can manage them over MCP.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>Littlebird as a source: chats, routine runs and meetings, read from the Littlebird desktop app's local copy (ChatsRecall never changes it).</li>
+                            <li>A conversation can belong to several local projects; each project gets a stable identity and a folder, and the MCP and API can create, change, archive and delete projects and file conversations into them.</li>
+                            <li>A local glossary of your own names, former names and misspellings that feeds search, so one spelling finds conversations that used another.</li>
+                            <li>Search Claude Code tool output (Sync → Settings): what a local Claude Code session's tools printed becomes searchable; on by default, and the reader shows the conversation as before.</li>
+                            <li>Before the first save from an account it has not seen, sync asks on the Sync page whether to save from it; the answer is remembered per account.</li>
+                            <li>Ctrl and plus, minus or 0 enlarge, shrink and reset the app's text, like a browser; the size is remembered.</li>
+                            <li>Settings → Meeting sources: an API key field for Fireflies and a Connect Zoom button, so both can be set up without developer tools.</li>
+                            <li>Settings → Updates → Save report: one text file with what support needs to see why an update did not install, with no conversation text or account details.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>The update log is kept on disk, and a failed update check or install now says why in plain words (web filter, untrusted certificate, proxy and so on).</li>
+                            <li>ChatsRecall now uses the proxy set in Windows and the Windows certificate store, so it works on company networks that require them.</li>
+                            <li>A source you were never signed in to shows a grey &quot;Skipped&quot; after a sync instead of a red failure.</li>
+                            <li>Grok says &quot;not signed in&quot; instead of &quot;auth denied&quot; when nobody is signed in.</li>
+                            <li>An installer can provide a setup file that skips the tour and narrows the first sync to the sources that person uses.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>On some PCs a &quot;reg.exe - Application Error&quot; dialog appeared at Windows logon and the browser connection was never registered.</li>
+                            <li>If Windows or antivirus blocked an update's installer, the app closed without saying why; the next launch now says the update did not complete.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.94 -->
             <article class="update-card" data-version="0.1.94">
