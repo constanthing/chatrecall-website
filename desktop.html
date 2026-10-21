@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.95/ChatsRecall_0.1.95_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.96/ChatsRecall_0.1.96_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -81,6 +81,76 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.96 -->
+            <article class="update-card" data-version="0.1.96">
+                <div class="update-meta">
+                    <span class="update-version">0.1.96</span>
+                    <span class="update-date">October 21, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A big update for anyone setting ChatsRecall up for the first time, and a new source for everyone.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Search your own chats within a minute of setup</p>
+                                <p class="update-highlight-body">Setup asks which AI you use most, brings its newest conversations in first, and tells you the moment they are searchable, with three searches built from your own chats.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.25 3.75L17 8l-3.75 1.25L12 13l-1.25-3.75L7 8l3.75-1.25L12 3Z"/><path d="m18.5 14 .75 2.25L21.5 17l-2.25.75L18.5 20l-.75-2.25L15.5 17l2.25-.75L18.5 14Z"/><path d="m5 12 .75 2.25L8 15l-2.25.75L5 18l-.75-2.25L2 15l2.25-.75L5 12Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Meta AI joins your library</p>
+                                <p class="update-highlight-body">Conversations from meta.ai can now be synced from your signed-in browser; switch it on in the Sync page.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 7.1A6.8 6.8 0 0 0 6 8.5"/><path d="M6.2 4.7V8.5H10"/><path d="M6.4 16.9A6.8 6.8 0 0 0 18 15.5"/><path d="M17.8 19.3v-3.8H14"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">A Refresh never removes Gemini, Wave or Copilot chats</p>
+                                <p class="update-highlight-body">A slow or throttled page could make a Refresh delete conversations that still existed; it now keeps everything it has.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>Setup asks &quot;Which AI do you use most?&quot;, picking out the AI sites open in your browser and the AI apps on this computer; its newest conversations come in first and the rest follow on their own.</li>
+                            <li>When your first conversations are searchable, a card says so and offers three searches built from your own chats, each checked to find its conversation near the top.</li>
+                            <li>Meta AI (meta.ai) as a source, off until you switch it on in the Sync page.</li>
+                            <li>chatsrecall:// links and <code>ChatsRecall --search &quot;words&quot;</code> open ChatsRecall on that search, even when it is already running.</li>
+                            <li>Assistants that use ChatsRecall over MCP can bring the window up on the same search they ran, so you see the conversation in the app.</li>
+                            <li>A ChatsRecall installed with a kit can come with AI included for up to 90 days, so Ask archive works on day one; it ends when your own OpenAI key works, and only you can let it write session cards.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>Search finds plural and past-tense forms of what you type: &quot;budgets&quot; finds &quot;budget&quot;, &quot;planned&quot; finds &quot;plan&quot;.</li>
+                            <li>For your first week, search results come best match first unless you pick an order; &quot;Relevance&quot; is now called &quot;Best match&quot;.</li>
+                            <li>A sync that could not start now says why instead of doing nothing, and a sync where only the browser was missing says to connect it.</li>
+                            <li>Local Claude Code sessions are read newest first.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>The tour's Sources card now says whether to choose now or later, and its switches respond during the tour.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.95 -->
             <article class="update-card" data-version="0.1.95">
