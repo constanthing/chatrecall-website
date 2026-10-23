@@ -53,7 +53,7 @@
     </script>
 </head>
 
-<body>
+<body data-icons="brand">
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-content">
@@ -136,91 +136,112 @@
         </section>
 
         <!-- Supported Sources Section -->
-        <section class="sources">
-            <h2 class="section-title">Supported Sources</h2>
-            <!-- Original in-house glyphs, one metaphor per source. Kept in sync with
-                 the desktop app's src* icons (chatsrecall-desktop/src/shared/dom.ts).
-                 Deliberately not the vendor logos, per the 2026-08 trademark review. -->
-            <div class="sources-grid">
-                <div class="source-card chatgpt">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01"/><path d="M12 11.5h.01"/><path d="M15.5 11.5h.01"/></svg>
-                    </div>
-                    <span class="source-name">ChatGPT</span>
-                </div>
-                <div class="source-card claude">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.7C10.4 5.2 8.4 4.5 6 4.5c-1 0-2 .13-3 .4V19c1-.27 2-.4 3-.4 2.4 0 4.4.7 6 2.2 1.6-1.5 3.6-2.2 6-2.2 1 0 2 .13 3 .4V4.9c-1-.27-2-.4-3-.4-2.4 0-4.4.7-6 2.2Z"/><path d="M12 6.7v14.1"/></svg>
-                    </div>
-                    <span class="source-name">Claude</span>
-                </div>
-                <div class="source-card claude-code">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7.5 9.5 3 3-3 3"/><path d="M13.5 15.5H17"/></svg>
-                    </div>
-                    <span class="source-name">Claude Code</span>
-                </div>
-                <div class="source-card claude-cowork">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9.2" cy="12" r="5.7"/><circle cx="14.8" cy="12" r="5.7"/></svg>
-                    </div>
-                    <span class="source-name">Claude Cowork</span>
-                </div>
-                <div class="source-card gemini">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5c2.3 1.3 4.6 2 7 2s4.7-.7 7-2"/><path d="M5 19.5c2.3-1.3 4.6-2 7-2s4.7.7 7 2"/><path d="M9 7v10"/><path d="M15 7v10"/></svg>
-                    </div>
-                    <span class="source-name">Gemini</span>
-                </div>
-                <div class="source-card google-ai-mode">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m20.8 20.8-5.2-5.2"/><path d="M10.5 7.6v5.8"/><path d="m8 9.05 5 2.9"/><path d="m13 9.05-5 2.9"/></svg>
-                    </div>
-                    <span class="source-name">Google AI Mode</span>
-                </div>
-                <div class="source-card perplexity">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H8V9h8v7h-5v-4h2.5"/></svg>
-                    </div>
-                    <span class="source-name">Perplexity</span>
-                </div>
-                <div class="source-card wave">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg>
-                    </div>
-                    <span class="source-name">Wave</span>
-                </div>
-                <div class="source-card grok">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10.2" ry="3.6" transform="rotate(-24 12 12)"/></svg>
-                    </div>
-                    <span class="source-name">Grok</span>
-                </div>
-                <div class="source-card copilot">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.7 8.3-2.2 5.2-5.2 2.2 2.2-5.2Z"/></svg>
-                    </div>
-                    <span class="source-name">Copilot</span>
-                </div>
-                <div class="source-card readai">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="14.8" r="3.6"/><circle cx="17" cy="14.8" r="3.6"/><path d="M10.6 14.2a1.9 1.9 0 0 1 2.8 0"/><path d="M3.4 13.6 2.4 9.4"/><path d="m20.6 13.6 1-4.2"/></svg>
-                    </div>
-                    <span class="source-name">Read AI</span>
-                </div>
-                <div class="source-card fireflies">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10.8 5.8-1.6-3"/><path d="m13.2 5.8 1.6-3"/><path d="M12 5.5c1.4 0 2.2 1 2.2 2.3v4.4c0 1.3-.8 2.3-2.2 2.3s-2.2-1-2.2-2.3V7.8c0-1.3.8-2.3 2.2-2.3Z"/><path d="M9.8 8.5 4.5 7.2c-1 2.6.4 4.8 5.3 4.3"/><path d="m14.2 8.5 5.3-1.3c1 2.6-.4 4.8-5.3 4.3"/><circle cx="12" cy="18.3" r="2.3"/><path d="M12 14.5v1.5"/></svg>
-                    </div>
-                    <span class="source-name">Fireflies</span>
-                </div>
-                <div class="source-card zoom">
-                    <div class="source-icon">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="m21 9-4 3 4 3V9Z"/></svg>
-                    </div>
-                    <span class="source-name">Zoom</span>
-                </div>
-            </div>
+        <section class="sources" aria-labelledby="sources-title">
+            <h2 class="section-title" id="sources-title">Supported Sources</h2>
+            <!-- ICON SWITCH. One attribute decides which pictures this row shows:
+                   <body data-icons="brand">  a source that has a logo file shows its vendor's own logo (the default)
+                   <body data-icons="own">    every source shows our in-house glyph instead
+                 One source can be set alone: data-icons="own" (or "brand") on its <li> wins over the body, e.g.
+                 <li class="source-chip chatgpt" data-icons="own">. That is how a vendor can be switched back by itself.
+                 Today four sources are set to "own" on their <li>. Claude Code, Claude Cowork and Google AI Mode have no
+                 standalone logo of their own on a public vendor page, so they have no logo file. Zoom's logo file is kept
+                 but switched off until Zoom's terms for our use are confirmed. To change one later, remove or add
+                 data-icons="own" on its <li> (a source with no logo file also needs an <img class="icon-brand"> added).
+                 To preview a mode without editing the file, add ?icons=own or ?icons=brand to the page address.
+                 Logo files are in assets/logos/ and assets/logos/SOURCES.md says where each one came from.
+                 The in-house glyphs are original drawings, one metaphor per source, kept in sync with the
+                 desktop app's src* icons (chatsrecall-desktop/src/shared/dom.ts). -->
+            <ul class="source-chips" role="list">
+                <li class="source-chip chatgpt">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-onlight" src="assets/logos/chatgpt.svg" alt="ChatGPT" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="ChatGPT"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01"/><path d="M12 11.5h.01"/><path d="M15.5 11.5h.01"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">ChatGPT</span>
+                </li>
+                <li class="source-chip claude">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-tile" src="assets/logos/claude.svg" alt="Claude" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude"><path d="M12 6.7C10.4 5.2 8.4 4.5 6 4.5c-1 0-2 .13-3 .4V19c1-.27 2-.4 3-.4 2.4 0 4.4.7 6 2.2 1.6-1.5 3.6-2.2 6-2.2 1 0 2 .13 3 .4V4.9c-1-.27-2-.4-3-.4-2.4 0-4.4.7-6 2.2Z"/><path d="M12 6.7v14.1"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Claude</span>
+                </li>
+                <li class="source-chip claude-code" data-icons="own">
+                    <span class="chip-icon">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude Code"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7.5 9.5 3 3-3 3"/><path d="M13.5 15.5H17"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Claude Code</span>
+                </li>
+                <li class="source-chip claude-cowork" data-icons="own">
+                    <span class="chip-icon">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude Cowork"><circle cx="9.2" cy="12" r="5.7"/><circle cx="14.8" cy="12" r="5.7"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Claude Cowork</span>
+                </li>
+                <li class="source-chip gemini">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-glyph" src="assets/logos/gemini.png" alt="Gemini" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Gemini"><path d="M5 4.5c2.3 1.3 4.6 2 7 2s4.7-.7 7-2"/><path d="M5 19.5c2.3-1.3 4.6-2 7-2s4.7.7 7 2"/><path d="M9 7v10"/><path d="M15 7v10"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Gemini</span>
+                </li>
+                <li class="source-chip google-ai-mode" data-icons="own">
+                    <span class="chip-icon">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Google AI Mode"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m20.8 20.8-5.2-5.2"/><path d="M10.5 7.6v5.8"/><path d="m8 9.05 5 2.9"/><path d="m13 9.05-5 2.9"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Google AI Mode</span>
+                </li>
+                <li class="source-chip perplexity">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-onlight" src="assets/logos/perplexity.svg" alt="Perplexity" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Perplexity"><path d="M5 5h14v14H8V9h8v7h-5v-4h2.5"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Perplexity</span>
+                </li>
+                <li class="source-chip wave">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-tile" src="assets/logos/wave.svg" alt="Wave" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Wave"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Wave</span>
+                </li>
+                <li class="source-chip grok">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-onlight" src="assets/logos/grok.svg" alt="Grok" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Grok"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10.2" ry="3.6" transform="rotate(-24 12 12)"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Grok</span>
+                </li>
+                <li class="source-chip copilot">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-glyph" src="assets/logos/copilot.png" alt="Copilot" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Copilot"><circle cx="12" cy="12" r="9"/><path d="m15.7 8.3-2.2 5.2-5.2 2.2 2.2-5.2Z"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Copilot</span>
+                </li>
+                <li class="source-chip readai">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-tile" src="assets/logos/readai.svg" alt="Read AI" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Read AI"><circle cx="7" cy="14.8" r="3.6"/><circle cx="17" cy="14.8" r="3.6"/><path d="M10.6 14.2a1.9 1.9 0 0 1 2.8 0"/><path d="M3.4 13.6 2.4 9.4"/><path d="m20.6 13.6 1-4.2"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Read AI</span>
+                </li>
+                <li class="source-chip fireflies">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-glyph" src="assets/logos/fireflies.png" alt="Fireflies" width="28" height="28" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Fireflies"><path d="m10.8 5.8-1.6-3"/><path d="m13.2 5.8 1.6-3"/><path d="M12 5.5c1.4 0 2.2 1 2.2 2.3v4.4c0 1.3-.8 2.3-2.2 2.3s-2.2-1-2.2-2.3V7.8c0-1.3.8-2.3 2.2-2.3Z"/><path d="M9.8 8.5 4.5 7.2c-1 2.6.4 4.8 5.3 4.3"/><path d="m14.2 8.5 5.3-1.3c1 2.6-.4 4.8-5.3 4.3"/><circle cx="12" cy="18.3" r="2.3"/><path d="M12 14.5v1.5"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Fireflies</span>
+                </li>
+                <li class="source-chip zoom" data-icons="own">
+                    <span class="chip-icon">
+                        <img class="icon-brand logo-wide" src="assets/logos/zoom.svg" alt="Zoom" width="48" height="11" loading="lazy" decoding="async">
+                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Zoom"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="m21 9-4 3 4 3V9Z"/></svg>
+                    </span>
+                    <span class="chip-name" aria-hidden="true">Zoom</span>
+                </li>
+            </ul>
+            <p class="sources-caption">Names and logos belong to their owners and appear only to show which services ChatsRecall can read. ChatsRecall is not affiliated with, endorsed by or sponsored by any of them.</p>
         </section>
 
         <!-- Features Section -->
@@ -284,6 +305,7 @@
             </a>
             <p class="footer-note">Ongoing developer support</p>
             <p class="copyright">&copy; 2026 ChatsRecall. All rights reserved.</p>
+            <p class="legal-note">ChatGPT (OpenAI), Claude, Claude Code and Claude Cowork (Anthropic), Gemini and Google AI Mode (Google), Copilot (Microsoft), Grok (xAI), Perplexity, Wave, Read AI, Fireflies and Zoom are trademarks of their respective owners. All product names, logos and brands are the property of their owners and are used here only to identify the services ChatsRecall can import from. A rights holder who wants a name or logo changed or removed can write to <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a> and we will change it promptly.</p>
         </footer>
     </main>
     <script>
@@ -332,6 +354,13 @@
             navToggle.setAttribute('aria-expanded', String(open));
             navToggle.querySelector('i').className = open ? 'bi bi-x-lg' : 'bi bi-list';
         });
+
+        // Preview helper for the Supported Sources icon switch: ?icons=own or ?icons=brand shows that
+        // mode for this visit without editing the page (see the comment above the sources list).
+        const iconsParam = new URLSearchParams(location.search).get('icons');
+        if (iconsParam === 'own' || iconsParam === 'brand') {
+            document.body.setAttribute('data-icons', iconsParam);
+        }
     </script>
 </body>
 

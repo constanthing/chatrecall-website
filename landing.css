@@ -266,7 +266,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: clamp(32px, calc(6vh - 14px), 88px);
 }
 
 @media (max-width: 900px) {
@@ -537,63 +537,134 @@ main {
     }
 }
 
-/* Supported Sources Section */
+/* Supported Sources: a compact wrapping row of logo chips.
+
+   Icon switch (set in index.html):
+     <body data-icons="brand">  a source that has a logo file shows its vendor's own logo (the default)
+     <body data-icons="own">    every source shows our in-house glyph instead
+   One source can be set alone with data-icons="own" (or "brand") on its <li>; that wins over the body.
+   Which picture shows is decided by two custom properties, so the body's value and a chip's own
+   value cascade the ordinary way and the chip's wins. */
+body {
+    --brand-display: block;
+    --own-display: none;
+}
+
+body[data-icons="own"] {
+    --brand-display: none;
+    --own-display: block;
+}
+
+.source-chip[data-icons="brand"] {
+    --brand-display: block;
+    --own-display: none;
+}
+
+.source-chip[data-icons="own"] {
+    --brand-display: none;
+    --own-display: block;
+}
+
 .sources {
-    margin-bottom: 80px;
+    margin-bottom: clamp(18px, calc(5vh - 20px), 64px);
 }
 
-.sources-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+.sources .section-title {
+    margin-bottom: 10px;
 }
 
-@media (max-width: 900px) {
-    .sources-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.source-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 8px;
 }
 
 @media (max-width: 600px) {
-    .sources-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .source-chips {
+        gap: 5px 6px;
     }
 }
 
-.source-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.source-chip {
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 24px 16px;
+    gap: 6px;
+    height: 34px;
+    padding: 2px 10px 2px 3px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-    transition: all 0.15s ease;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text);
+    white-space: nowrap;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.source-card:not(.coming-soon):hover {
+.source-chip:not(.coming-soon):hover {
     border-color: var(--border);
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
 }
 
-.source-icon {
-    width: 48px;
-    height: 48px;
+/* The notice under the chips: who owns the names and logos, and that nothing here implies affiliation. */
+.sources-caption {
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+.chip-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-md);
-    font-size: 22px;
+    flex: none;
+    min-width: 28px;
+    height: 28px;
 }
 
-/* Source glyphs are stroke-drawn line art, same style as the desktop app */
-.source-icon svg {
-    width: 24px;
-    height: 24px;
+/* The vendor's own logo, shown as the vendor supplies it (never recoloured). Tiles (logos that are already a
+   rounded square) fill the box; free-standing marks sit a little inside it so every chip looks the same size. */
+.icon-brand {
+    display: var(--brand-display);
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.icon-brand.logo-tile {
+    border-radius: 7px;
+}
+
+.icon-brand.logo-glyph,
+.icon-brand.logo-onlight {
+    padding: 2px;
+}
+
+/* A word-shaped logo (Zoom) needs a wider slot. */
+.icon-brand.logo-wide {
+    width: 48px;
+    height: 11px;
+}
+
+/* Dark marks (ChatGPT, Grok, Perplexity) are made for light backgrounds, so on the dark theme they sit on a
+   light square instead of being recoloured. */
+[data-theme="dark"] .icon-brand.logo-onlight {
+    padding: 3px;
+    background: #f4f4f6;
+    border-radius: 7px;
+}
+
+/* Our own glyphs: stroke-drawn line art on a tinted square, same style as the desktop app. */
+.icon-own {
+    display: var(--own-display);
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    border-radius: 7px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
@@ -601,98 +672,89 @@ main {
     stroke-linejoin: round;
 }
 
-.source-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-}
-
-/* Source card colors */
-.source-card.chatgpt .source-icon {
+.source-chip.chatgpt .icon-own {
     background: rgba(16, 163, 127, 0.12);
     color: var(--gpt);
 }
 
-.source-card.claude .source-icon {
+.source-chip.claude .icon-own {
     background: rgba(217, 119, 87, 0.12);
     color: var(--claude);
 }
 
-.source-card.gemini .source-icon {
-    background: rgba(66, 133, 244, 0.12);
-    color: var(--gemini);
-}
-
-.source-card.perplexity .source-icon {
-    background: rgba(75, 85, 99, 0.12);
-    color: var(--perplexity);
-}
-
-.source-card.wave .source-icon {
-    background: rgba(139, 92, 246, 0.12);
-    color: var(--wave);
-}
-
-.source-card.claude-code .source-icon {
+.source-chip.claude-code .icon-own {
     background: rgba(176, 73, 47, 0.12);
     color: var(--claude-code);
 }
 
-.source-card.claude-cowork .source-icon {
+.source-chip.claude-cowork .icon-own {
     background: rgba(193, 95, 60, 0.12);
     color: var(--claude-cowork);
 }
 
-.source-card.google-ai-mode .source-icon {
+.source-chip.gemini .icon-own {
+    background: rgba(66, 133, 244, 0.12);
+    color: var(--gemini);
+}
+
+.source-chip.google-ai-mode .icon-own {
     background: rgba(26, 115, 232, 0.12);
     color: var(--google-ai);
 }
 
-.source-card.grok .source-icon {
+.source-chip.perplexity .icon-own {
+    background: rgba(75, 85, 99, 0.12);
+    color: var(--perplexity);
+}
+
+.source-chip.wave .icon-own {
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--wave);
+}
+
+.source-chip.grok .icon-own {
     background: rgba(142, 142, 147, 0.12);
     color: var(--grok);
 }
 
-.source-card.copilot .source-icon {
+.source-chip.copilot .icon-own {
     background: rgba(22, 184, 196, 0.12);
     color: var(--copilot);
 }
 
-.source-card.readai .source-icon {
+.source-chip.readai .icon-own {
     background: rgba(124, 108, 232, 0.12);
     color: var(--readai);
 }
 
-.source-card.fireflies .source-icon {
+.source-chip.fireflies .icon-own {
     background: rgba(193, 60, 207, 0.12);
     color: var(--fireflies);
 }
 
-.source-card.zoom .source-icon {
+.source-chip.zoom .icon-own {
     background: rgba(45, 140, 255, 0.12);
     color: var(--zoom);
 }
 
-/* Coming soon cards */
-.source-card.coming-soon {
-    opacity: 0.5;
+/* Coming soon: add class "coming-soon" to the chip and a <span class="coming-soon-badge">Soon</span>
+   after its name. (None of the current sources is marked this way.) */
+.source-chip.coming-soon {
+    opacity: 0.55;
     cursor: default;
 }
 
-.source-card.coming-soon .source-icon {
-    background: var(--bg-active);
-    color: var(--text-tertiary);
+.source-chip.coming-soon .chip-icon {
+    filter: grayscale(1);
 }
 
-.source-card.coming-soon .source-name {
+.source-chip.coming-soon .chip-name {
     color: var(--text-tertiary);
 }
 
 .coming-soon-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 2px 8px;
+    margin-left: -2px;
+    padding: 1px 6px;
     background: var(--bg-active);
     border-radius: var(--radius-full);
     font-size: 10px;
@@ -809,6 +871,25 @@ main {
     font-size: 12px;
     color: var(--text-tertiary);
     margin-top: 32px;
+}
+
+/* Tiny print: trademark notice for the product names and logos shown in Supported Sources. */
+.legal-note {
+    max-width: 640px;
+    margin-top: -12px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.legal-note a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.legal-note a:hover {
+    color: var(--text);
 }
 
 /* Updates Page */
