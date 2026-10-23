@@ -1,8 +1,6 @@
 # Logo files on chatsrecall.com: where each one came from
 
-Retrieved 2026-10-23 for John Reese by a Claude Code agent (dispatch name site-logos-1023), following the research report
-`research/logo-policy-research-2026-10-23.md` in the Chief of Staff repository. Every file here is a copy kept in this repository;
-the page never links to another site's copy. They are shown only to identify the services ChatsRecall can read, and the home page
+Retrieved 2026-10-23. Every file here is a copy kept in this repository; the page never links to another site's copy. They are shown only to identify the services ChatsRecall can read, and the home page
 says so, and who to write to, in the caption under the Supported Sources chips and in the small print at the bottom.
 
 ## The switch between the real logos and our own pictures
