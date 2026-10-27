@@ -71,7 +71,12 @@ A big update, and the largest change so far to how ChatsRecall handles your
   so every sync reported new conversations while the library count stayed the
   same.
 - Renaming, pinning, deleting and moving chats from ChatsRecall work again
-  after recent changes to Claude, Perplexity, Gemini and Grok.
+  after recent changes to ChatGPT, Claude, Perplexity, Gemini and Grok.
+- Moving a Claude chat out of a project no longer reports done while the chat
+  stays in the project.
+- A very long conversation no longer cuts ChatsRecall off from your browser
+  partway through a sync.
+- A Claude chat you start in your browser is no longer sometimes saved empty.
 - Meta AI conversations are read again after meta.ai changed how it loads
   messages.
 - A Claude account's name no longer changes to its organization's name after
