@@ -3,5 +3,5 @@ A small fix release.
 ## Fixed
 
 - A ChatGPT chat you start in your browser is no longer sometimes saved
-  without its reply.
+  empty.
 - Includes security fixes.
