@@ -1,12 +1,12 @@
 {
-  "version": "0.1.98",
-  "notes": "A small fix release.\n\n## Fixed\n\n- A ChatGPT chat you start in your browser is no longer sometimes saved empty.\n- Includes security fixes.\n",
-  "pub_date": "2026-10-28T01:08:54.319Z",
+  "version": "0.1.99",
+  "notes": "A small update to search, mostly for assistants connected to ChatsRecall.\n\n## Improved\n\n- An assistant you connected in Settings → Connect an agent (Claude Desktop, Claude Code or Cursor) now finds the conversation you mean far more often. Its searches look at whole conversations and titles instead of single messages, and they list your own chats ahead of automated Claude Code runs.\n- Assistants now also find your archived conversations when they search with exact words, and can open them. Archived results are marked as archived.\n- When nothing matches every word, the assistant gets a few close matches, marked as loose leads. When there are none at all, it gets a short note instead: whether its filters hid results, or whether fewer words would work better.\n- If part of ChatsRecall's search index gets damaged, it now rebuilds that part by itself instead of leaving conversations out of search. This covers the search in the app as well.\n",
+  "pub_date": "2026-10-28T05:28:12.723Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.98/ChatsRecall_0.1.98_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjVmZkkrbDcyNlh2U3lZY3VZdWtjbGZnSkx5YmRpNVlETEo5anh3WUZYMWw4M3YySU1jcW1RZStCQjVHYjZMSTRqdTU5NnpxRlZuczNyYW1zTDg3MUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTQ5NzMyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjk4X3g2NC1zZXR1cC5leGUKeFBKSTBybkRmYzVlTTQvVUYyNkJwUURNenV1dnYzMVRmZUdKRms3SVBGK09JaFpxMzBwNVMzcndNWDcwMFFwRGpKV2c5TlpvWDh4cFdjMGt2MGpVQUE9PQo=",
-      "published_at": "2026-10-28T01:08:54.319Z"
+      "url": "https://chatsrecall.com/releases/0.1.99/ChatsRecall_0.1.99_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjFPRDRBYTUxbVFIdElMWVltRUpyUVMxU2g4YlNXKzB1SXJDejg4ODhIc2lPRTlhU01HQTAwbGI5Vk85WklMQmgrTXNBNGhvTGhLY2RTeEEzam81c2dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTY1MjkwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjk5X3g2NC1zZXR1cC5leGUKVVhWb2V5NldnZS95bFJOLytodGVlZUwrNFNxWkdqMS9LdkdYM1lrMkp1RFh2T202a2theStLOURXOGJsTEkrRDJnaVc5WXd5NThMZWh0U1o2S2lJQkE9PQo=",
+      "published_at": "2026-10-28T05:28:12.723Z"
     }
   }
 }

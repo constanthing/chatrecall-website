@@ -1,6 +1,11 @@
 {
   "releases": [
     {
+      "version": "0.1.99",
+      "pub_date": "2026-10-27T21:46:27-04:00",
+      "notes": "A small update to search, mostly for assistants connected to ChatsRecall.\n\n## Improved\n\n- An assistant you connected in Settings → Connect an agent (Claude Desktop, Claude Code or Cursor) now finds the conversation you mean far more often. Its searches look at whole conversations and titles instead of single messages, and they list your own chats ahead of automated Claude Code runs.\n- Assistants now also find your archived conversations when they search with exact words, and can open them. Archived results are marked as archived.\n- When nothing matches every word, the assistant gets a few close matches, marked as loose leads. When there are none at all, it gets a short note instead: whether its filters hid results, or whether fewer words would work better.\n- If part of ChatsRecall's search index gets damaged, it now rebuilds that part by itself instead of leaving conversations out of search. This covers the search in the app as well."
+    },
+    {
       "version": "0.1.98",
       "pub_date": "2026-10-27T19:10:19-04:00",
       "notes": "A small fix release.\n\n## Fixed\n\n- A ChatGPT chat you start in your browser is no longer sometimes saved empty.\n- Includes security fixes."
