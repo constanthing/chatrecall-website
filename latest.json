@@ -1,12 +1,12 @@
 {
-  "version": "0.1.99",
-  "notes": "A small update to search, mostly for assistants connected to ChatsRecall.\n\n## Improved\n\n- An assistant you connected in Settings → Connect an agent (Claude Desktop, Claude Code or Cursor) now finds the conversation you mean far more often. Its searches look at whole conversations and titles instead of single messages, and they list your own chats ahead of automated Claude Code runs.\n- Assistants now also find your archived conversations when they search with exact words, and can open them. Archived results are marked as archived.\n- When nothing matches every word, the assistant gets a few close matches, marked as loose leads. When there are none at all, it gets a short note instead: whether its filters hid results, or whether fewer words would work better.\n- If part of ChatsRecall's search index gets damaged, it now rebuilds that part by itself instead of leaving conversations out of search. This covers the search in the app as well.\n",
-  "pub_date": "2026-10-28T05:28:12.723Z",
+  "version": "0.1.100",
+  "notes": "A small release: fixes only, nothing new to learn.\n\n## Fixed\n\n- New Gemini prompts reach your library again as you send them. A change on Gemini's side in late October stopped the app from noticing a sent prompt, so new chats and follow-ups waited for the next sync.\n- A follow-up in an existing Gemini chat is saved together with its reply, not before the reply has appeared.\n",
+  "pub_date": "2026-10-29T00:29:54.058Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.99/ChatsRecall_0.1.99_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjFPRDRBYTUxbVFIdElMWVltRUpyUVMxU2g4YlNXKzB1SXJDejg4ODhIc2lPRTlhU01HQTAwbGI5Vk85WklMQmgrTXNBNGhvTGhLY2RTeEEzam81c2dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTY1MjkwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjk5X3g2NC1zZXR1cC5leGUKVVhWb2V5NldnZS95bFJOLytodGVlZUwrNFNxWkdqMS9LdkdYM1lrMkp1RFh2T202a2theStLOURXOGJsTEkrRDJnaVc5WXd5NThMZWh0U1o2S2lJQkE9PQo=",
-      "published_at": "2026-10-28T05:28:12.723Z"
+      "url": "https://chatsrecall.com/releases/0.1.100/ChatsRecall_0.1.100_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjZXTERNdG1tY2lsZnVOVFdkbTl2eC9uNEFyUEt3NE9LdENXb2xOSG8wNWxTZHFNdmo0T2g4TnNmWmY5VFVrc2JXYitadUUzRHNNUkhhdFFmMkcyZVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMjMzNzkyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwMF94NjQtc2V0dXAuZXhlCjhwRVBMYm8wbVllOEZDSC9nY2U5anBCQ25UencwZXRyRHZ0eG92Qm1mdUltUXZpeDhrTGhucVcwM1JmZHZ3ZkVuVTVCSWc4UWJmTXNXRzlqVEZVakFBPT0K",
+      "published_at": "2026-10-29T00:29:54.058Z"
     }
   }
 }

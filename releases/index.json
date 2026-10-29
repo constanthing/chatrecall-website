@@ -1,6 +1,11 @@
 {
   "releases": [
     {
+      "version": "0.1.100",
+      "pub_date": "2026-10-28T23:31:10.079Z",
+      "notes": "A small release: fixes only, nothing new to learn.\n\n## Fixed\n\n- New Gemini prompts reach your library again as you send them. A change on Gemini's side in late October stopped the app from noticing a sent prompt, so new chats and follow-ups waited for the next sync.\n- A follow-up in an existing Gemini chat is saved together with its reply, not before the reply has appeared."
+    },
+    {
       "version": "0.1.99",
       "pub_date": "2026-10-27T21:46:27-04:00",
       "notes": "A small update to search, mostly for assistants connected to ChatsRecall.\n\n## Improved\n\n- An assistant you connected in Settings → Connect an agent (Claude Desktop, Claude Code or Cursor) now finds the conversation you mean far more often. Its searches look at whole conversations and titles instead of single messages, and they list your own chats ahead of automated Claude Code runs.\n- Assistants now also find your archived conversations when they search with exact words, and can open them. Archived results are marked as archived.\n- When nothing matches every word, the assistant gets a few close matches, marked as loose leads. When there are none at all, it gets a short note instead: whether its filters hid results, or whether fewer words would work better.\n- If part of ChatsRecall's search index gets damaged, it now rebuilds that part by itself instead of leaving conversations out of search. This covers the search in the app as well."
