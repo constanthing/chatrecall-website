@@ -268,6 +268,13 @@
                             <p>Ask a question in plain language, like "what did I decide about the kitchen renovation?", and get an answer grounded in the conversations you actually saved, with citations that open the exact conversations behind it. It is set up under Settings, and every run reports the tokens it used.</p>
                         </div>
                     </details>
+                    <details class="help-item">
+                        <summary>Can my AI assistant search ChatsRecall?<i class="bi bi-chevron-down"></i></summary>
+                        <div class="help-item-body">
+                            <p>Yes, on Windows: Claude Desktop, Claude Code and Cursor can search your archive and read your conversations while ChatsRecall is running. In ChatsRecall, open Settings, then Connect an agent. Pick your assistant, click Create access code, and paste the ready-made setup it shows into your assistant (for Claude Code it is one command to run). Test the connection checks everything on ChatsRecall's side. If your ChatsRecall has no Connect an agent section yet, update it first.</p>
+                            <p>Only programs on your computer can connect, and only with an access code you create there. A code made there can search and read but change nothing; it can still read your whole archive, so create one only for an assistant you trust. Revoke, on the same screen, stops a code at once. What your assistant reads goes to that assistant and the AI service behind it.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
 
@@ -286,6 +293,7 @@
                         <div class="help-item-body">
                             <p>Your archive stays on your computer, and the app runs no analytics or telemetry. A few things do go out: update checks against chatsrecall.com, your email address if you entered it during setup, calls to meeting tools you connect yourself, and images inside a conversation you open, which load from where they are hosted. The <a href="privacy.html">Privacy page</a> lists every case.</p>
                             <p>Conversation content leaves only through the optional AI features, which do nothing until an OpenAI or Anthropic API key is connected. Once one is, session cards are on by default: after each sync they send the text of changed conversations to the model provider to write a short summary for each card. Switch them off in Settings to stop that. Agentic Search, indexing notable moments, and summarizing a chat to continue it elsewhere send text only when you start them.</p>
+                            <p>If you connect an AI assistant under Settings, Connect an agent, what that assistant reads goes to it and to the AI service behind it. Nothing can connect until you create an access code there.</p>
                         </div>
                     </details>
                 </div>
