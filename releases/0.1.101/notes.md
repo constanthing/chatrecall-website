@@ -1,0 +1,45 @@
+Mostly fixes, and one AI that had quietly stopped saving is back.
+
+## Highlights
+
+- :srcLittlebird: **Littlebird chats are saved again** Littlebird's desktop
+  app moved where it keeps your chats in early October, and ChatsRecall
+  stopped finding them. Everything since then comes in on your next sync.
+- :search: **New accounts can search sooner** A first sync now makes each
+  AI's 25 newest chats searchable, text included, before that AI's sync
+  ends. The rest arrive in the background.
+
+> Claude, Grok, Perplexity, AI Mode, Meta AI, pacing
+
+## Improved
+
+- A first sync now has each AI's 25 newest chats ready to search however it
+  was started: from the setup tour, from the Sync page or by the schedule.
+  Pinned chats no longer take one of those 25 places. The Sync page says so
+  in words: "Your 25 newest Claude chats are ready to search; the rest
+  arrive in the background."
+- Syncs leave a few seconds between requests to the same site (longest for
+  Google and ChatGPT), so sites are less likely to show a CAPTCHA or slow
+  you down. A sync can take a little longer. Saving a chat as you send it is
+  not slowed down.
+
+## Fixed
+
+- Littlebird has saved nothing since early October. Its desktop app (0.84 to
+  0.86) moved your chats and meetings into a new file, and ChatsRecall only
+  knew the old one. It now reads the new file, read-only, and writes nothing
+  into Littlebird's folder. Nothing was lost, nothing is saved twice, and
+  you aren't asked about a new account.
+- Deleting a Google AI Mode conversation from ChatsRecall failed with
+  "couldn't read Google AI Mode's request token" after a change on Google's
+  side. It works again.
+- Meta AI conversations are read in full again after another change on
+  Meta's side.
+- Pinning, deleting or moving a Perplexity thread works again when
+  Perplexity opens its thread menu as a panel at the bottom of the window.
+- Continue in Perplexity types your text into Perplexity's new prompt box
+  again.
+- A Claude prompt sent from another device just after ChatsRecall saved
+  that conversation could be skipped by the next sync. It is read now.
+- The first prompt of a new Grok chat is saved as soon as Grok has
+  answered, instead of up to ten minutes later.
