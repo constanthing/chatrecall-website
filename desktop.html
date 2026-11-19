@@ -77,6 +77,47 @@
             </a>
         </section>
 
+        <!-- Mac download (docs#498). The href is rewritten by the release
+             pipeline (scripts/update-website-downloads.mjs --platform mac).
+             Until it links a build newer than 0.1.21 (the June build left as a
+             placeholder so the script has a link to rewrite), this row, the
+             old-version note and the first-open steps stay hidden; the script
+             below shows them and reads the version chip from the link's file
+             name. Keep exactly one .dmg link on this page. -->
+        <section class="dl-row dl-row-mac" id="mac-download" aria-label="Download ChatsRecall for Mac" hidden>
+            <div class="download-icon"><i class="bi bi-apple"></i></div>
+            <div>
+                <h2 class="dl-row-title">Mac <span id="mac-version" class="dl-version"></span></h2>
+                <div class="dl-row-meta">
+                    <span>Mac installer (.dmg)</span>
+                    <span>For Apple-chip and Intel Macs</span>
+                </div>
+            </div>
+            <a id="mac-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.21/ChatsRecall_0.1.21_aarch64.dmg" class="btn-cta">
+                <i class="bi bi-download"></i>
+                Download for Mac
+            </a>
+        </section>
+
+        <div class="dl-note" id="mac-old-version-note" hidden>
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            <p><strong>Have the Mac version from June (0.1.21)?</strong> It can't update itself. Download the Mac version above and drag it into Applications to replace it.</p>
+        </div>
+
+        <section class="dl-steps" id="mac-first-open" aria-labelledby="mac-first-open-title" hidden>
+            <h2 id="mac-first-open-title" class="dl-steps-title">Opening ChatsRecall the first time on a Mac</h2>
+            <ol>
+                <li>Open the file you downloaded and drag ChatsRecall onto the Applications folder.</li>
+                <li>Open ChatsRecall. Your Mac stops it and says:
+                    <blockquote>Apple could not verify &ldquo;ChatsRecall&rdquo; is free of malware that may harm your Mac or compromise your privacy.</blockquote>
+                    Click <strong>Done</strong> (not Move to Trash).</li>
+                <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.</li>
+                <li>Next to the line about ChatsRecall, click <strong>Open Anyway</strong>, then <strong>Open Anyway</strong> again. Your Mac may ask for your password or Touch ID.</li>
+            </ol>
+            <p>ChatsRecall opens, and from then on it opens without the warning.</p>
+            <p class="dl-steps-why">Why the warning: ChatsRecall is not signed with Apple yet, so your Mac asks you to confirm it once.</p>
+        </section>
+
         <!-- Release Notes. Cards are generated from releases/<version>/notes.md by scripts/update-website-updates.mjs; never hand-edit them. -->
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
@@ -2831,6 +2872,39 @@
         }
 
         updateDesktopVersion();
+
+        // Mac download (docs#498): visibility follows the Mac link, not
+        // latest.json. The link starts as the June 0.1.21 build and the
+        // release rewrites it; anything newer than 0.1.21 shows the Mac row,
+        // the old-version note and the first-open steps, with the version
+        // read from the DMG's file name (ChatsRecall_<version>_<arch>.dmg).
+        function showMacDownload() {
+            const link = document.getElementById('mac-download-link');
+            if (!link) return;
+
+            const fileName = (link.getAttribute('href') || '').split(/[?#]/)[0].split('/').pop();
+            const match = /^ChatsRecall_(\d+)\.(\d+)\.(\d+)_[^/]*\.dmg$/i.exec(fileName);
+            if (!match) return;
+
+            const version = match.slice(1).map(Number);
+            const placeholder = [0, 1, 21];
+            let newer = false;
+            for (let i = 0; i < 3; i++) {
+                if (version[i] !== placeholder[i]) {
+                    newer = version[i] > placeholder[i];
+                    break;
+                }
+            }
+            if (!newer) return;
+
+            document.getElementById('mac-version').textContent = `v${version.join('.')}`;
+            for (const id of ['mac-download', 'mac-old-version-note', 'mac-first-open']) {
+                const element = document.getElementById(id);
+                if (element) element.hidden = false;
+            }
+        }
+
+        showMacDownload();
     </script>
 </body>
 
