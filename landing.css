@@ -998,6 +998,99 @@ body[data-icons="own"] {
     font-size: 22px;
 }
 
+/* Mac download (docs#498): the row, note and steps start hidden and the
+   page script shows them once the Mac link is a real release. */
+.dl-row[hidden],
+.dl-note[hidden],
+.dl-steps[hidden] {
+    display: none;
+}
+
+/* Two rows in a row sit close together; the last one keeps the gap. */
+.dl-row:has(+ .dl-row:not([hidden])) {
+    margin-bottom: 12px;
+}
+
+.dl-row-mac {
+    margin-bottom: 16px;
+}
+
+.dl-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+}
+
+.dl-note i {
+    color: var(--warning);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.dl-note strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.dl-steps {
+    padding: 22px 24px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-bottom: 48px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.dl-steps-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.dl-steps ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.dl-steps li + li {
+    margin-top: 8px;
+}
+
+.dl-steps strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.dl-steps blockquote {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-left: 3px solid var(--border);
+    background: var(--bg-hover);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text);
+}
+
+.dl-steps p + p {
+    margin-top: 6px;
+}
+
+.dl-steps-why {
+    font-size: 13px;
+    color: var(--text-tertiary);
+}
+
 @media (max-width: 768px) {
     .dl-header h1 {
         font-size: 26px;
