@@ -111,7 +111,18 @@
                 <li>Open ChatsRecall. Your Mac stops it and says:
                     <blockquote>Apple could not verify &ldquo;ChatsRecall&rdquo; is free of malware that may harm your Mac or compromise your privacy.</blockquote>
                     Click <strong>Done</strong> (not Move to Trash).</li>
-                <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.</li>
+                <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.
+                    <!-- Opens System Settings at Privacy & Security, scrolled to
+                         Security (checked on macOS 27.2; macOS 13 or later). The
+                         browser asks before it opens Settings. Shown only on a Mac, by the script
+                         below; the written step stays for everyone. -->
+                    <span class="dl-steps-settings" id="mac-settings-link" hidden>
+                        <a class="btn-settings" href="x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Security">
+                            <i class="bi bi-gear" aria-hidden="true"></i>
+                            Open Privacy &amp; Security
+                        </a>
+                        <span class="dl-steps-hint">Your browser asks before opening System Settings: allow it.</span>
+                    </span></li>
                 <li>Next to the line about ChatsRecall, click <strong>Open Anyway</strong>, then <strong>Open Anyway</strong> again. Your Mac may ask for your password or Touch ID.</li>
             </ol>
             <p>ChatsRecall opens, and from then on it opens without the warning.</p>
@@ -2990,7 +3001,17 @@
             }
         }
 
+        // The Privacy & Security button in the first-open steps only works on
+        // a Mac. iPads also say "Macintosh" but have a touch screen; leave
+        // them out.
+        function showMacSettingsLink() {
+            const isMac = /Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints < 2;
+            const link = document.getElementById('mac-settings-link');
+            if (isMac && link) link.hidden = false;
+        }
+
         showMacDownload();
+        showMacSettingsLink();
     </script>
 </body>
 
