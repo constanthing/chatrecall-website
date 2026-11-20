@@ -196,7 +196,7 @@
                 <ul class="privacy-list">
                     <li>It listens on your own machine only (<code>127.0.0.1</code>) and is never reachable from the network</li>
                     <li>Every client needs a token you create. Tokens carry narrowly defined scopes, can be limited to certain sources or accounts, can expire, are rate limited, and can be revoked at any time</li>
-                    <li>Everything it offers is read-only. Nothing can write, delete, or start a sync through it</li>
+                    <li>A token is read-only unless you allow more: organizing ChatsRecall's own local projects (creating projects and filing conversations in them) and asking questions (below) each need their own permission. Nothing can change or delete a conversation, or start a sync, through it</li>
                     <li>Asking a question through it needs its own separate scope, because that is the one operation that sends excerpts to a model provider and spends your key</li>
                     <li>An append-only log records that each request happened, deliberately without message content or the text of queries. Questions appear only as a short hash</li>
                     <li>Conversation text handed to an agent is labeled as untrusted data rather than instructions</li>
