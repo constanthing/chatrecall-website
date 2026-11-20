@@ -1,12 +1,22 @@
 {
-  "version": "0.1.102",
-  "notes": "Text files from another program can now come into ChatsRecall by themselves.\n\n## Highlights\n\n- :folder: **Watched folders** Point ChatsRecall at a folder once, and every new or changed .txt or .md file in it becomes a searchable conversation within a few seconds. Find it in Settings, under Watched folders.\n\n> Watched folders, Fireflies sync fixes, security fixes\n\n## Added\n\n- Settings has a new Watched folders section. Paste a folder's full path, give it a name, and press Watch this folder. Each file becomes one conversation, titled from its file name, and the folder's name shows as a project on the Projects page and as a chip on each of its conversations.\n- An edited file updates its own conversation instead of adding a second one. A file that disappears keeps its conversation, and a conversation you delete stays deleted, even if its file changes later.\n- Files you already imported by hand from the same folder are taken over, not copied.\n- Only .txt and .md files up to 2 MB are read. Hidden files, links and files kept online only (OneDrive) are skipped and listed, and one bad file never stops the rest.\n\n## Fixed\n\n- Fireflies no longer re-reads old meetings that never got a summary on every sync, which made each Fireflies sync take about five minutes. A meeting still without a summary three days on is left alone.\n- A sync that ended while the database was busy no longer leaves a source stuck on \"running\" in the sync history; it now shows as failed, with the reason.\n- Search results and AI answers given to connected assistants never show part of a saved password or access key. Before, a key that sat right next to the word you searched for could lose its start and come out partly unhidden.\n- An assistant connected with a fixed port only sends its access code to that port when it is the one ChatsRecall is using right now. Otherwise it says the code was not sent; remove the fixed port so it follows ChatsRecall.\n- An access code limited to some accounts no longer lists the other accounts' projects when it exports a project.\n",
-  "pub_date": "2026-11-20T00:43:17.105Z",
+  "version": "0.1.103",
+  "notes": "A small release: one date fix, and ChatsRecall is back on the Mac.\n\n## Highlights\n\n- :sparkles: **ChatsRecall for Mac** The Mac version is available again from the website, for Apple-chip and Intel Macs, and it updates itself from now on like the Windows version.\n\n> imported dates, Mac setup and updates\n\n## Improved\n\n- On a Mac, first-run setup finds the AI apps you have installed, and Connect an assistant offers Claude Desktop's own settings file.\n- A Mac that has no update waiting now says so, instead of showing an update error.\n\n## Fixed\n\n- Conversations added with Import or from a watched folder show their real date again. Builds up to 0.1.102 saved some of them with a date far in the future; they are corrected the next time ChatsRecall opens.\n",
+  "pub_date": "2026-11-20T01:58:27.820Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.102/ChatsRecall_0.1.102_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjcyQ051cjZNWHl6SGFCYzVBNHRCS0RqMno1TnR5RmZEWlR5cmVQVnRrbEs1Y1ZVQjhaN2FSTjVSY1FCMkx5djgrM0JLamhRU0p6QkVULzF6VFNORFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTM1Mzk1CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwMl94NjQtc2V0dXAuZXhlCmVpTnRBcHJON2hWL245ejcwODZJQUIyb0Y0NHRwZVZvZWx6aGdaZHhieTBDRUZ5YVp1WDhrS2EwNi82VDF2WGpRR0kwdW55UUppN0ZMVHhxN2hLNkFBPT0K",
-      "published_at": "2026-11-20T00:43:17.105Z"
+      "url": "https://chatsrecall.com/releases/0.1.103/ChatsRecall_0.1.103_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1Vi9GTW1LYnhteGIxY1BWbVN6MXdSZlJqUVE5WlY4dmxTZFg3RyttSWNLc1NPZjl5TlBOTnFsWFRIVDQ5Wk1qSXZuU0RjeWdoSVBieWJlZ2JhWjJsQ3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTM5ODA4CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwM194NjQtc2V0dXAuZXhlClZVMU1OMWdzMWx0NnBEQnBhSnJNZ2VRTlE0SVFhNnNLeStPYnFZcVR1MVVSWTUzMlNVQ092ellxWWd0SkRxZERpeTlDS2thdXJ6aE16UWpjN3BLWUJRPT0K",
+      "published_at": "2026-11-20T01:58:27.820Z"
+    },
+    "darwin-aarch64": {
+      "url": "https://chatsrecall.com/releases/0.1.103/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjdrbW0yV3pvVEJGTTU3ZEFkaGg2WjJNL0piL0RlSUFoajIrNURXdHd4NVkrTlAyUDlWOXNRUTVqTUVIMzlYcGxtK2J2b3RwTTkvaXNsSUJqZzBjekFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTM5OTA3CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpzQUNIUy9sYTc4QkFndUZPMXkrUkFBUlRLUzNYQmtmek5YUlVMUWJ5UGZFck9BbG9CaU56eWM2RHlUQi9xL1VldG01eklOa2xKV3JnNmxZY3hCRzBEZz09Cg==",
+      "published_at": "2026-11-20T01:58:27.820Z"
+    },
+    "darwin-x86_64": {
+      "url": "https://chatsrecall.com/releases/0.1.103/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjdrbW0yV3pvVEJGTTU3ZEFkaGg2WjJNL0piL0RlSUFoajIrNURXdHd4NVkrTlAyUDlWOXNRUTVqTUVIMzlYcGxtK2J2b3RwTTkvaXNsSUJqZzBjekFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTM5OTA3CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpzQUNIUy9sYTc4QkFndUZPMXkrUkFBUlRLUzNYQmtmek5YUlVMUWJ5UGZFck9BbG9CaU56eWM2RHlUQi9xL1VldG01eklOa2xKV3JnNmxZY3hCRzBEZz09Cg==",
+      "published_at": "2026-11-20T01:58:27.820Z"
     }
   }
 }
