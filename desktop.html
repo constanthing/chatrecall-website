@@ -71,7 +71,7 @@
                     <span>For modern 64-bit PCs</span>
                 </div>
             </div>
-            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.101/ChatsRecall_0.1.101_x64-setup.exe" class="btn-cta">
+            <a href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.102/ChatsRecall_0.1.102_x64-setup.exe" class="btn-cta">
                 <i class="bi bi-download"></i>
                 Download for Windows
             </a>
@@ -122,6 +122,52 @@
         <section id="release-notes" aria-label="Release notes">
             <h2 class="section-title">Release Notes</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.102 -->
+            <article class="update-card" data-version="0.1.102">
+                <div class="update-meta">
+                    <span class="update-version">0.1.102</span>
+                    <span class="update-date">November 19, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">Text files from another program can now come into ChatsRecall by themselves.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.2A2.2 2.2 0 0 1 5.7 5h4.1l1.8 2h6.7a2.2 2.2 0 0 1 2.2 2.2v7.1a2.2 2.2 0 0 1-2.2 2.2H5.7a2.2 2.2 0 0 1-2.2-2.2V7.2Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Watched folders</p>
+                                <p class="update-highlight-body">Point ChatsRecall at a folder once, and every new or changed .txt or .md file in it becomes a searchable conversation within a few seconds. Find it in Settings, under Watched folders.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>Settings has a new Watched folders section. Paste a folder's full path, give it a name, and press Watch this folder. Each file becomes one conversation, titled from its file name, and the folder's name shows as a project on the Projects page and as a chip on each of its conversations.</li>
+                            <li>An edited file updates its own conversation instead of adding a second one. A file that disappears keeps its conversation, and a conversation you delete stays deleted, even if its file changes later.</li>
+                            <li>Files you already imported by hand from the same folder are taken over, not copied.</li>
+                            <li>Only .txt and .md files up to 2 MB are read. Hidden files, links and files kept online only (OneDrive) are skipped and listed, and one bad file never stops the rest.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>Fireflies no longer re-reads old meetings that never got a summary on every sync, which made each Fireflies sync take about five minutes. A meeting still without a summary three days on is left alone.</li>
+                            <li>A sync that ended while the database was busy no longer leaves a source stuck on &quot;running&quot; in the sync history; it now shows as failed, with the reason.</li>
+                            <li>Search results and AI answers given to connected assistants never show part of a saved password or access key. Before, a key that sat right next to the word you searched for could lose its start and come out partly unhidden.</li>
+                            <li>An assistant connected with a fixed port only sends its access code to that port when it is the one ChatsRecall is using right now. Otherwise it says the code was not sent; remove the fixed port so it follows ChatsRecall.</li>
+                            <li>An access code limited to some accounts no longer lists the other accounts' projects when it exports a project.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.101 -->
             <article class="update-card" data-version="0.1.101">
