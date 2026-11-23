@@ -115,7 +115,7 @@
                 <p><strong>On your computer, in files that belong to you.</strong></p>
                 <ul class="privacy-list">
                     <li>Conversations, indexes, and app settings are in a single SQLite database, <code>chatsrecall.db</code>, in the desktop app's data folder in your Windows user profile</li>
-                    <li>API keys you add for the optional AI features, and the courtesy AI's token, are stored in Windows Credential Manager, not in the database and not in plain text</li>
+                    <li>API keys you add for the optional AI features, and the courtesy AI's token, are stored in Windows Credential Manager (on a Mac, the Keychain), not in the database and not in plain text</li>
                     <li>Access tokens for the app's local programmatic interface are stored only as irreversible hashes</li>
                     <li>Answer feedback is written to a local file in the same app folder. The question you asked is stored only as a short hash of itself, so the only question-shaped text ever written is a comment you type yourself</li>
                     <li>Small preferences, such as your theme and whether setup is finished, are kept in the app's own local storage</li>
@@ -169,8 +169,8 @@
                 <p>When a question comes in through the local interface described below, the excerpts are first scanned for things that look like secrets, such as keys and tokens, and those are removed. The features above send text as it is stored, so a secret you pasted into a conversation can reach the provider. Question runs are bounded in rounds, evidence, tokens, and time, and can be cancelled. What you send is then handled under your own agreement with that provider.</p>
 
                 <h3 class="privacy-subheading">The Courtesy AI</h3>
-                <p>So you can try asking your archive before you have an AI account, a new install with no AI key of its own signs up with our courtesy AI service, <code>chatsrecall-courtesy-ai.chatsrecall.workers.dev</code>, when it starts. The sign-up sends the app's name, its version, and your operating system, nothing else, and the app gets back a token for this computer. The app also checks this computer's daily limit and end date there, at start-up and when the day's use runs out.</p>
-                <p>For up to 90 days, when you ask your archive a question after ticking its box, the question and excerpts go to this service, which passes them on to Google Gemini. It keeps only how much was used, not what you asked. Session cards use it only if you turn that on in Settings. An install set up for you with a kit may instead come with a Google Gemini key, used the same way. Once your own key works, the courtesy AI is no longer used.</p>
+                <p>So you can try asking your archive before you have an AI account, a new install with no AI key of its own signs up with our courtesy AI service, <code>chatsrecall-courtesy-ai.chatsrecall.workers.dev</code>, when it starts. The sign-up sends the app's name, its version, and your operating system, and the app gets back a token for this computer. The app also checks this computer's daily limit and end date there, at start-up and when the day's use runs out.</p>
+                <p>For up to 90 days, when you ask your archive a question after ticking its box, the question and excerpts go to this service, which passes them on to Google Gemini. It never keeps what you asked. It keeps the app's name, version and operating system from the sign-up and how much was used, and for two days a scrambled form of your network address, so no one can take all of a day's sign-ups. Session cards use it only if you turn that on in Settings. An install set up for you with a kit may instead come with a Google Gemini key, used the same way. Once your own key works, the courtesy AI is no longer used.</p>
                 <h3 class="privacy-subheading">Your Email Address, If You Entered It</h3>
                 <p>If you fill in the optional email step, the app posts it to our contact database, hosted on Supabase, so we can reach you about updates, fixes, or a reply to your feedback. Sent with it: your operating system and the app version. No identifier is attached, because the app has no analytics ID. It is sent once, and the step never asks again.</p>
 
@@ -287,7 +287,7 @@
                 <h2 class="privacy-heading">Security</h2>
                 <ul class="privacy-list">
                     <li>Your conversations stay on your device, in your user profile, protected by your operating system's own account protections</li>
-                    <li>API keys live in Windows Credential Manager; local access tokens are stored only as irreversible hashes</li>
+                    <li>API keys live in Windows Credential Manager (on a Mac, the Keychain); local access tokens are stored only as irreversible hashes</li>
                     <li>The local interface binds to your own machine only and requires a scoped token for every request</li>
                     <li>The desktop app and the extension talk over Chrome native messaging, a channel no web page can reach</li>
                     <li>The extension runs only on its listed sites, and never fetches or evaluates remote code</li>
