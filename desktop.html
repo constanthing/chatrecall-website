@@ -26,37 +26,32 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/icon_16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Stylesheets -->
+    <!-- Stylesheets and the site script (the redesign approved 2026-11-23, docs#541). Bootstrap Icons
+         stays for the release cards, whose section icons the release script writes as bi classes. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js"></script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="navbar-logo">ChatsRecall <span class="beta-badge">beta</span></a>
-            <div class="navbar-links" id="navbar-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="desktop.html" class="nav-link active">Download</a>
-                <a href="help.html" class="nav-link">Help</a>
-                <a href="privacy.html" class="nav-link">Privacy</a>
-            </div>
-            <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
-                <i class="bi bi-moon"></i>
-            </button>
-            <button id="nav-toggle" class="btn-icon nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navbar-links">
-                <i class="bi bi-list"></i>
-            </button>
-        </div>
+<body data-page="download">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">ChatsRecall <span class="beta">BETA</span></a>
+    <nav class="links">
+      <a href="desktop.html" aria-current="page">Download</a>
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
+    <button class="theme" type="button" aria-label="Switch light or dark" data-theme-toggle>
+      <svg class="icon sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
 
-    <main class="desktop-main">
-        <!-- Download header -->
-        <header class="dl-header">
-            <h1>Download ChatsRecall</h1>
-            <p>On first launch, the app walks you through connecting the browser extension, so new conversations are saved as you chat.</p>
-        </header>
+<main class="wrap page">
+        <h1>Download ChatsRecall</h1>
+        <p class="lede">On first launch, the app walks you through connecting the browser extension, so new conversations are saved as you chat.</p>
 
         <!-- The downloads, one row per computer (docs#540). The visitor's own
              computer comes first: Mac first here and for anyone who is not on
@@ -69,75 +64,76 @@
              page. -->
         <div class="dl-list" id="dl-list">
             <section class="dl-row" id="mac-download" data-os="mac" aria-label="Download ChatsRecall for Mac">
-                <div class="download-icon"><i class="bi bi-apple" aria-hidden="true"></i></div>
+                <svg class="dl-os" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.8-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.8c1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-1-2.4-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
                 <div class="dl-what">
                     <h2 class="dl-row-title">Mac <span id="mac-version" class="dl-version" hidden></span></h2>
                     <span class="dl-row-meta">Apple-chip and Intel Macs · .dmg</span>
                 </div>
-                <a id="mac-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_universal.dmg" class="btn-cta">
-                    <i class="bi bi-download" aria-hidden="true"></i>
-                    Download for Mac
-                </a>
+                <a id="mac-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_universal.dmg" class="btn" aria-label="Download for Mac">Download</a>
             </section>
             <section class="dl-row" id="windows-download" data-os="windows" aria-label="Download ChatsRecall for Windows">
-                <div class="download-icon"><i class="bi bi-windows" aria-hidden="true"></i></div>
+                <svg class="dl-os" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4.5v7H3zM11 4.4 21 3v8.5H11zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg>
                 <div class="dl-what">
                     <h2 class="dl-row-title">Windows <span id="windows-version" class="dl-version" hidden></span></h2>
                     <span class="dl-row-meta">64-bit PCs · installer</span>
                 </div>
-                <a id="windows-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_x64-setup.exe" class="btn-cta btn-cta-secondary">
-                    <i class="bi bi-download" aria-hidden="true"></i>
-                    Download for Windows
-                </a>
+                <a id="windows-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_x64-setup.exe" class="btn secondary" aria-label="Download for Windows">Download</a>
             </section>
         </div>
         <!-- The version line names the newest release card below (the release
              writes it at the top of the list); the script below refreshes it
              from that card, so it never needs editing by hand. -->
-        <p class="dl-version-line">Version <span id="desktop-version">0.1.103</span> · <span id="desktop-release-date">November 19, 2026</span> · <a href="#release-notes">What's new</a></p>
+        <p class="meta dl-version-line">Version <span id="desktop-version">0.1.103</span> · <span id="desktop-release-date">November 19, 2026</span> · <a class="inline" href="#release-notes">What's new</a></p>
 
-        <!-- Kept in view until the signed Mac build ships (docs#526 removes it). -->
-        <section class="dl-steps" id="mac-first-open" aria-labelledby="mac-first-open-title">
-            <h2 id="mac-first-open-title" class="dl-steps-title"><i class="bi bi-apple" aria-hidden="true"></i> Opening ChatsRecall the first time on a Mac</h2>
-            <ol>
-                <li>Open the file you downloaded and drag ChatsRecall onto the Applications folder.</li>
-                <li>Open ChatsRecall. Your Mac stops it and says:
-                    <blockquote>Apple could not verify &ldquo;ChatsRecall&rdquo; is free of malware that may harm your Mac or compromise your privacy.</blockquote>
-                    Click <strong>Done</strong> (not Move to Trash).</li>
-                <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.
-                    <!-- Opens System Settings at Privacy & Security, scrolled to
-                         Security (checked on macOS 27.2; macOS 13 or later). The
-                         browser asks before it opens Settings. Shown only on a Mac, by the script
-                         below; the written step stays for everyone. -->
-                    <span class="dl-steps-settings" id="mac-settings-link" hidden>
-                        <a class="btn-settings" href="x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Security">
-                            <i class="bi bi-gear" aria-hidden="true"></i>
-                            Open Privacy &amp; Security
-                        </a>
-                        <span class="dl-steps-hint">Your browser asks before opening System Settings: allow it.</span>
-                    </span></li>
-                <li>Next to the line about ChatsRecall, click <strong>Open Anyway</strong>, then <strong>Open Anyway</strong> again. Your Mac may ask for your password or Touch ID.</li>
-            </ol>
-            <p>ChatsRecall opens, and from then on it opens without the warning. <span class="dl-steps-why">Why the warning: ChatsRecall is not signed with Apple yet, so your Mac asks you to confirm it once.</span></p>
-        </section>
-
-        <div class="dl-qlist">
-            <details class="dl-q" id="windows-smartscreen">
+        <section class="block folds" aria-label="Opening ChatsRecall the first time, and older versions">
+            <div class="qlist">
+            <!-- Open by default: kept in view until the signed Mac build ships (docs#526 removes it). -->
+            <details class="q dl-steps" id="mac-first-open" open>
+                <summary id="mac-first-open-title">Opening ChatsRecall the first time on a Mac</summary>
+                <div class="a">
+                    <ol>
+                        <li>Open the file you downloaded and drag ChatsRecall onto the Applications folder.</li>
+                        <li>Open ChatsRecall. Your Mac stops it and says:
+                            <blockquote>Apple could not verify &ldquo;ChatsRecall&rdquo; is free of malware that may harm your Mac or compromise your privacy.</blockquote>
+                            Click <strong>Done</strong> (not Move to Trash).</li>
+                        <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.
+                            <!-- Opens System Settings at Privacy & Security, scrolled to
+                                 Security (checked on macOS 27.2; macOS 13 or later). The
+                                 browser asks before it opens Settings. Shown only on a Mac, by the script
+                                 below; the written step stays for everyone. -->
+                            <span class="dl-steps-settings" id="mac-settings-link" hidden>
+                                <a class="btn btn-settings" href="x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Security">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+                                    Open Privacy &amp; Security
+                                </a>
+                                <span class="dl-steps-hint">Your browser asks before opening System Settings: allow it.</span>
+                            </span></li>
+                        <li>Next to the line about ChatsRecall, click <strong>Open Anyway</strong>, then <strong>Open Anyway</strong> again. Your Mac may ask for your password or Touch ID.</li>
+                    </ol>
+                    <p>ChatsRecall opens, and from then on it opens without the warning. <span class="dl-steps-why">Why the warning: ChatsRecall is not signed with Apple yet, so your Mac asks you to confirm it once.</span></p>
+                </div>
+            </details>
+            <details class="q dl-q" id="windows-smartscreen">
                 <summary>Windows warned me about the installer</summary>
-                <p>During the beta, a fresh installer can be new to Microsoft SmartScreen, so Windows may show &ldquo;Windows protected your PC&rdquo;. First make sure your download came from this page. Then choose <strong>More info</strong>, followed by <strong>Run anyway</strong>.</p>
+                <div class="a">
+                    <p>During the beta, a fresh installer can be new to Microsoft SmartScreen, so Windows may show &ldquo;Windows protected your PC&rdquo;. First make sure your download came from this page. Then choose <strong>More info</strong>, followed by <strong>Run anyway</strong>.</p>
+                </div>
             </details>
-            <details class="dl-q" id="mac-old-version-note">
+            <details class="q dl-q" id="mac-old-version-note">
                 <summary>I have the Mac version from June (0.1.21)</summary>
-                <p>It can't update itself. Download the Mac version above and drag it into Applications to replace it.</p>
+                <div class="a">
+                    <p>It can't update itself. Download the Mac version above and drag it into Applications to replace it.</p>
+                </div>
             </details>
-        </div>
+            </div>
+        </section>
 
         <!-- Release Notes. Cards are generated from releases/<version>/notes.md by scripts/update-website-updates.mjs; never hand-edit them.
              The script inserts each new card right after the updates-list opening tag below.
              The page script shows the latest two open and folds the older ones (docs#540);
              without the script every card stays open. -->
-        <section id="release-notes" aria-label="Release notes">
-            <h2 class="section-title">Release history</h2>
+        <section class="block releases" id="release-notes" aria-label="Release notes">
+            <h2 class="label">Release history</h2>
             <div class="updates-list">
 
             <!-- Version 0.1.103 -->
@@ -2878,60 +2874,15 @@
             </article>
         </div>
         </section>
+</main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p class="copyright">&copy; 2026 ChatsRecall. All rights reserved.</p>
-        </footer>
-    </main>
+<footer>
+  <div class="wrap">
+    <div class="row"><span>© 2026 ChatsRecall</span><a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="desktop.html#release-notes">What's new</a><a href="mailto:support@chatsrecall.com">Contact</a></div>
+  </div>
+</footer>
 
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const icon = themeToggle.querySelector('i');
-
-        function setTheme(isDark) {
-            if (isDark) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                icon.classList.replace('bi-moon', 'bi-sun');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-                icon.classList.replace('bi-sun', 'bi-moon');
-            }
-        }
-
-        // Check for saved preference, otherwise use system preference
-        const savedTheme = localStorage.getItem('chatrecall-theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (savedTheme) {
-            setTheme(savedTheme === 'dark');
-        } else {
-            setTheme(systemPrefersDark);
-        }
-
-        // Listen for system theme changes (only if user hasn't set a preference)
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('chatrecall-theme')) {
-                setTheme(e.matches);
-            }
-        });
-
-        // Manual toggle saves preference
-        themeToggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
-            setTheme(!isDark);
-        });
-
-        // Mobile nav: the hamburger reveals the links column.
-        const navToggle = document.getElementById('nav-toggle');
-        const navbarContent = navToggle.closest('.navbar-content');
-        navToggle.addEventListener('click', () => {
-            const open = navbarContent.classList.toggle('nav-open');
-            navToggle.setAttribute('aria-expanded', String(open));
-            navToggle.querySelector('i').className = open ? 'bi bi-x-lg' : 'bi bi-list';
-        });
-
         // The visitor's own computer comes first (docs#540). The page lists
         // Mac first, which stays for Macs and anything we can't tell; a
         // Windows visitor gets Windows on top. The first row has the filled
@@ -2943,8 +2894,8 @@
             const mac = list.querySelector('[data-os="mac"]');
             if (!windows || !mac) return;
             list.prepend(windows);
-            windows.querySelector('.btn-cta').classList.remove('btn-cta-secondary');
-            mac.querySelector('.btn-cta').classList.add('btn-cta-secondary');
+            windows.querySelector('.btn').classList.remove('secondary');
+            mac.querySelector('.btn').classList.add('secondary');
         }
 
         // The version in a download link's file name:
