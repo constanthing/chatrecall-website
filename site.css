@@ -156,7 +156,7 @@
   .dl-what .dl-version { margin-left: 4px; font-variant-numeric: tabular-nums; }
   .dl-row .btn { padding: 7px 14px; font-size: 13px; }
 
-  /* Fold-open rows: the Download notes and the Mac first-open steps */
+  /* Fold-open rows: the Download notes */
   details.q summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 8px 10px; border-radius: 8px; font-weight: 550; }
   details.q summary::-webkit-details-marker { display: none; }
   details.q summary::after { content: ""; width: 7px; height: 7px; border-right: 1.6px solid var(--text-3); border-bottom: 1.6px solid var(--text-3); transform: rotate(45deg); margin: -4px 4px 0 auto; transition: transform .15s, margin .15s; flex: none; }
@@ -169,10 +169,6 @@
   .a b, .a strong { color: var(--text); font-weight: 600; }
   .a a { color: var(--text); border-bottom: 1px solid var(--line); }
   .a blockquote { margin: 6px 0; padding: 2px 0 2px 12px; border-left: 2px solid var(--line); font-style: italic; }
-  .dl-steps-settings { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; margin: 8px 0 4px; }
-  .dl-steps-settings[hidden] { display: none; }
-  .a .dl-steps-settings .btn { color: #fff; border-bottom: 0; padding: 6px 12px; font-size: 13px; }
-  .dl-steps-hint { color: var(--text-3); font-size: 12.5px; }
   section.folds { padding-top: 26px; }
 
   /* Release history, at the bottom of Download. The cards are written by the release tooling

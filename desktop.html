@@ -85,34 +85,8 @@
              from that card, so it never needs editing by hand. -->
         <p class="meta dl-version-line">Version <span id="desktop-version">0.1.103</span> · <span id="desktop-release-date">November 19, 2026</span> · <a class="inline" href="#release-notes">What's new</a></p>
 
-        <section class="block folds" aria-label="Opening ChatsRecall the first time, and older versions">
+        <section class="block folds" aria-label="Installer warnings and older versions">
             <div class="qlist">
-            <!-- Open by default: kept in view until the signed Mac build ships (docs#526 removes it). -->
-            <details class="q dl-steps" id="mac-first-open" open>
-                <summary id="mac-first-open-title">Opening ChatsRecall the first time on a Mac</summary>
-                <div class="a">
-                    <ol>
-                        <li>Open the file you downloaded and drag ChatsRecall onto the Applications folder.</li>
-                        <li>Open ChatsRecall. Your Mac stops it and says:
-                            <blockquote>Apple could not verify &ldquo;ChatsRecall&rdquo; is free of malware that may harm your Mac or compromise your privacy.</blockquote>
-                            Click <strong>Done</strong> (not Move to Trash).</li>
-                        <li>Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, and scroll down to <strong>Security</strong>.
-                            <!-- Opens System Settings at Privacy & Security, scrolled to
-                                 Security (checked on macOS 27.2; macOS 13 or later). The
-                                 browser asks before it opens Settings. Shown only on a Mac, by the script
-                                 below; the written step stays for everyone. -->
-                            <span class="dl-steps-settings" id="mac-settings-link" hidden>
-                                <a class="btn btn-settings" href="x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Security">
-                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
-                                    Open Privacy &amp; Security
-                                </a>
-                                <span class="dl-steps-hint">Your browser asks before opening System Settings: allow it.</span>
-                            </span></li>
-                        <li>Next to the line about ChatsRecall, click <strong>Open Anyway</strong>, then <strong>Open Anyway</strong> again. Your Mac may ask for your password or Touch ID.</li>
-                    </ol>
-                    <p>ChatsRecall opens, and from then on it opens without the warning. <span class="dl-steps-why">Why the warning: ChatsRecall is not signed with Apple yet, so your Mac asks you to confirm it once.</span></p>
-                </div>
-            </details>
             <details class="q dl-q" id="windows-smartscreen">
                 <summary>Windows warned me about the installer</summary>
                 <div class="a">
@@ -3005,15 +2979,6 @@
             }
         }
 
-        // The Privacy & Security button in the first-open steps only works on
-        // a Mac. iPads also say "Macintosh" but have a touch screen; leave
-        // them out.
-        function showMacSettingsLink() {
-            const isMac = /Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints < 2;
-            const link = document.getElementById('mac-settings-link');
-            if (isMac && link) link.hidden = false;
-        }
-
         // Release history: the latest two open, older ones folded to one line
         // (docs#540). The cards are the release script's markup, untouched;
         // this only adds the one-line summary and the fold. A folded card's
@@ -3062,7 +3027,6 @@
 
         putVisitorsComputerFirst();
         showVersionLine();
-        showMacSettingsLink();
         foldOlderReleases();
     </script>
 </body>
