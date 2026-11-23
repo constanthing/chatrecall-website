@@ -31,9 +31,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/icon_16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="landing.css">
+    <!-- Stylesheet and script for Home only (the redesign approved 2026-11-23, docs#541).
+         The other pages keep landing.css and are not affected. -->
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -52,315 +53,155 @@
     }
     </script>
 </head>
+<body data-page="home">
 
-<body data-icons="brand">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="navbar-logo">ChatsRecall <span class="beta-badge">beta</span></a>
-            <div class="navbar-links" id="navbar-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="desktop.html" class="nav-link">Download</a>
-                <a href="help.html" class="nav-link">Help</a>
-                <a href="privacy.html" class="nav-link">Privacy</a>
-            </div>
-            <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
-                <i class="bi bi-moon"></i>
-            </button>
-            <button id="nav-toggle" class="btn-icon nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navbar-links">
-                <i class="bi bi-list"></i>
-            </button>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="lg-chatgpt" viewBox="180 180 356 356"><path d="M508.749 317.399C516.777 287.314 508.991 253.884 485.389 230.282C461.788 206.681 428.36 198.895 398.273 206.923C376.231 184.928 343.39 174.956 311.148 183.596C278.906 192.234 255.45 217.292 247.36 247.361C217.291 255.451 192.233 278.91 183.595 311.149C174.957 343.391 184.927 376.232 206.924 398.274C198.896 428.359 206.683 461.789 230.284 485.391C253.885 508.992 287.313 516.779 317.401 508.75C339.442 530.745 372.286 540.717 404.525 532.079C436.767 523.441 460.223 498.384 468.313 468.315C498.383 460.224 523.44 436.766 532.078 404.526C540.716 372.285 530.747 339.443 508.749 317.402V317.399ZM470.899 244.776C486.892 260.77 493.488 282.601 490.687 303.412L415.577 260.046C412.411 258.218 408.509 258.218 405.345 260.046L317.401 310.82V277.526C317.401 275.191 318.652 273.005 320.676 271.837L387.644 233.174C414.178 218.353 448.346 222.223 470.901 244.776H470.899ZM357.837 311.144L398.275 334.491V381.185L357.837 404.532L317.398 381.185V334.491L357.837 311.144ZM264.776 269.693C265.207 239.305 285.644 211.649 316.453 203.393C338.3 197.54 360.505 202.744 377.127 215.573L302.014 258.937C298.848 260.764 296.898 264.144 296.898 267.798V369.346L268.065 352.699C266.043 351.531 264.776 349.353 264.776 347.017V269.691V269.693ZM203.391 316.454C209.244 294.608 224.854 277.978 244.276 269.999V356.73C244.276 360.384 246.226 363.763 249.392 365.591L337.337 416.365L308.503 433.013C306.481 434.181 303.961 434.188 301.939 433.02L234.971 394.357C208.868 378.789 195.138 347.261 203.391 316.454ZM244.775 470.9C228.781 454.906 222.186 433.075 224.986 412.264L300.096 455.63C303.263 457.457 307.164 457.457 310.328 455.63L398.273 404.856V438.149C398.273 440.485 397.022 442.671 394.997 443.839L328.029 482.502C301.495 497.322 267.327 493.452 244.772 470.9H244.775ZM450.897 445.982C450.466 476.371 430.029 504.027 399.22 512.283C377.373 518.136 355.168 512.932 338.547 500.102L413.659 456.738C416.826 454.911 418.775 451.532 418.775 447.877V346.329L447.609 362.977C449.631 364.145 450.897 366.323 450.897 368.659V445.985V445.982ZM512.282 399.221C506.429 421.068 490.819 437.697 471.397 445.676V358.946C471.397 355.292 469.448 351.912 466.281 350.085L378.336 299.311L407.17 282.663C409.192 281.495 411.712 281.487 413.734 282.655L480.702 321.318C506.805 336.887 520.536 368.415 512.282 399.221Z"/></symbol>
+<symbol id="lg-claude" viewBox="16 16 96 96"><path d="M35.0157 79.6937L53.4322 69.3667L53.7357 68.4622L53.4322 67.9585H52.5215L49.4352 67.7708L38.9115 67.4891L29.8045 67.1136L20.9504 66.6442L18.7243 66.1748L16.6499 63.4053L16.8523 62.044L18.7243 60.7766L21.4058 61.0113L27.3254 61.4337L36.23 62.044L42.6555 62.4195L52.2179 63.4053H53.7357L53.9381 62.795L53.4322 62.4195L53.0274 62.044L43.8192 55.8008L33.8521 49.2291L28.6408 45.4269L25.8581 43.5024L24.4415 41.7186L23.8343 37.7756L26.3641 34.9591L29.8045 35.1938L30.6646 35.4285L34.1556 38.1042L41.593 43.8779L51.3072 51.0129L52.7239 52.1864L53.2943 51.8014L53.3816 51.5292L52.7239 50.4496L47.462 40.9206L41.846 31.2039L39.3163 27.1669L38.6586 24.773C38.4038 23.7683 38.2538 22.9371 38.2538 21.9096L41.1377 17.9665L42.7567 17.4502L46.6525 17.9665L48.2715 19.3748L50.7001 24.9138L54.5958 33.5978L60.6672 45.4269L62.438 48.9475L63.3993 52.1864L63.7535 53.1722H64.3606V52.6089L64.8666 45.9433L65.7773 37.7756L66.688 27.2608L66.9915 24.3036L68.4588 20.7361L71.3933 18.8115L73.67 19.8911L75.542 22.5667L75.289 24.3036L74.176 31.5324L72.0004 42.8452L70.5837 50.4496H71.3933L72.3546 49.4638L76.1997 44.3942L82.6252 36.3204L85.4585 33.1284L88.7978 29.6079L90.9228 27.918H94.9703L97.9048 32.3304L96.5894 36.8837L92.4406 42.1411L89.0002 46.6004L84.0672 53.2095L81.0062 58.5234L81.2807 58.9618L82.0181 58.8989L93.1489 56.505L99.1697 55.4253L106.354 54.2049L109.592 55.707L109.946 57.256L108.681 60.401L100.991 62.2787L91.9853 64.1094L78.5744 67.2664L78.4259 67.3858L78.6012 67.6458L84.649 68.1932L87.2294 68.334H93.5537L105.342 69.2259L108.428 71.2444L110.25 73.7322L109.946 75.6568L105.19 78.0508L98.8155 76.5487L83.8901 72.9812L78.7801 71.7138H78.0717V72.1362L82.3217 76.314L90.1639 83.3551L99.9286 92.4616L100.435 94.7148L99.1697 96.4985L97.8542 96.3108L89.2532 89.8329L85.9139 86.9226L78.4259 80.5856H77.92V81.2428L79.6402 83.7776L88.7978 97.5312L89.2532 101.756L88.5954 103.117L86.2175 103.962L83.6371 103.493L78.2235 95.9352L72.7087 87.4859L68.2564 79.8815L67.7187 80.221L65.0689 108.515L63.8547 109.971L61.0214 111.05L58.6434 109.266L57.3786 106.356L58.6434 100.582L60.1613 93.0719L61.3755 87.1104L62.4886 79.6937L63.1684 77.2161L63.1083 77.0503L62.5653 77.1416L56.9738 84.8103L48.4739 96.3108L41.7448 103.493L40.1258 104.15L37.3431 102.695L37.5961 100.113L39.1645 97.8129L48.4739 85.9838L54.0899 78.6141L57.7094 74.3837L57.6742 73.7718L57.4744 73.7548L32.739 89.8799L28.3373 90.4432L26.4147 88.6594L26.6676 85.7491L27.5783 84.8103L35.0157 79.6937Z"/></symbol>
+<symbol id="lg-perplexity" viewBox="824.3 382 271.5 315.9"><path fill-rule="evenodd" d="M1095.8,476.6h-37.3v-94.6l-90.9,84.7v-84.7h-15.1v84.7l-90.9-84.7v94.6h-37.3v136.3h37.2v85l91-81v81h15.1v-81l91,81v-85h37.2v-136.3ZM1043.3,416.8v59.8h-64.1l64.1-59.8ZM876.7,416.8l64.1,59.8h-64.1v-59.8ZM839.4,597.8v-106h101.2l-79.1,72.7v33.3h-22ZM876.6,571.1l75.9-69.7v95.3l-75.9,67.5v-93.1ZM1043.4,664.2l-75.9-67.5v-95.3l75.9,69.7v93.1ZM1080.6,597.8h-22v-33.3l-79.1-72.7h101.2v106Z"/></symbol>
+<symbol id="lg-wave" viewBox="152 152 720 720"><path transform="translate(249.06 153.60) scale(28.2427)" d="M11.5175 23.2939C12.092 23.2939 12.5585 23.761 12.5585 24.3359C12.5585 24.9109 12.092 25.3779 11.5175 25.3779H7.10245C6.52808 25.3777 6.06241 24.9108 6.06241 24.3359C6.06243 23.7611 6.52809 23.2941 7.10245 23.2939H11.5175ZM16.3661 15.041C16.5306 14.4911 17.1114 14.1792 17.663 14.3438C18.2125 14.5083 18.5268 15.0895 18.3603 15.6416C17.1694 19.6099 13.4476 22.3809 9.30948 22.3809C5.17139 22.3808 1.44951 19.6099 0.258701 15.6416C0.0942688 15.0917 0.40652 14.5105 0.955966 14.3438C1.50545 14.1792 2.08623 14.4912 2.25284 15.041C3.18124 18.1346 6.083 20.2968 9.30948 20.2969C12.536 20.2969 15.4377 18.1367 16.3661 15.041ZM9.30851 0C12.8036 0 15.6347 2.8354 15.6347 6.33105V13.041C15.6347 16.5387 12.8015 19.3721 9.30851 19.3721C5.81361 19.3719 2.98235 16.5366 2.98233 13.041V6.33105C2.98233 2.83342 5.81568 0.000167258 9.30851 0ZM9.56046 6.27246C9.51871 5.98311 9.10126 5.98313 9.05948 6.27246L8.9462 7.03516C8.77336 8.21835 7.84531 9.14741 6.663 9.32031L5.90128 9.43262C5.61193 9.47428 5.61193 9.89291 5.90128 9.93457L6.663 10.0479C7.84536 10.2208 8.77343 11.1497 8.9462 12.333L9.05948 13.0947C9.10111 13.3843 9.51883 13.3843 9.56046 13.0947L9.67276 12.333C9.84554 11.1497 10.7746 10.2208 11.9569 10.0479L12.7187 9.93457C13.0078 9.89276 13.0078 9.47436 12.7187 9.43262L11.9569 9.32031C10.7746 9.14741 9.84556 8.2184 9.67276 7.03516L9.56046 6.27246ZM12.6327 4.13281C12.6116 3.99162 12.4087 3.99158 12.3876 4.13281L12.3339 4.50586C12.2485 5.085 11.7943 5.53763 11.2177 5.62305L10.8446 5.67676C10.7036 5.6979 10.7036 5.90174 10.8446 5.92285L11.2177 5.97656C11.7964 6.06197 12.2485 6.5167 12.3339 7.09375L12.3876 7.46582C12.4084 7.60748 12.6119 7.60748 12.6327 7.46582L12.6874 7.09375C12.7727 6.51473 13.2262 6.06211 13.8026 5.97656L14.1757 5.92285C14.3172 5.90202 14.3172 5.69762 14.1757 5.67676L13.8026 5.62305C13.2241 5.53751 12.7727 5.0828 12.6874 4.50586L12.6327 4.13281Z"/></symbol>
+<symbol id="lg-grok" viewBox="0 0 1024 988"><path d="M395.479 633.828L735.91 381.105C752.599 368.715 776.454 373.548 784.406 392.792C826.26 494.285 807.561 616.253 724.288 699.996C641.016 783.739 525.151 802.104 419.247 760.277L303.556 814.143C469.49 928.202 670.987 899.995 796.901 773.282C896.776 672.843 927.708 535.937 898.785 412.476L899.047 412.739C857.105 231.37 909.358 158.874 1016.4 10.6326C1018.93 7.11771 1021.47 3.60279 1024 0L883.144 141.651V141.212L395.392 633.916"/><path d="M325.226 695.251C206.128 580.84 226.662 403.776 328.285 301.668C403.431 226.097 526.549 195.254 634.026 240.596L749.454 186.994C728.657 171.88 702.007 155.623 671.424 144.2C533.19 86.9942 367.693 115.465 255.323 228.382C147.234 337.081 113.244 504.215 171.613 646.833C215.216 753.423 143.739 828.818 71.7385 904.916C46.2237 931.893 20.6216 958.87 0 987.429L325.139 695.339"/></symbol>
+<symbol id="lg-readai" viewBox="15 15 60 60"><path fill-rule="evenodd" clip-rule="evenodd" d="M66.12 44.9646C66.12 56.7455 56.5697 66.2958 44.7888 66.2958C33.0079 66.2958 23.4576 56.7455 23.4576 44.9646C23.4576 33.1837 33.0079 23.6334 44.7888 23.6334C56.5697 23.6334 66.12 33.1837 66.12 44.9646ZM44.7888 61.227C53.7703 61.227 61.0512 53.9461 61.0512 44.9646C61.0512 35.9831 53.7703 28.7022 44.7888 28.7022C35.8073 28.7022 28.5264 35.9831 28.5264 44.9646C28.5264 53.9461 35.8073 61.227 44.7888 61.227Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M38.0894 47.2675C39.0847 50.0084 41.7121 51.96 44.7888 51.96C47.8655 51.96 50.4929 50.0084 51.4882 47.2675L56.2526 48.9976C54.5527 53.6787 50.0652 57.0288 44.7888 57.0288C39.5124 57.0288 35.0249 53.6787 33.325 48.9976L38.0894 47.2675Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M68.232 66.7182V58.2702H73.3008V66.7182C73.3008 70.4507 70.2749 73.4766 66.5424 73.4766H58.0944V68.4078H66.5424C67.4755 68.4078 68.232 67.6513 68.232 66.7182Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21.768 23.6334V32.0814H16.6992V23.6334C16.6992 19.9008 19.7251 16.875 23.4576 16.875H31.9056V21.9438H23.4576C22.5245 21.9438 21.768 22.7003 21.768 23.6334Z"/></symbol>
+<symbol id="lg-zoom" viewBox="0 9.27 24 5.46"><path d="M5.033 14.649H.743a.74.74 0 0 1-.686-.458.74.74 0 0 1 .16-.808L3.19 10.41H1.06A1.06 1.06 0 0 1 0 9.35h3.957c.301 0 .57.18.686.458a.74.74 0 0 1-.161.808L1.51 13.59h2.464c.585 0 1.06.475 1.06 1.06zM24 11.338c0-1.14-.927-2.066-2.066-2.066-.61 0-1.158.265-1.537.686a2.061 2.061 0 0 0-1.536-.686c-1.14 0-2.066.926-2.066 2.066v3.311a1.06 1.06 0 0 0 1.06-1.06v-2.251a1.004 1.004 0 0 1 2.013 0v2.251c0 .586.474 1.06 1.06 1.06v-3.311a1.004 1.004 0 0 1 2.012 0v2.251c0 .586.475 1.06 1.06 1.06zM16.265 12a2.728 2.728 0 1 1-5.457 0 2.728 2.728 0 0 1 5.457 0zm-1.06 0a1.669 1.669 0 1 0-3.338 0 1.669 1.669 0 0 0 3.338 0zm-4.82 0a2.728 2.728 0 1 1-5.458 0 2.728 2.728 0 0 1 5.457 0zm-1.06 0a1.669 1.669 0 1 0-3.338 0 1.669 1.669 0 0 0 3.338 0z"/></symbol>
+
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">ChatsRecall <span class="beta">BETA</span></a>
+    <nav class="links">
+      <a href="desktop.html">Download</a>
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
+    <button class="theme" type="button" aria-label="Switch light or dark" data-theme-toggle>
+      <svg class="icon sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Recall your chats</h1>
-                <p class="hero-description">
-                    A desktop app that syncs and lets you search your conversation history across ChatGPT, Claude,
-                    Gemini, and more, with a lightweight browser bridge that captures new chats automatically.
-                </p>
-                <a href="desktop.html" class="btn-cta">
-                    <i class="bi bi-download"></i>
-                    Download for Desktop
-                </a>
-                <p class="trust-note">
-                    <i class="bi bi-shield-check"></i>
-                    Your archive is stored on your computer, never on our servers.
-                </p>
-            </div>
-            <div class="hero-visual">
-                <div class="chat-card card-1">
-                    <div class="card-header">
-                        <div class="card-title">Planning a weekend trip to Tokyo</div>
-                        <span class="card-prompts">3 <i class="bi bi-chat-square-text"></i></span>
-                    </div>
-                    <div class="card-details">
-                        <span class="card-source chatgpt">ChatGPT</span>
-                        <span class="card-time">Jan 14, 2026, 8:50 PM</span>
-                    </div>
-                </div>
-                <div class="chat-card card-2">
-                    <div class="card-header">
-                        <div class="card-title">Help me write a cover letter</div>
-                        <span class="card-prompts">5 <i class="bi bi-chat-square-text"></i></span>
-                    </div>
-                    <div class="card-details">
-                        <span class="card-source claude">Claude</span>
-                        <span class="card-time">Jan 13, 2026, 3:22 PM</span>
-                    </div>
-                </div>
-                <div class="chat-card card-3">
-                    <div class="card-header">
-                        <div class="card-title">Explain how mortgage rates work</div>
-                        <span class="card-prompts">2 <i class="bi bi-chat-square-text"></i></span>
-                    </div>
-                    <div class="card-details">
-                        <span class="card-source gemini">Gemini</span>
-                        <span class="card-time">Jan 11, 2026, 10:15 AM</span>
-                    </div>
-                </div>
-                <div class="chat-card card-4">
-                    <div class="card-header">
-                        <div class="card-title">Meal prep ideas for the week</div>
-                        <span class="card-prompts">4 <i class="bi bi-chat-square-text"></i></span>
-                    </div>
-                    <div class="card-details">
-                        <span class="card-source perplexity">Perplexity</span>
-                        <span class="card-time">Jan 7, 2026, 2:45 PM</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<main class="wrap">
+  <section class="hero">
+    <h1>Your AI forgets what you told the other one. ChatsRecall fixes that.</h1>
+    <p class="lede">One private record of your chats with ChatGPT, Claude, Gemini and more, plus your recorded meetings. Find any moment yourself, or let the AI you're using right now look it up before it answers.</p>
+    <div class="cta-row">
+      <a class="btn" href="desktop.html#mac-download" data-download-link>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+        <span data-download-label>Download for Mac</span>
+      </a>
+      <span class="alt">or <a href="desktop.html#windows-download" id="other-os">Windows</a></span>
+    </div>
+    <div class="meta">Beta · Version <span id="home-version">0.1.103</span> · Apple-chip and Intel Macs, and Windows</div>
 
-        <!-- Supported Sources Section -->
-        <section class="sources" aria-labelledby="sources-title">
-            <h2 class="section-title" id="sources-title">Supported Sources</h2>
-            <!-- ICON SWITCH. One attribute decides which pictures this row shows:
-                   <body data-icons="brand">  a source that has a logo file shows its vendor's own logo (the default)
-                   <body data-icons="own">    every source shows our in-house glyph instead
-                 One source can be set alone: data-icons="own" (or "brand") on its <li> wins over the body, e.g.
-                 <li class="source-chip chatgpt" data-icons="own">. That is how a vendor can be switched back by itself.
-                 Today four sources are set to "own" on their <li>: Claude Code, Claude Cowork and Google AI Mode (they
-                 have no logo file) and Zoom (its logo file is kept but not shown). To change one later, remove or add
-                 data-icons="own" on its <li> (a source with no logo file also needs an <img class="icon-brand"> added).
-                 To preview a mode without editing the file, add ?icons=own or ?icons=brand to the page address.
-                 Logo files are in assets/logos/ and assets/logos/SOURCES.md says where each one came from.
-                 The in-house glyphs are original drawings, one metaphor per source, kept in sync with the
-                 desktop app's src* icons (chatsrecall-desktop/src/shared/dom.ts). -->
-            <ul class="source-chips" role="list">
-                <li class="source-chip chatgpt">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-onlight" src="assets/logos/chatgpt.svg" alt="ChatGPT" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="ChatGPT"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01"/><path d="M12 11.5h.01"/><path d="M15.5 11.5h.01"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">ChatGPT</span>
-                </li>
-                <li class="source-chip claude">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-tile" src="assets/logos/claude.svg" alt="Claude" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude"><path d="M12 6.7C10.4 5.2 8.4 4.5 6 4.5c-1 0-2 .13-3 .4V19c1-.27 2-.4 3-.4 2.4 0 4.4.7 6 2.2 1.6-1.5 3.6-2.2 6-2.2 1 0 2 .13 3 .4V4.9c-1-.27-2-.4-3-.4-2.4 0-4.4.7-6 2.2Z"/><path d="M12 6.7v14.1"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Claude</span>
-                </li>
-                <li class="source-chip claude-code" data-icons="own">
-                    <span class="chip-icon">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude Code"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7.5 9.5 3 3-3 3"/><path d="M13.5 15.5H17"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Claude Code</span>
-                </li>
-                <li class="source-chip claude-cowork" data-icons="own">
-                    <span class="chip-icon">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Claude Cowork"><circle cx="9.2" cy="12" r="5.7"/><circle cx="14.8" cy="12" r="5.7"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Claude Cowork</span>
-                </li>
-                <li class="source-chip gemini">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-glyph" src="assets/logos/gemini.png" alt="Gemini" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Gemini"><path d="M5 4.5c2.3 1.3 4.6 2 7 2s4.7-.7 7-2"/><path d="M5 19.5c2.3-1.3 4.6-2 7-2s4.7.7 7 2"/><path d="M9 7v10"/><path d="M15 7v10"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Gemini</span>
-                </li>
-                <li class="source-chip google-ai-mode" data-icons="own">
-                    <span class="chip-icon">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Google AI Mode"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m20.8 20.8-5.2-5.2"/><path d="M10.5 7.6v5.8"/><path d="m8 9.05 5 2.9"/><path d="m13 9.05-5 2.9"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Google AI Mode</span>
-                </li>
-                <li class="source-chip perplexity">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-onlight" src="assets/logos/perplexity.svg" alt="Perplexity" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Perplexity"><path d="M5 5h14v14H8V9h8v7h-5v-4h2.5"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Perplexity</span>
-                </li>
-                <li class="source-chip wave">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-tile" src="assets/logos/wave.svg" alt="Wave" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Wave"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Wave</span>
-                </li>
-                <li class="source-chip grok">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-onlight" src="assets/logos/grok.svg" alt="Grok" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Grok"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10.2" ry="3.6" transform="rotate(-24 12 12)"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Grok</span>
-                </li>
-                <li class="source-chip copilot">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-glyph" src="assets/logos/copilot.png" alt="Copilot" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Copilot"><circle cx="12" cy="12" r="9"/><path d="m15.7 8.3-2.2 5.2-5.2 2.2 2.2-5.2Z"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Copilot</span>
-                </li>
-                <li class="source-chip readai">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-tile" src="assets/logos/readai.svg" alt="Read AI" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Read AI"><circle cx="7" cy="14.8" r="3.6"/><circle cx="17" cy="14.8" r="3.6"/><path d="M10.6 14.2a1.9 1.9 0 0 1 2.8 0"/><path d="M3.4 13.6 2.4 9.4"/><path d="m20.6 13.6 1-4.2"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Read AI</span>
-                </li>
-                <li class="source-chip fireflies">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-glyph" src="assets/logos/fireflies.png" alt="Fireflies" width="28" height="28" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Fireflies"><path d="m10.8 5.8-1.6-3"/><path d="m13.2 5.8 1.6-3"/><path d="M12 5.5c1.4 0 2.2 1 2.2 2.3v4.4c0 1.3-.8 2.3-2.2 2.3s-2.2-1-2.2-2.3V7.8c0-1.3.8-2.3 2.2-2.3Z"/><path d="M9.8 8.5 4.5 7.2c-1 2.6.4 4.8 5.3 4.3"/><path d="m14.2 8.5 5.3-1.3c1 2.6-.4 4.8-5.3 4.3"/><circle cx="12" cy="18.3" r="2.3"/><path d="M12 14.5v1.5"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Fireflies</span>
-                </li>
-                <li class="source-chip zoom" data-icons="own">
-                    <span class="chip-icon">
-                        <img class="icon-brand logo-wide" src="assets/logos/zoom.svg" alt="Zoom" width="48" height="11" loading="lazy" decoding="async">
-                        <svg class="icon-own" viewBox="0 0 24 24" role="img" aria-label="Zoom"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="m21 9-4 3 4 3V9Z"/></svg>
-                    </span>
-                    <span class="chip-name" aria-hidden="true">Zoom</span>
-                </li>
-            </ul>
-            <p class="sources-caption">Names and logos belong to their owners and appear only to show which services ChatsRecall can read. ChatsRecall is not affiliated with, endorsed by or sponsored by any of them.</p>
-        </section>
+    <div class="window" aria-label="The ChatsRecall app, searching for pricing">
+      <div class="win-side">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="side-label">Sources</div>
+        <div class="side-row on"><svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M4 6h16M4 12h16M4 18h16"/></svg>All sources<span class="n">2,452</span></div>
+        <div class="side-row"><svg class="logo"><use href="#lg-chatgpt"/></svg>ChatGPT<span class="n">1,204</span></div>
+        <div class="side-row"><svg class="logo"><use href="#lg-claude"/></svg>Claude<span class="n">687</span></div>
+        <div class="side-row"><img class="logo" src="assets/logos/gemini.png" alt="">Gemini<span class="n">212</span></div>
+        <div class="side-row"><svg class="logo"><use href="#lg-perplexity"/></svg>Perplexity<span class="n">158</span></div>
+        <div class="side-row"><svg class="logo"><use href="#lg-grok"/></svg>Grok<span class="n">96</span></div>
+        <div class="side-row"><svg class="logo"><use href="#lg-wave"/></svg>Wave<span class="n">61</span></div>
+        <div class="side-row"><svg class="logo zoom" aria-label="Zoom"><use href="#lg-zoom"/></svg><span class="n">34</span></div>
+      </div>
+      <div class="win-main">
+        <div class="search">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          pricing<span class="caret"></span>
+          <span class="filter">All time ▾</span>
+        </div>
+        <div class="count">3 results for "pricing"</div>
+        <div class="result">
+          <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;margin-top:2px;color:var(--logo)" aria-label="Zoom meeting"><rect x="3" y="7" width="12" height="10" rx="2"/><path d="m15 11 6-3v8l-6-3"/></svg>
+          <span class="title">Zoom: Hartwell &amp; Co quarterly review</span><span class="when">Jan 14</span>
+          <span class="snip">…we agreed to hold <mark>pricing</mark> at this year's rate and revisit it after the March numbers…</span>
+        </div>
+        <div class="result">
+          <svg class="logo"><use href="#lg-claude"/></svg>
+          <span class="title">Hartwell proposal: fee options</span><span class="when">Jan 9</span>
+          <span class="snip">…a fixed monthly retainer keeps <mark>pricing</mark> simple for them, with project work billed on top…</span>
+        </div>
+        <div class="result">
+          <svg class="logo"><use href="#lg-chatgpt"/></svg>
+          <span class="title">How to explain a price change to a client</span><span class="when">Dec 18</span>
+          <span class="snip">…lead with what they get for the new <mark>pricing</mark>, then give them the date it starts…</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <h2 class="section-title">Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-arrow-repeat"></i>
-                    </div>
-                    <h3 class="feature-title">Import & Sync</h3>
-                    <p class="feature-desc">Seamlessly import and sync conversations from multiple AI platforms in one
-                        place.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-chat-square-text"></i>
-                    </div>
-                    <h3 class="feature-title">Dynamic Conversations</h3>
-                    <p class="feature-desc">Automatically captures new conversations with their prompts as you chat.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-search"></i>
-                    </div>
-                    <h3 class="feature-title">Search Everything</h3>
-                    <p class="feature-desc">Instantly search through titles and prompts across all your conversations.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-keyboard"></i>
-                    </div>
-                    <h3 class="feature-title">Keyboard First</h3>
-                    <p class="feature-desc">Built for power users with full keyboard navigation and shortcuts.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-circle-half"></i>
-                    </div>
-                    <h3 class="feature-title">Light & Dark Themes</h3>
-                    <p class="feature-desc">Switch between light and dark modes to match your preference.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="bi bi-funnel"></i>
-                    </div>
-                    <h3 class="feature-title">Smart Filters</h3>
-                    <p class="feature-desc">Filter by specific sources and time ranges to find exactly what you need.
-                    </p>
-                </div>
-            </div>
-        </section>
+  <section class="block">
+    <div class="label">Works with</div>
+    <dl class="works">
+      <dt>AI chats</dt>
+      <dd>
+        <span class="src"><svg class="logo"><use href="#lg-chatgpt"/></svg>ChatGPT</span>
+        <span class="src"><svg class="logo"><use href="#lg-claude"/></svg>Claude</span>
+        <span class="src"><img class="logo" src="assets/logos/gemini.png" alt="">Gemini</span>
+        <span class="src"><svg class="logo"><use href="#lg-grok"/></svg>Grok</span>
+        <span class="src"><img class="logo" src="assets/logos/copilot.png" alt="">Copilot</span>
+        <span class="src"><svg class="logo"><use href="#lg-perplexity"/></svg>Perplexity</span>
+        <span class="src"><svg class="icon logo-line" viewBox="0 0 24 24" style="width:15px;height:15px;color:var(--logo)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Google AI Mode</span>
+        <span class="src"><svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px;color:var(--logo)"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4 3v-3H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>Meta AI</span>
+        <span class="src"><svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px;color:var(--logo)"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4 3v-3H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>Littlebird</span>
+      </dd>
+      <dt>Coding</dt>
+      <dd>
+        <span class="src"><svg class="logo"><use href="#lg-claude"/></svg>Claude Code</span>
+        <span class="src"><svg class="logo"><use href="#lg-claude"/></svg>Claude Cowork</span>
+      </dd>
+      <dt>Meetings</dt>
+      <dd>
+        <span class="src"><svg class="logo zoom" aria-label="Zoom"><use href="#lg-zoom"/></svg></span>
+        <span class="src"><img class="logo" src="assets/logos/fireflies.png" alt="">Fireflies</span>
+        <span class="src"><svg class="logo"><use href="#lg-readai"/></svg>Read AI</span>
+        <span class="src"><svg class="logo"><use href="#lg-wave"/></svg>Wave</span>
+      </dd>
+    </dl>
+  </section>
 
-        <!-- Footer CTA -->
-        <footer class="footer">
-            <h2 class="footer-headline">Stop digging for lost conversations. Start Recalling.</h2>
-            <a href="desktop.html" class="btn-cta">
-                <i class="bi bi-download"></i>
-                Download for Desktop
-            </a>
-            <p class="footer-note">Ongoing developer support</p>
-            <p class="copyright">&copy; 2026 ChatsRecall. All rights reserved.</p>
-            <p class="legal-note">ChatGPT (OpenAI), Claude, Claude Code and Claude Cowork (Anthropic), Gemini and Google AI Mode (Google), Copilot (Microsoft), Grok (xAI), Perplexity, Wave, Read AI, Fireflies and Zoom are trademarks of their respective owners. All product names, logos and brands are the property of their owners and are used here only to identify the services ChatsRecall can import from. A rights holder who wants a name or logo changed or removed can write to <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a> and we will change it promptly.</p>
-        </footer>
-    </main>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const icon = themeToggle.querySelector('i');
+  <section class="block">
+    <div class="label">Let your AI look it up</div>
+    <dl class="works">
+      <dt>Assistants</dt>
+      <dd>
+        <span class="src"><svg class="logo"><use href="#lg-claude"/></svg>Claude Desktop</span>
+        <span class="src"><svg class="logo"><use href="#lg-claude"/></svg>Claude Code</span>
+        <span class="src">Cursor</span>
+        <span class="src">and other assistants on your computer</span>
+      </dd>
+      <dt>How</dt>
+      <dd class="how">Create an access code in ChatsRecall, under Connect an agent. Your assistant can then read your record and find what you said and decided before it answers.</dd>
+    </dl>
+  </section>
 
-        function setTheme(isDark) {
-            if (isDark) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                icon.classList.replace('bi-moon', 'bi-sun');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-                icon.classList.replace('bi-sun', 'bi-moon');
-            }
-        }
+  <section class="block">
+    <div class="steps">
+      <div class="step"><b>Install the app</b><span>For Mac or Windows. Your record lives in it.</span></div>
+      <div class="step"><b>Add the browser bridge</b><span>It saves new chats as you have them.</span></div>
+      <div class="step"><b>Ask your AI</b><span>It looks in your record, or you search it yourself.</span></div>
+    </div>
+  </section>
 
-        // Check for saved preference, otherwise use system preference
-        const savedTheme = localStorage.getItem('chatrecall-theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  <section class="closing">
+    <div>
+      <h2>What you said, decided and promised, in front of the AI you're using.</h2>
+      <p class="privacy-note"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.4 3 7.8 7 9 4-1.2 7-4.6 7-9V6z"/></svg>Your record stays on your computer, never on our servers.</p>
+    </div>
+    <a class="btn" href="desktop.html#mac-download" data-download-link><svg class="icon" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-download-label>Download for Mac</span></a>
+  </section>
+</main>
 
-        if (savedTheme) {
-            setTheme(savedTheme === 'dark');
-        } else {
-            setTheme(systemPrefersDark);
-        }
+<footer>
+  <div class="wrap">
+    <div class="row"><span>© 2026 ChatsRecall</span><a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="desktop.html#release-notes">What's new</a><a href="mailto:support@chatsrecall.com">Contact</a></div>
+    <p>ChatGPT (OpenAI), Claude, Claude Desktop, Claude Code and Claude Cowork (Anthropic), Cursor (Anysphere), Gemini and Google AI Mode (Google), Copilot (Microsoft), Grok (xAI), Meta AI (Meta), Perplexity, Littlebird, Wave, Read AI, Fireflies and Zoom are trademarks of their owners, shown only to say which services ChatsRecall can import from. ChatsRecall is not affiliated with or endorsed by any of them. To have a name or logo changed or removed, write to <a href="mailto:support@chatsrecall.com">support@chatsrecall.com</a>.</p>
+  </div>
+</footer>
 
-        // Listen for system theme changes (only if user hasn't set a preference)
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('chatrecall-theme')) {
-                setTheme(e.matches);
-            }
-        });
 
-        // Manual toggle saves preference
-        themeToggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            localStorage.setItem('chatrecall-theme', isDark ? 'light' : 'dark');
-            setTheme(!isDark);
-        });
-
-        // Mobile nav: the hamburger reveals the links column.
-        const navToggle = document.getElementById('nav-toggle');
-        const navbarContent = navToggle.closest('.navbar-content');
-        navToggle.addEventListener('click', () => {
-            const open = navbarContent.classList.toggle('nav-open');
-            navToggle.setAttribute('aria-expanded', String(open));
-            navToggle.querySelector('i').className = open ? 'bi bi-x-lg' : 'bi bi-list';
-        });
-
-        // Preview helper for the Supported Sources icon switch: ?icons=own or ?icons=brand shows that
-        // mode for this visit without editing the page (see the comment above the sources list).
-        const iconsParam = new URLSearchParams(location.search).get('icons');
-        if (iconsParam === 'own' || iconsParam === 'brand') {
-            document.body.setAttribute('data-icons', iconsParam);
-        }
-    </script>
 </body>
-
 </html>
