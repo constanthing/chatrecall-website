@@ -26,7 +26,7 @@ function toggleTheme() {
 const visitorOnWindows = /Windows/.test(navigator.userAgent);
 
 // The download buttons name the visitor's computer and open its row on the Download page, where the
-// release pipeline keeps the current installer links (and the Mac first-open steps are in view).
+// release pipeline keeps the current installer links.
 function nameDownloadButtons() {
   if (!visitorOnWindows) return;
   document.querySelectorAll('[data-download-label]').forEach((label) => { label.textContent = 'Download for Windows'; });
