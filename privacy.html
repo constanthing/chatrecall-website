@@ -55,7 +55,7 @@
         <!-- Privacy Header -->
         <header class="privacy-header">
             <h1 class="privacy-title">Privacy Policy</h1>
-            <p class="privacy-subtitle">Last updated September 29, 2026</p>
+            <p class="privacy-subtitle">Last updated November 23, 2026</p>
         </header>
 
         <!-- Privacy Content -->
@@ -95,7 +95,7 @@
                 <p>To make the archive searchable, ChatsRecall builds indexes locally from the conversations it already holds: a full-text search index, an index of the terms and named things your conversations mention, and, if you choose to run it, an index of notable moments with the sentence each one came from quoted verbatim. It also records what the built-in AI features cost you, and any thumbs up or down you give an answer.</p>
 
                 <h3 class="privacy-subheading">Files On Your Computer</h3>
-                <p>For local coding-agent sessions, ChatsRecall reads session transcripts that other apps have already written to your own disk. It reads only those session directories. If you use manual import, it reads the transcript file you pick, or the text you paste.</p>
+                <p>For local coding-agent sessions, ChatsRecall reads session transcripts that other apps have already written to your own disk. If you switch on Littlebird, it also reads the copy of your account that the Littlebird desktop app keeps on your computer. It reads only those folders, and never changes them. If you use manual import, it reads the transcript file you pick, or the text you paste.</p>
 
                 <h3 class="privacy-subheading">Your Email Address, If You Give It</h3>
                 <p>The setup wizard asks for your email address once, and the step can be skipped. If you enter it, see "When Data Leaves Your Device" below for where it goes.</p>
@@ -115,7 +115,7 @@
                 <p><strong>On your computer, in files that belong to you.</strong></p>
                 <ul class="privacy-list">
                     <li>Conversations, indexes, and app settings are in a single SQLite database, <code>chatsrecall.db</code>, in the desktop app's data folder in your Windows user profile</li>
-                    <li>API keys you add for the optional AI features are stored in Windows Credential Manager, not in the database and not in plain text</li>
+                    <li>API keys you add for the optional AI features, and the courtesy AI's token, are stored in Windows Credential Manager (on a Mac, the Keychain), not in the database and not in plain text</li>
                     <li>Access tokens for the app's local programmatic interface are stored only as irreversible hashes</li>
                     <li>Answer feedback is written to a local file in the same app folder. The question you asked is stored only as a short hash of itself, so the only question-shaped text ever written is a comment you type yourself</li>
                     <li>Small preferences, such as your theme and whether setup is finished, are kept in the app's own local storage</li>
@@ -131,7 +131,7 @@
                 <ul class="privacy-list">
                     <li><strong>Through your browser.</strong> The desktop app sends commands to the extension over Chrome native messaging, a private channel between the two programs on your machine. On a supported site, the extension reads what is on the page and records the requests the page itself makes, which is how titles, prompts, replies, renames, and deletions are detected. It acts inside your existing signed-in session, exactly as you would if you clicked through the site yourself. Some sync steps open a supported site in a background browser window to read pages that are not currently on screen</li>
                     <li><strong>Directly from a service's API</strong>, for meeting tools you connect yourself with your own API key or by granting access. These touch no browser</li>
-                    <li><strong>From local session files</strong> written by coding-agent apps already installed on your computer</li>
+                    <li><strong>From local files</strong> written by apps already installed on your computer, such as Claude Code and Littlebird</li>
                     <li><strong>By manual import</strong> of a transcript file or pasted text</li>
                 </ul>
                 <p>Sources are individually switchable, and several ship switched off until you turn them on. Some require a one-time permission approval in your browser, which only you can grant, from the extension's own popup.</p>
@@ -156,11 +156,11 @@
                 <h2 class="privacy-heading">When Data Leaves Your Device</h2>
                 <p>This is the complete list. Apart from these cases, no conversation data leaves your computer.</p>
 
-                <h3 class="privacy-subheading">Optional AI Features, Using Your Own API Key</h3>
-                <p>Some features call a model provider. None of them does anything until an OpenAI or Anthropic API key is connected, and you pay the provider directly. A key counts as connected when you add it in Settings, and also when one is already set in the <code>OPENAI_API_KEY</code> or <code>ANTHROPIC_API_KEY</code> environment variable, or saved in Windows Credential Manager by FollowThrough.</p>
+                <h3 class="privacy-subheading">Optional AI Features</h3>
+                <p>Some features call a model provider. None of them does anything until an AI key is connected: your own OpenAI or Anthropic key, or, for asking your archive, your own Google Gemini key or the courtesy AI below. With your own key, you pay the provider directly. A key counts as connected when you add it in Settings, and also when one is already set in the <code>OPENAI_API_KEY</code> or <code>ANTHROPIC_API_KEY</code> environment variable, or saved in Windows Credential Manager by FollowThrough.</p>
                 <ul class="privacy-list">
                     <li><strong>Session cards</strong> are on by default once a key is connected. After each sync, the app sends a digest of each changed conversation (its text, up to about 16,000 characters) to Anthropic, or to OpenAI when only an OpenAI key is connected, and gets back a few lines saying what came of it. It runs in the background, newest conversations first, at most 50 conversations in any 24 hours by default. You can lower the limit or switch it off in Settings</li>
-                    <li><strong>Asking your archive a question</strong> sends the question and a bounded set of relevant excerpts to OpenAI. It requires a per-feature consent checkbox in the panel. The full archive is never sent, and neither are file contents</li>
+                    <li><strong>Asking your archive a question</strong> sends the question and a bounded set of relevant excerpts to OpenAI, or to Google Gemini when that is the key it runs on. It requires a consent checkbox in the panel, one for each AI. The full archive is never sent, and neither are file contents. On Google's free tier, Google may use what it receives to improve its products</li>
                     <li><strong>Indexing notable moments</strong> sends conversation text to OpenAI. The page states the cost before anything runs, and indexes a limited batch at a time</li>
                     <li><strong>Summarizing a conversation to continue it elsewhere</strong> sends that conversation's text to OpenAI, or to Anthropic when only an Anthropic key is connected. It runs only when you choose the summary option</li>
                     <li><strong>Suggesting extra wordings for a term</strong> is one clearly marked button that sends the term to OpenAI. It is never required</li>
@@ -168,6 +168,9 @@
                 </ul>
                 <p>When a question comes in through the local interface described below, the excerpts are first scanned for things that look like secrets, such as keys and tokens, and those are removed. The features above send text as it is stored, so a secret you pasted into a conversation can reach the provider. Question runs are bounded in rounds, evidence, tokens, and time, and can be cancelled. What you send is then handled under your own agreement with that provider.</p>
 
+                <h3 class="privacy-subheading">The Courtesy AI</h3>
+                <p>So you can try asking your archive before you have an AI account, a new install with no AI key of its own signs up with our courtesy AI service, <code>chatsrecall-courtesy-ai.chatsrecall.workers.dev</code>, when it starts. The sign-up sends the app's name, its version, and your operating system, and the app gets back a token for this computer. The app also checks this computer's daily limit and end date there, at start-up and when the day's use runs out.</p>
+                <p>For up to 90 days, when you ask your archive a question after ticking its box, the question and excerpts go to this service, which passes them on to Google Gemini. It never keeps what you asked. It keeps the app's name, version and operating system from the sign-up and how much was used, and for two days a scrambled form of your network address, so no one can take all of a day's sign-ups. Session cards use it only if you turn that on in Settings. An install set up for you with a kit may instead come with a Google Gemini key, used the same way. Once your own key works, the courtesy AI is no longer used.</p>
                 <h3 class="privacy-subheading">Your Email Address, If You Entered It</h3>
                 <p>If you fill in the optional email step, the app posts it to our contact database, hosted on Supabase, so we can reach you about updates, fixes, or a reply to your feedback. Sent with it: your operating system and the app version. No identifier is attached, because the app has no analytics ID. It is sent once, and the step never asks again.</p>
 
@@ -250,7 +253,7 @@
                 </div>
 
                 <h3 class="privacy-subheading">Which Sites Are Captured Today</h3>
-                <p>The desktop app captures conversations from thirteen sources: ChatGPT, Claude, Claude Code, Cowork, Gemini, Google AI Mode search results, Perplexity, Grok, Microsoft Copilot, Wave, Read AI, Fireflies, and Zoom AI Companion meeting summaries. Several of these are switched off until you enable them.</p>
+                <p>The desktop app captures conversations from fourteen sources: ChatGPT, Claude, Claude Code, Cowork, Gemini, Google AI Mode search results, Perplexity, Grok, Wave, Meta AI, Read AI, Fireflies, Zoom AI Companion meeting summaries, and Littlebird. Several of these are switched off until you enable them. Microsoft Copilot is paused for now.</p>
                 <p>The extension's site list is broader than that. It is prepared in advance for additional AI chat, research, meeting, and coding sites, so that support for a new one does not require a new extension release, which browsers would otherwise treat as a permission change that disables the extension until every user re-approves it. <strong>Having access to a site is not the same as capturing it.</strong> The extension does nothing on a site until the desktop app sends it a command for a source you have enabled, and the list of enabled sources is always visible in the app.</p>
             </section>
 
@@ -270,7 +273,7 @@
                 </ol>
 
                 <h3 class="privacy-subheading">Keeping Everything Local</h3>
-                <p>If no API key is connected (see above), nothing about your conversations is ever sent to a model provider, and every other feature keeps working, including search. With a key connected, switch session cards off in Settings to keep anything from being sent without a click.</p>
+                <p>If you connect no AI key of your own and never tick the box when you ask your archive a question, nothing about your conversations is sent to a model provider, and every other feature keeps working, including search. With a key connected, switch session cards off in Settings to keep anything from being sent without a click.</p>
 
                 <h3 class="privacy-subheading">Limiting What Is Captured</h3>
                 <p>Turn individual sources off, decline or revoke site permissions in your browser, or simply do not connect an account. Capture only happens for sources that are on.</p>
@@ -284,7 +287,7 @@
                 <h2 class="privacy-heading">Security</h2>
                 <ul class="privacy-list">
                     <li>Your conversations stay on your device, in your user profile, protected by your operating system's own account protections</li>
-                    <li>API keys live in Windows Credential Manager; local access tokens are stored only as irreversible hashes</li>
+                    <li>API keys live in Windows Credential Manager (on a Mac, the Keychain); local access tokens are stored only as irreversible hashes</li>
                     <li>The local interface binds to your own machine only and requires a scoped token for every request</li>
                     <li>The desktop app and the extension talk over Chrome native messaging, a channel no web page can reach</li>
                     <li>The extension runs only on its listed sites, and never fetches or evaluates remote code</li>
@@ -319,7 +322,7 @@
             <!-- Summary -->
             <section class="privacy-section privacy-summary">
                 <h2 class="privacy-heading">Summary</h2>
-                <p><strong>Your conversations stay on your computer.</strong> ChatsRecall stores them in a database in your own user profile, has no account and no cloud, and collects no analytics of any kind. It reads AI chat sites through a browser you are already signed in to, and only for the sources you switch on. It changes something at a source, such as a title, a pin, or a deletion, only when you click to do it. The one way conversation text leaves your device is the optional AI features, which need an API key and send conversation text to OpenAI or Anthropic. Once a key is connected, session cards do this after every sync until you switch them off. Everything else, including search, is local.</p>
+                <p><strong>Your conversations stay on your computer.</strong> ChatsRecall stores them in a database in your own user profile, has no account and no cloud, and collects no analytics of any kind. It reads AI chat sites through a browser you are already signed in to, and only for the sources you switch on. It changes something at a source, such as a title, a pin, or a deletion, only when you click to do it. The one way conversation text leaves your device is the optional AI features, which need an AI key (your own, or the courtesy AI) and send conversation text to OpenAI, Anthropic, or Google Gemini. Once a key is connected, session cards do this after every sync until you switch them off. Everything else, including search, is local.</p>
             </section>
 
         </div>
