@@ -910,19 +910,24 @@ body[data-icons="own"] {
     color: var(--text-secondary);
 }
 
-/* Download Page */
+/* Download Page (docs#540): one list of downloads, the version line, the Mac
+   first-open steps, two folded notes, and the release history. A narrow
+   column and tight spacing (Mario). Only desktop.html uses these classes. */
 .desktop-main {
-    max-width: 760px;
+    max-width: 720px;
+    padding-top: 96px;
+    font-size: 14px;
 }
 
 .dl-header {
-    margin-bottom: 32px;
+    margin-bottom: 18px;
 }
 
 .dl-header h1 {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -0.5px;
+    font-size: 30px;
+    font-weight: 650;
+    letter-spacing: -0.6px;
+    line-height: 1.15;
     color: var(--text);
     margin-bottom: 8px;
 }
@@ -930,142 +935,128 @@ body[data-icons="own"] {
 .dl-header p {
     font-size: 15px;
     color: var(--text-secondary);
-    max-width: 560px;
+    max-width: 540px;
+}
+
+/* The downloads: one card, one row per computer. */
+.dl-list {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
 }
 
 .dl-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
     align-items: center;
-    gap: 18px;
-    padding: 22px 24px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 48px;
+    gap: 14px;
+    padding: 12px 16px;
+}
+
+.dl-row + .dl-row {
+    border-top: 1px solid var(--border-subtle);
 }
 
 .dl-row .download-icon {
-    flex: 0 0 auto;
+    font-size: 19px;
+    line-height: 1;
+    color: var(--text-secondary);
 }
 
 .dl-row-title {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 18px;
+    gap: 8px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: -0.3px;
     color: var(--text);
-    margin-bottom: 5px;
-}
-
-.dl-version {
-    display: inline-flex;
-    align-items: center;
-    padding: 2px 8px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: var(--radius-sm);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: -0.2px;
 }
 
 .dl-row-meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px 14px;
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+}
+
+.dl-version {
+    padding: 0 6px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: var(--radius-sm);
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+.dl-version[hidden] {
+    display: none;
+}
+
+.dl-row .btn-cta {
+    padding: 7px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dl-row .btn-cta-secondary {
+    background: var(--bg-hover);
+    border: 1px solid var(--border);
+    color: var(--text);
+    box-shadow: none;
+}
+
+.dl-row .btn-cta-secondary:hover {
+    background: var(--bg-active);
+}
+
+.dl-version-line {
+    margin-top: 8px;
     font-size: 12px;
     color: var(--text-tertiary);
 }
 
-.dl-row .btn-cta {
-    margin-left: auto;
-    white-space: nowrap;
+.dl-version-line a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
 }
 
-.download-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-active);
-    border-radius: var(--radius-sm);
-    color: var(--accent);
-    font-size: 22px;
+.dl-version-line a:hover {
+    color: var(--text);
 }
 
-/* Mac download (docs#498): the row, note and steps start hidden and the
-   page script shows them once the Mac link is a real release. */
-.dl-row[hidden],
-.dl-note[hidden],
-.dl-steps[hidden] {
-    display: none;
-}
-
-/* Two rows in a row sit close together; the last one keeps the gap. */
-.dl-row:has(+ .dl-row:not([hidden])) {
-    margin-bottom: 12px;
-}
-
-.dl-row-mac {
-    margin-bottom: 16px;
-}
-
-.dl-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 14px 18px;
+/* The Mac first-open steps, in view (not folded) until the signed build. */
+.dl-steps {
+    margin-top: 18px;
+    padding: 12px 16px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
-    margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 1.55;
     color: var(--text-secondary);
 }
 
-.dl-note i {
-    color: var(--warning);
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.dl-note strong {
-    color: var(--text);
-    font-weight: 600;
-}
-
-.dl-steps {
-    padding: 22px 24px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    margin-bottom: 48px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-}
-
 .dl-steps-title {
-    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: -0.2px;
     color: var(--text);
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+}
+
+.dl-steps-title i {
+    color: var(--text-secondary);
 }
 
 .dl-steps ol {
     padding-left: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 .dl-steps li + li {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .dl-steps strong {
@@ -1074,20 +1065,15 @@ body[data-icons="own"] {
 }
 
 .dl-steps blockquote {
-    margin: 8px 0;
-    padding: 8px 12px;
+    margin: 4px 0;
+    padding: 5px 10px;
     border-left: 3px solid var(--border);
     background: var(--bg-hover);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     color: var(--text);
 }
 
-.dl-steps p + p {
-    margin-top: 6px;
-}
-
 .dl-steps-why {
-    font-size: 13px;
     color: var(--text-tertiary);
 }
 
@@ -1096,8 +1082,8 @@ body[data-icons="own"] {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 6px 12px;
-    margin-top: 8px;
+    gap: 4px 12px;
+    margin-top: 6px;
 }
 
 .dl-steps-settings[hidden] {
@@ -1108,7 +1094,7 @@ body[data-icons="own"] {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 7px 14px;
+    padding: 5px 12px;
     background: var(--accent-soft);
     border: 1px solid transparent;
     border-radius: var(--radius-sm);
@@ -1133,89 +1119,197 @@ body[data-icons="own"] {
     color: var(--text-tertiary);
 }
 
+/* The two notes most people don't need, one line each until opened. */
+.dl-qlist {
+    margin-top: 10px;
+    padding: 2px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.dl-q summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    list-style: none;
+    cursor: pointer;
+    font-weight: 550;
+    color: var(--text);
+}
+
+.dl-q summary::-webkit-details-marker {
+    display: none;
+}
+
+.dl-q summary::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    margin: -4px 4px 0 auto;
+    border-right: 1.6px solid var(--text-tertiary);
+    border-bottom: 1.6px solid var(--text-tertiary);
+    transform: rotate(45deg);
+    flex: none;
+}
+
+.dl-q[open] summary::after {
+    transform: rotate(-135deg);
+    margin-top: 4px;
+}
+
+.dl-q summary:hover {
+    background: var(--bg-hover);
+}
+
+.dl-q p {
+    padding: 2px 12px 10px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+}
+
+.dl-q strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+#release-notes {
+    margin-top: 28px;
+    scroll-margin-top: 80px;
+}
+
+#release-notes .section-title {
+    margin-bottom: 8px;
+}
+
 @media (max-width: 768px) {
+    .desktop-main {
+        padding-top: 88px;
+    }
+
     .dl-header h1 {
         font-size: 26px;
     }
+}
 
+@media (max-width: 480px) {
     .dl-row {
-        flex-wrap: wrap;
+        grid-template-columns: 22px 1fr;
     }
 
     .dl-row .btn-cta {
-        margin-left: 0;
-        width: 100%;
+        grid-column: 1 / -1;
         justify-content: center;
+        width: 100%;
     }
 }
 
+/* Release history: one card, one row per version. The cards are written by
+   scripts/update-website-updates.mjs (article.update-card); the page script
+   adds a one-line summary to each and folds all but the latest two. */
 .updates-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-bottom: 80px;
-}
-
-.update-card {
+    padding: 2px;
+    margin-bottom: 40px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-    overflow: hidden;
-    transition: all 0.15s ease;
 }
 
-.update-card:hover {
-    border-color: var(--border);
-    box-shadow: var(--shadow-md);
+.update-card + .update-card {
+    border-top: 1px solid var(--border-subtle);
 }
 
 .update-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--border-subtle);
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 12px;
+    align-items: baseline;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+}
+
+.update-meta[role="button"] {
+    cursor: pointer;
+}
+
+.update-meta[role="button"]:hover {
+    background: var(--bg-hover);
+}
+
+.update-meta[role="button"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
 }
 
 .update-version {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 12px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: var(--radius-sm);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: -0.3px;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
+.update-meta:hover .update-version {
+    color: var(--accent);
+}
+
+.update-summary {
+    min-width: 0;
+    color: var(--text);
+}
+
+.update-card.is-folded .update-summary {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .update-date {
-    font-size: 13px;
+    grid-column: 3;
+    font-size: 12px;
     color: var(--text-tertiary);
+    white-space: nowrap;
 }
 
 .update-body {
-    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 10px;
+    padding: 2px 12px 14px 88px;
+    font-size: 13.5px;
+}
+
+/* Folded: the notes take no room. They keep hidden="until-found" (set by the
+   page script) so find-in-page still reaches them where supported. */
+.update-card.is-folded .update-body {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+/* The summary line repeats the intro, so an open card doesn't show it twice. */
+.update-card.has-summary .update-body > .update-intro:first-child {
+    display: none;
 }
 
 .update-section {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
 }
 
 .update-section-title {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-size: 13px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .update-section-title.added {
@@ -1239,51 +1333,34 @@ body[data-icons="own"] {
 }
 
 .update-section-title i {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .update-list {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-left: 22px;
+    gap: 4px;
+    padding-left: 18px;
 }
 
 .update-list li {
-    position: relative;
-    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.5;
 }
 
-.update-list li::before {
-    content: "";
-    position: absolute;
-    left: -14px;
-    top: 9px;
-    width: 4px;
-    height: 4px;
-    background: var(--text-tertiary);
-    border-radius: 50%;
-}
-
 .update-intro {
-    font-size: 15px;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
-/* The highlights tier: the two or three changes of a release someone will
-   actually notice, lifted above the full Added/Improved/Fixed record. That
-   record stays visible — this page is the reference for every version and
-   find-in-page has to keep working across all of it. */
+/* The highlights tier: the changes of a release someone will actually
+   notice, lifted above the full Added/Improved/Fixed record. */
 .update-highlights {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 18px 20px;
+    gap: 10px;
+    padding: 12px 14px;
     background: color-mix(in srgb, var(--accent) 5%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
     border-radius: var(--radius-md, 10px);
@@ -1291,19 +1368,19 @@ body[data-icons="own"] {
 
 .update-highlight {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 /* Keeps a highlight without a glyph on the same left edge as one with it. */
 .update-highlight-plain {
-    padding-left: 30px;
+    padding-left: 27px;
 }
 
 /* The glyphs are the desktop app's own stroked paths, so they need its stroke
    treatment rather than a fill. */
 .update-highlight-icon {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     flex: 0 0 auto;
     margin-top: 2px;
     fill: none;
@@ -1319,43 +1396,38 @@ body[data-icons="own"] {
 }
 
 .update-highlight-title {
-    font-size: 15px;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text);
     line-height: 1.45;
 }
 
 .update-highlight-body {
-    margin-top: 3px;
-    font-size: 14px;
+    margin-top: 1px;
     color: var(--text-secondary);
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 .update-note {
     font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.5;
-    padding: 10px 14px;
+    padding: 8px 12px;
     background: color-mix(in srgb, var(--accent) 6%, transparent);
     border-left: 3px solid var(--accent);
     border-radius: var(--radius-sm);
 }
 
-@media (max-width: 768px) {
-    .updates-title {
-        font-size: 28px;
+@media (max-width: 640px) {
+    .update-meta {
+        grid-template-columns: 56px 1fr;
     }
 
-    .update-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 16px 20px;
+    .update-date {
+        display: none;
     }
 
     .update-body {
-        padding: 20px;
+        padding-left: 12px;
     }
 }
 
