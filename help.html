@@ -64,14 +64,14 @@
                 <div class="help-link-icon"><i class="bi bi-rocket-takeoff"></i></div>
                 <div>
                     <div class="help-link-title">Getting started</div>
-                    <div class="help-link-desc">Install, connect a browser, run your first sync</div>
+                    <div class="help-link-desc">Install, connect a browser, bring in your chats</div>
                 </div>
             </a>
             <a href="desktop.html" class="help-link-card">
                 <div class="help-link-icon"><i class="bi bi-download"></i></div>
                 <div>
                     <div class="help-link-title">Download the app</div>
-                    <div class="help-link-desc">Get the Windows desktop app</div>
+                    <div class="help-link-desc">Get the app for Windows or Mac</div>
                 </div>
             </a>
             <a href="desktop.html#release-notes" class="help-link-card">
@@ -97,20 +97,20 @@
                 <ol class="help-steps">
                     <li>
                         <div class="help-step-title">Install the desktop app</div>
-                        <div class="help-step-desc">Download the Windows installer from the <a href="desktop.html">Download page</a> and run it. The app is where all your conversations live, on your computer.</div>
-                    </li>
-                    <li>
-                        <div class="help-step-title">Take the quick tour</div>
-                        <div class="help-step-desc">First launch walks you through the app using sample conversations. The samples are removed when the tour ends, so your library starts empty until the first sync.</div>
+                        <div class="help-step-desc">Download ChatsRecall for Windows or Mac from the <a href="desktop.html">Download page</a> and install it. The app is where all your conversations live, on your computer.</div>
                     </li>
                     <li>
                         <div class="help-step-title">Connect your browser</div>
                         <!-- The inline icon chips on this page copy glyphs from the desktop app's icon set (src/shared/dom.ts); keep them in sync. -->
-                        <div class="help-step-desc">Install the ChatsRecall extension in Chrome or Edge, using the link on the app's Extensions <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 3H5a2 2 0 0 0-2 2v3.5a2.5 2.5 0 1 1 0 5V19a2 2 0 0 0 2 2h5.5a2.5 2.5 0 1 1 5 0H19a2 2 0 0 0 2-2v-5.5a2.5 2.5 0 1 1 0-5V5a2 2 0 0 0-2-2h-3.5a2.5 2.5 0 1 1-5 0h-2Z"/></svg></span>.</span> It connects to the desktop app automatically, and the sidebar shows how many browsers are attached.</div>
+                        <div class="help-step-desc">When the app first opens, it helps you add the ChatsRecall extension to Chrome or Edge (on a Mac, use Chrome). The link is also on the app's Extensions <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 3H5a2 2 0 0 0-2 2v3.5a2.5 2.5 0 1 1 0 5V19a2 2 0 0 0 2 2h5.5a2.5 2.5 0 1 1 5 0H19a2 2 0 0 0 2-2v-5.5a2.5 2.5 0 1 1 0-5V5a2 2 0 0 0-2-2h-3.5a2.5 2.5 0 1 1-5 0h-2Z"/></svg></span>.</span> It connects to the desktop app automatically, and the sidebar shows how many browsers are attached.</div>
                     </li>
                     <li>
-                        <div class="help-step-title">Sync, then just chat</div>
-                        <div class="help-step-desc">On the Sync <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.6 7.1A6.8 6.8 0 0 0 6 8.5"/><path d="M6.2 4.7V8.5H10"/><path d="M6.4 16.9A6.8 6.8 0 0 0 18 15.5"/><path d="M17.8 19.3v-3.8H14"/></svg></span>,</span> pick your sources and run the first sync. Make sure the browser is signed in to each source you choose. From then on, new conversations are saved live as you chat.</div>
+                        <div class="help-step-title">Pick the AI you use most</div>
+                        <div class="help-step-desc">The app asks <strong>Which AI do you use most?</strong> Tap it, and any others you use, then press <strong>Bring in my conversations</strong>. Make sure the browser is signed in to each one. Prefer a tour on sample chats first? Press <strong>Not now</strong>.</div>
+                    </li>
+                    <li>
+                        <div class="help-step-title">Search in a minute or two</div>
+                        <div class="help-step-desc">The first sync is a quick start: your newest 25 conversations from each AI you picked. Everything older comes in by itself over the next hours, or press Quick sync on the Sync <span class="help-nowrap">page&nbsp;<span class="help-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.6 7.1A6.8 6.8 0 0 0 6 8.5"/><path d="M6.2 4.7V8.5H10"/><path d="M6.4 16.9A6.8 6.8 0 0 0 18 15.5"/><path d="M17.8 19.3v-3.8H14"/></svg></span></span> to bring more in now. From then on, new conversations are saved live as you chat.</div>
                     </li>
                 </ol>
             </div>
@@ -133,7 +133,7 @@
                         <div class="help-item-body">
                             <p>The connection needs three things: the desktop app running, the ChatsRecall extension installed, and that browser open. If the connector count in the sidebar stays at zero:</p>
                             <ul>
-                                <li>Open Chrome or Edge and give it a few seconds. The count updates on its own.</li>
+                                <li>Open Chrome or Edge (Chrome on a Mac) and give it a few seconds. The count updates on its own.</li>
                                 <li>Check that the extension is still enabled in the browser's extension settings.</li>
                                 <li>Restart the browser.</li>
                             </ul>
@@ -143,7 +143,7 @@
                     <details class="help-item">
                         <summary>Can I connect more than one browser?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Yes. Chrome and Microsoft Edge can be connected at the same time, and syncing runs in every connected browser. Each conversation remembers the account it came from, so using different accounts in different browsers or profiles stays tidy. The Extensions page lists every connected browser and the extension version it runs.</p>
+                            <p>Yes. Chrome and Microsoft Edge can be connected at the same time, and syncing runs in every connected browser. On a Mac, use Chrome: it is the browser we have checked there. Each conversation remembers the account it came from, so using different accounts in different browsers or profiles stays tidy. The Extensions page lists every connected browser and the extension version it runs.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -175,7 +175,7 @@
                         <summary>Sync is not running on its own<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
                             <p>Scheduled sync only runs while a connected browser is open. ChatsRecall never launches a browser by itself; a scheduled run simply waits until the browser is open again.</p>
-                            <p>Also check that the source is switched on on the Sync page. Copilot, Read AI, Fireflies, and Zoom ship switched off until you opt in.</p>
+                            <p>Also check that the source is switched on on the Sync page. Meta AI, Read AI, Fireflies, Zoom, and Littlebird ship switched off until you opt in.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -207,8 +207,9 @@
                     <details class="help-item" open>
                         <summary>Which sources are supported?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Thirteen today: ChatGPT, Claude, Claude Code, Claude Cowork, Gemini, Google AI Mode, Perplexity, Grok, Copilot, Wave, Read AI, Fireflies, and Zoom. All of them sync; most also capture live as you chat.</p>
-                            <p>Copilot, Read AI, Fireflies, and Zoom ship switched off. Turn them on from the Sync page when you want them. Zoom brings in AI Companion meeting summaries from the zoom.us account signed in to your browser. Read AI needs extension version 0.1.5 or newer.</p>
+                            <p>Fourteen today: ChatGPT, Claude, Claude Code, Claude Cowork, Gemini, Google AI Mode, Perplexity, Grok, Wave, Meta AI, Read AI, Fireflies, Zoom, and Littlebird. All of them sync; most also capture live as you chat.</p>
+                            <p>Meta AI, Read AI, Fireflies, Zoom, and Littlebird ship switched off. Turn them on from the Sync page when you want them. Zoom brings in AI Companion meeting summaries from the zoom.us account signed in to your browser. Littlebird is read from the Littlebird desktop app on this computer. Read AI needs extension version 0.1.5 or newer.</p>
+                            <p>Copilot is paused for now. Copilot chats you already saved stay in your library.</p>
                         </div>
                     </details>
                     <details class="help-item">
@@ -265,7 +266,7 @@
                     <details class="help-item">
                         <summary>What is Agentic Search?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Ask a question in plain language, like "what did I decide about the kitchen renovation?", and get an answer grounded in the conversations you actually saved, with citations that open the exact conversations behind it. It is set up under Settings, and every run reports the tokens it used.</p>
+                            <p>Ask a question in plain language, like "what did I decide about the kitchen renovation?", and get an answer grounded in the conversations you actually saved, with citations that open the exact conversations behind it. It runs on your own OpenAI key, your own free Google Gemini key, or the courtesy AI new installs get for up to 90 days (both Google Gemini). Set it up under Settings; every run reports the tokens it used.</p>
                         </div>
                     </details>
                 </div>
@@ -284,8 +285,8 @@
                     <details class="help-item">
                         <summary>Does anything ever leave my device?<i class="bi bi-chevron-down"></i></summary>
                         <div class="help-item-body">
-                            <p>Your archive stays on your computer, and the app runs no analytics or telemetry. A few things do go out: update checks against chatsrecall.com, your email address if you entered it during setup, calls to meeting tools you connect yourself, and images inside a conversation you open, which load from where they are hosted. The <a href="privacy.html">Privacy page</a> lists every case.</p>
-                            <p>Conversation content leaves only through the optional AI features, which do nothing until an OpenAI or Anthropic API key is connected. Once one is, session cards are on by default: after each sync they send the text of changed conversations to the model provider to write a short summary for each card. Switch them off in Settings to stop that. Agentic Search, indexing notable moments, and summarizing a chat to continue it elsewhere send text only when you start them.</p>
+                            <p>Your archive stays on your computer, and the app runs no analytics or telemetry. A few things do go out: update checks against chatsrecall.com, your email address if you entered it during setup, a sign-up with our courtesy AI service if you have no AI key of your own, calls to meeting tools you connect yourself, and images inside a conversation you open, which load from where they are hosted. The <a href="privacy.html">Privacy page</a> lists every case.</p>
+                            <p>Conversation content leaves only through the optional AI features. Agentic Search runs on your own OpenAI or Google Gemini key, or on the courtesy AI (Google Gemini), and sends excerpts only after you tick its box. With your own OpenAI or Anthropic key, session cards are on by default: after each sync they send the text of changed conversations to the model provider to write a short summary for each card. Switch them off in Settings to stop that. Indexing notable moments and summarizing a chat to continue it elsewhere send text only when you start them.</p>
                         </div>
                     </details>
                 </div>
