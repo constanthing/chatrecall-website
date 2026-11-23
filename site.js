@@ -1,6 +1,7 @@
-// Home only (index.html): theme, the visitor's own computer, and the current version.
-// From the approved mockup's site.js (docs#541), using the live site's theme setting so a choice made
-// on Home carries over to Download, Help and Privacy, and the other way round.
+// Every page: the theme; and on Home, the visitor's own computer and the current version.
+// From the approved mockup's site.js (docs#541), using the live site's theme setting (chatrecall-theme),
+// so a choice made on one page carries over to the others. Each page loads this in <head>.
+// The Download page's own script (desktop.html) puts the visitor's computer first there.
 
 // Theme: follows the system until the visitor picks one. Runs in <head> so the page never flashes.
 const THEME_KEY = 'chatrecall-theme';
