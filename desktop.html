@@ -69,7 +69,7 @@
                     <h2 class="dl-row-title">Mac <span id="mac-version" class="dl-version" hidden></span></h2>
                     <span class="dl-row-meta">Apple-chip and Intel Macs · .dmg</span>
                 </div>
-                <a id="mac-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_universal.dmg" class="btn" aria-label="Download for Mac">Download</a>
+                <a id="mac-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.104/ChatsRecall_0.1.104_universal.dmg" class="btn" aria-label="Download for Mac">Download</a>
             </section>
             <section class="dl-row" id="windows-download" data-os="windows" aria-label="Download ChatsRecall for Windows">
                 <svg class="dl-os" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4.5v7H3zM11 4.4 21 3v8.5H11zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg>
@@ -77,7 +77,7 @@
                     <h2 class="dl-row-title">Windows <span id="windows-version" class="dl-version" hidden></span></h2>
                     <span class="dl-row-meta">64-bit PCs · installer</span>
                 </div>
-                <a id="windows-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.103/ChatsRecall_0.1.103_x64-setup.exe" class="btn secondary" aria-label="Download for Windows">Download</a>
+                <a id="windows-download-link" href="https://github.com/constanthing/chatrecall-website/releases/download/desktop-v0.1.104/ChatsRecall_0.1.104_x64-setup.exe" class="btn secondary" aria-label="Download for Windows">Download</a>
             </section>
         </div>
         <!-- The version line names the newest release card below (the release
@@ -135,6 +135,81 @@
         <section class="block releases" id="release-notes" aria-label="Release notes">
             <h2 class="label">Release history</h2>
             <div class="updates-list">
+
+            <!-- Version 0.1.104 -->
+            <article class="update-card" data-version="0.1.104">
+                <div class="update-meta">
+                    <span class="update-version">0.1.104</span>
+                    <span class="update-date">November 23, 2026</span>
+                </div>
+                <div class="update-body">
+                    <p class="update-intro">A big update: search, Ask and the Mac app all change in ways you will notice.</p>
+                    <ul class="update-highlights">
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Search by meaning</p>
+                                <p class="update-highlight-body">Search now also finds conversations that say the same thing in other words, so &quot;car insurance renewal&quot; can turn up a chat that only ever said &quot;auto policy&quot;. It runs on this computer after a one-time 30 MB download, and Match by meaning in Filters turns it off.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight">
+                            <svg class="update-highlight-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.25 3.75L17 8l-3.75 1.25L12 13l-1.25-3.75L7 8l3.75-1.25L12 3Z"/><path d="m18.5 14 .75 2.25L21.5 17l-2.25.75L18.5 20l-.75-2.25L15.5 17l2.25-.75L18.5 14Z"/><path d="m5 12 .75 2.25L8 15l-2.25.75L5 18l-.75-2.25L2 15l2.25-.75L5 12Z"/></svg>
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">Ask your archive with no setup</p>
+                                <p class="update-highlight-body">Every install gets a free courtesy AI allowance for 90 days, with nothing to sign up for or copy in. Settings shows when it ends and warns you three weeks before, and can get you a free Google Gemini key of your own.</p>
+                            </div>
+                        </li>
+                        <li class="update-highlight update-highlight-plain">
+                            <div class="update-highlight-text">
+                                <p class="update-highlight-title">A signed Mac app</p>
+                                <p class="update-highlight-body">The Mac version is now signed and checked by Apple, so it opens like any other app, without the Privacy &amp; Security steps.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="update-section">
+                        <h3 class="update-section-title added">
+                            <i class="bi bi-plus-circle"></i>
+                            Added
+                        </h3>
+                        <ul class="update-list">
+                            <li>Very common words get a &quot;Which did you mean?&quot; row above the results: one button per meaning, each with a count, so a search for &quot;session&quot; can be narrowed to the kind you meant.</li>
+                            <li>Search finds a meeting by who was in it, from the calendar invite, the notetaker's list or the speaker labels, even when the name is never said.</li>
+                            <li>A Commitments page finds the commitments, action items and goals in your conversations and shows whose move each one is. It needs an OpenAI key.</li>
+                            <li>Settings &gt; Updates has an Email report button: it saves the support report, shows the file and opens an email in your own mail program, ready for you to attach it and send.</li>
+                            <li>Settings has a Local glossary section for the glossary search.</li>
+                            <li>A watched folder can download OneDrive files that are kept online only, so they can be imported. It is a per-folder option and off by default.</li>
+                            <li>The Help row in the sidebar shows the app version.</li>
+                            <li>TabSidecar can show related chats from ChatsRecall. It only searches, and it is off until you switch it on.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title improved">
+                            <i class="bi bi-arrow-up-circle"></i>
+                            Improved
+                        </h3>
+                        <ul class="update-list">
+                            <li>When a search finds few exact matches, it adds results for related words underneath them. Exact matches always stay on top.</li>
+                            <li>The Sync page names what happened for each source, and a sync that only got through part of the way says Partial.</li>
+                            <li>Claude Code and Cowork sessions on this computer are read every 5 minutes, and a busy database no longer stops a sync.</li>
+                            <li>A Claude Code session stored both on this computer and on claude.ai shows as one row.</li>
+                            <li>Due dates in Moments count from the conversation's own date, not from the day it was read.</li>
+                            <li>AI agents connected to ChatsRecall can ask your archive questions with the courtesy AI or your own Gemini key, choose how long excerpts are, and find people whose names are misspelled.</li>
+                        </ul>
+                    </div>
+                    <div class="update-section">
+                        <h3 class="update-section-title fixed">
+                            <i class="bi bi-check-circle"></i>
+                            Fixed
+                        </h3>
+                        <ul class="update-list">
+                            <li>A watched OneDrive folder no longer reports files that were already imported and later freed up to save space.</li>
+                            <li>A higher daily limit or a later end date for the courtesy AI now reaches the app, and a courtesy key that stops working is replaced at the next start even if ChatsRecall was closed in between.</li>
+                            <li>The courtesy AI key is saved on a Mac too.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
 
             <!-- Version 0.1.103 -->
             <article class="update-card" data-version="0.1.103">
