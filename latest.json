@@ -1,22 +1,22 @@
 {
-  "version": "0.1.105",
-  "notes": "A small release with one new source.\n\n## Highlights\n\n- :srcMonica: **Monica is a new source** Turn on Monica under Sources and ChatsRecall brings in your Monica conversations, including the ones from the Monica browser sidebar, from the monica.im tab you're signed in to. It only reads them: pinning, renaming and deleting stay in Monica.\n\n> Monica details\n\n## Added\n\n- Monica conversations starred in Monica arrive pinned, and each answer keeps the name of the AI model that wrote it.\n",
-  "pub_date": "2026-11-24T23:11:05.136Z",
+  "version": "0.1.106",
+  "notes": "A feature release: conversations get extra titles, and Moments can look back over your last month.\n\n## Highlights\n\n- :search: **Give a conversation several titles** Right-click a conversation and choose Add a title here to name the part you're reading. It can carry up to seven extra titles, and search finds it by any of them and opens it at that part.\n- :sparkles: **Find moments in your last 30 days** A new button on the Moments & X-Ray page reads up to 60 recent conversations at a time and pulls out their moments, including a new kind: commitments, who promised what and by when. It works with your own OpenAI or Anthropic key or on the included AI, which keeps a separate share for it so Ask archive is never used up.\n- :link: **Connect any MCP assistant, Hermes included** Connect an agent has an Other assistant choice with ready-to-copy connection details, an mcpServers entry and a Hermes entry.\n\n> groups, moments, the included AI, Mac wording\n\n## Added\n\n- Right-click a conversation and choose Add to group to see a suggested group. The suggestion also shows on the conversation's card, with a tick to accept it and a cross to dismiss it.\n- Moments has commitments and outcomes filter chips.\n- A moment can be backed by a document, a record or your own word, not just a quote, and a decision can become a lasting conclusion with dates for when it was true.\n\n## Improved\n\n- Every choice under Connect an agent uses Mac wording on a Mac, naming Terminal and TextEdit.\n- The included AI accepts a sign-up end date of up to two years.\n",
+  "pub_date": "2026-11-25T21:20:29.207Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.105/ChatsRecall_0.1.105_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VnczRitUZzY0Y2cxa1EvMWhLR2gvd2tybWNDZlFXQjJlNFM5a3JXcEJPUk1pMUxwNXdNRlZSRmg5dDh1Y3VCYzkyZ0JuUmgrdnpvV2E5WkR5bDBWVFE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTYxODUzCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwNV94NjQtc2V0dXAuZXhlClRNMSttRUVTaVN4SFNRV1FJNytvQzlMZ0tUeUZVV3J4VVFSQmR0WXlSRmtEamhRZndNb0dWdG5RMDRockZyUVdJVlRHL2VjWjB0ZWR0OUltbE9yTkF3PT0K",
-      "published_at": "2026-11-24T23:11:05.136Z"
+      "url": "https://chatsrecall.com/releases/0.1.106/ChatsRecall_0.1.106_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjV0YlZRU2tiVVRyM3RZTnc5c0dFUndpdzdIS2hlUGFrVzJubGRxYU1GREdKcW5JTEtjUTFBcWw4ejFrTllRSVc3QStQUFZHNFBlazU0UEg5Q2pGUHdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQxNjE3CWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwNl94NjQtc2V0dXAuZXhlClYwOHBETUk1anN0MWduUWFsSFhNV0o0U0ZnMzZUZTFhcXUweU85QVVaUnZwZzJMdG9HSGZqSFBVWkVHbVFKUHgrM0FlY2Z4MDF5dGhsbUFGc3NHeUNRPT0K",
+      "published_at": "2026-11-25T21:20:29.207Z"
     },
     "darwin-aarch64": {
-      "url": "https://chatsrecall.com/releases/0.1.105/ChatsRecall.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VityM0hjeXJLWnVUSUdFTzRyYjE5VXY4dVpHUDVmRmJCVXlKblYwMEdYYjZsem1VV2puR2ZSOHBxY1lXRlp2akVoVCt2OFY0Z3NuQmtxa2FSUmw3OFE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTYxODY0CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpTcFJsVldVYXRreDZpdGJqUG9CU1hxWnFQWER5b1NoQWJuYXBXSzVFZlBDQnR5SHVNWnM2ZGY1WkVtMUpsTDZWL1I4UUozc3lJRmhiUjJ1OWdYL0dCdz09Cg==",
-      "published_at": "2026-11-24T23:11:05.136Z"
+      "url": "https://chatsrecall.com/releases/0.1.106/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjZJY2hCcmZCdDU5ZTFYY3FxWW1rdGZVdzI0NUpqRU9DMTlMZUJwQVc2VlZEVmd3NG5CdFVLZWF0ZzZFQm9qZWF6OVA0S0IvSGRxU0dMWER0cUNaZEFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQxNjI4CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpoU0FLVFJmNS9YQ21XdUN4RldqdFpDZElrS0dRZ0p0MUJweUd4R3ZVcEdrNEt6UGhJWnVuTkRUNVd2VXlZc1oyWllDVzUzcWZKdm5uWkdLMFJyN0NEUT09Cg==",
+      "published_at": "2026-11-25T21:20:29.207Z"
     },
     "darwin-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.105/ChatsRecall.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VityM0hjeXJLWnVUSUdFTzRyYjE5VXY4dVpHUDVmRmJCVXlKblYwMEdYYjZsem1VV2puR2ZSOHBxY1lXRlp2akVoVCt2OFY0Z3NuQmtxa2FSUmw3OFE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTYxODY0CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpTcFJsVldVYXRreDZpdGJqUG9CU1hxWnFQWER5b1NoQWJuYXBXSzVFZlBDQnR5SHVNWnM2ZGY1WkVtMUpsTDZWL1I4UUozc3lJRmhiUjJ1OWdYL0dCdz09Cg==",
-      "published_at": "2026-11-24T23:11:05.136Z"
+      "url": "https://chatsrecall.com/releases/0.1.106/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjZJY2hCcmZCdDU5ZTFYY3FxWW1rdGZVdzI0NUpqRU9DMTlMZUJwQVc2VlZEVmd3NG5CdFVLZWF0ZzZFQm9qZWF6OVA0S0IvSGRxU0dMWER0cUNaZEFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQxNjI4CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpoU0FLVFJmNS9YQ21XdUN4RldqdFpDZElrS0dRZ0p0MUJweUd4R3ZVcEdrNEt6UGhJWnVuTkRUNVd2VXlZc1oyWllDVzUzcWZKdm5uWkdLMFJyN0NEUT09Cg==",
+      "published_at": "2026-11-25T21:20:29.207Z"
     }
   }
 }

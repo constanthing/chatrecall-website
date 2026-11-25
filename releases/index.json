@@ -1,8 +1,13 @@
 {
   "releases": [
     {
+      "version": "0.1.106",
+      "pub_date": "2026-11-25T21:02:51.379Z",
+      "notes": "A feature release: conversations get extra titles, and Moments can look back over your last month.\n\n## Highlights\n\n- :search: **Give a conversation several titles** Right-click a conversation and choose Add a title here to name the part you're reading. It can carry up to seven extra titles, and search finds it by any of them and opens it at that part.\n- :sparkles: **Find moments in your last 30 days** A new button on the Moments & X-Ray page reads up to 60 recent conversations at a time and pulls out their moments, including a new kind: commitments, who promised what and by when. It works with your own OpenAI or Anthropic key or on the included AI, which keeps a separate share for it so Ask archive is never used up.\n- :link: **Connect any MCP assistant, Hermes included** Connect an agent has an Other assistant choice with ready-to-copy connection details, an mcpServers entry and a Hermes entry.\n\n> groups, moments, the included AI, Mac wording\n\n## Added\n\n- Right-click a conversation and choose Add to group to see a suggested group. The suggestion also shows on the conversation's card, with a tick to accept it and a cross to dismiss it.\n- Moments has commitments and outcomes filter chips.\n- A moment can be backed by a document, a record or your own word, not just a quote, and a decision can become a lasting conclusion with dates for when it was true.\n\n## Improved\n\n- Every choice under Connect an agent uses Mac wording on a Mac, naming Terminal and TextEdit.\n- The included AI accepts a sign-up end date of up to two years."
+    },
+    {
       "version": "0.1.105",
-      "pub_date": "2026-11-24T22:36:35.740Z",
+      "pub_date": "2026-11-24T18:11:28-05:00",
       "notes": "A small release with one new source.\n\n## Highlights\n\n- :srcMonica: **Monica is a new source** Turn on Monica under Sources and ChatsRecall brings in your Monica conversations, including the ones from the Monica browser sidebar, from the monica.im tab you're signed in to. It only reads them: pinning, renaming and deleting stay in Monica.\n\n> Monica details\n\n## Added\n\n- Monica conversations starred in Monica arrive pinned, and each answer keeps the name of the AI model that wrote it."
     },
     {
