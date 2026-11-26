@@ -1,22 +1,22 @@
 {
-  "version": "0.1.107",
-  "notes": "A feature release: ChatsRecall now gathers your ideas and lists, and shows what needs your attention.\n\n## Highlights\n\n- :book: **Your ideas and lists, gathered for you** The Concepts tab now shows your own ideas, frameworks and terms, each with its meaning and every conversation it came up in, plus kept lists such as My friends or Places I want to travel to. Find concepts and lists in my last 30 days fills them from your recent conversations; list entries arrive as suggestions you keep or dismiss, and you can add your own.\n- :alertCircle: **Needs attention** A new page under Insights shows what needs your notice now and why: promises that are overdue or nearly due, things you promised, things you're waiting on, and open or reversed decisions. Each one links to where it was said and has Done, Not mine and Snooze buttons. It makes no AI call, so it's free to open.\n\n> concepts, assistants, meeting search\n\n## Added\n\n- Find concepts and lists works with your own OpenAI or Anthropic key or on the included AI, which gives it its own small share of the day so Ask archive keeps the rest.\n- Connected assistants can list your concepts and lists, read a concept, add an entry to a list and ask what needs your attention.\n\n## Improved\n\n- Concepts found on the included AI are better, because they now come from Gemini 3.6 Flash.\n- The old list of short phrases is still on the Concepts tab, collapsed under Search vocabulary.\n\n## Fixed\n\n- After an extra title was added, edited or removed on a meeting, searching for someone who was in it no longer found the meeting.\n",
-  "pub_date": "2026-11-25T23:36:36.139Z",
+  "version": "0.1.108",
+  "notes": "A feature release that reshapes two pages you use often: Settings and Moments.\n\n## Highlights\n\n- :sparkles: **A simpler Settings page** Settings opens on Start here: a box that says whether setup is done, or which things need your attention with a link to each, then eight short rows in the order you'll want them in your first hour, from the browser extension to getting help. Everything else is under Advanced.\n- :list: **A short list of the agreements that still matter** Moments opens on a short list of what people agreed and still holds: promises, decisions made together, permissions, refusals, changes and advice. Everything else goes to a Diary tab, so nothing is thrown away, and each row lets you keep it on the short list, send it to the diary or hide it.\n\n> Settings, Moments, Needs attention, Mac wording\n\n## Added\n\n- Appearance in Settings can be System, Light or Dark, and starts on System.\n- The Moments short list shows a monthly budget line, a Small, still open group, and Life events, where you can add your own.\n\n## Improved\n\n- Background sync and the list of AI accounts are in Settings now, not on the Sync page.\n- Find moments in my last 30 days reads meetings first, then imported conversations, then AI chats, says what it didn't read, and reads recent conversations again the next time you press it.\n- Needs attention takes agreements only from the Moments short list, so one you send to the diary or hide stops counting there. Promises found before this update still count.\n- On a Mac, Settings and the support report say this Mac, Finder, Keychain and Mac folder paths instead of Windows words.\n",
+  "pub_date": "2026-11-26T04:10:05.941Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.107/ChatsRecall_0.1.107_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjZuTFAxZlJMZmI1RTBQRHdGUlZxNWxSSkNxL3lsbDFENHpIUVFkN0dUNE51Zjg2OExpM0lCQTcxR3l3THN0QWhBVFdySDNGQWZMbG9pUkRvR2d0b0FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQ5NTcwCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwN194NjQtc2V0dXAuZXhlCnNQeTNmbkk3Y0QxQVhlaU44cGVjd085LytGOU1SZHU4cjVIRGJoeFNCZk1HeHRDem9LeHlMMjhjbGdzODI4VEhJSklhNGIrMUJrWk9YMGhLYThpSkFnPT0K",
-      "published_at": "2026-11-25T23:36:36.139Z"
+      "url": "https://chatsrecall.com/releases/0.1.108/ChatsRecall_0.1.108_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1Vjh5aGxjTldqVVhJWTNxTTYzZ2x1Vk9uSVdURE5RbFRycUJKRGZ4bHJ5WHpsaFpyaWdZakF5OTBjbGZIZDczUXo3Y3A5UWwvdkZSWldlQWlVc2FVakE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY2MDcyCWZpbGU6Q2hhdHNSZWNhbGxfMC4xLjEwOF94NjQtc2V0dXAuZXhlCnZ3ZUJPYjZXWGJONm1USTVKS0tudlRZRjk3N3YyWGh6OFpoNTROK21FbEsrREd4Q1RYK0VBQUZPYjJ1QWFIbU02cnk0S1hER2hPV01Kdy9DU29CVUJ3PT0K",
+      "published_at": "2026-11-26T04:10:05.941Z"
     },
     "darwin-aarch64": {
-      "url": "https://chatsrecall.com/releases/0.1.107/ChatsRecall.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjlYWXBMSURYRGtpQWlyK1hNVWg0am9ldUY3U21hN2sxT0lmZ3VmTWtiZ0NGN3FPZjErOGM5ZVNtVlVobmMyMW1BczdsUExHdW93ellUek0zY2hsbndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQ5Nzk1CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negp2RG5XS2NQSkNvWXo3Nlg0Z0hlRzQvbUVjeStMY0tOdG5uWHBySmFleHd6UnFHbzFLTkM4ZGRVaCtMcUREaFBCUWd1c0czR3VXMzhSb3EzMUdwTi9Edz09Cg==",
-      "published_at": "2026-11-25T23:36:36.139Z"
+      "url": "https://chatsrecall.com/releases/0.1.108/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjNoa1F5QXRpNEpPTFJKWUVjTkNVYTlocUEzRjRvd204eUh5VXhiMzlNWXkyZGltUXR1REZWMWZBTURIZlBBaUY2ODQycVQyTzZwbjkrM1FpcjBGcFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY2MjA1CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpFOC9jYnVxYTBOdzhBYkx3QnVKenJyL3ZrUS9ha2Zwdm1OalpQeFB0SEd3NE40UTd5TlJneFU2RVZmYk5xbi9IOENzcm9oTk9XL3JSZ2VrcTluRk9Bdz09Cg==",
+      "published_at": "2026-11-26T04:10:05.941Z"
     },
     "darwin-x86_64": {
-      "url": "https://chatsrecall.com/releases/0.1.107/ChatsRecall.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjlYWXBMSURYRGtpQWlyK1hNVWg0am9ldUY3U21hN2sxT0lmZ3VmTWtiZ0NGN3FPZjErOGM5ZVNtVlVobmMyMW1BczdsUExHdW93ellUek0zY2hsbndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQ5Nzk1CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negp2RG5XS2NQSkNvWXo3Nlg0Z0hlRzQvbUVjeStMY0tOdG5uWHBySmFleHd6UnFHbzFLTkM4ZGRVaCtMcUREaFBCUWd1c0czR3VXMzhSb3EzMUdwTi9Edz09Cg==",
-      "published_at": "2026-11-25T23:36:36.139Z"
+      "url": "https://chatsrecall.com/releases/0.1.108/ChatsRecall.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTM1o2NmVhYTQ1VjNoa1F5QXRpNEpPTFJKWUVjTkNVYTlocUEzRjRvd204eUh5VXhiMzlNWXkyZGltUXR1REZWMWZBTURIZlBBaUY2ODQycVQyTzZwbjkrM1FpcjBGcFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY2MjA1CWZpbGU6Q2hhdHNSZWNhbGwuYXBwLnRhci5negpFOC9jYnVxYTBOdzhBYkx3QnVKenJyL3ZrUS9ha2Zwdm1OalpQeFB0SEd3NE40UTd5TlJneFU2RVZmYk5xbi9IOENzcm9oTk9XL3JSZ2VrcTluRk9Bdz09Cg==",
+      "published_at": "2026-11-26T04:10:05.941Z"
     }
   }
 }
